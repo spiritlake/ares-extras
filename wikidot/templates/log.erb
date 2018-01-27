@@ -1,0 +1,20 @@
+><%= summary %>
+
+[[div class="log-wrapper"]]
+
+[[include LogInfoBox
+|summary=<%= summary %>
+|location=<%= location %>
+|related=None 
+]]
+
+[[include LogPlayerTop]]
+
+<% scene.participant_names.sort.each do |name| %>
+[[include LogIcon name=<%= name %>]]
+<% end %>
+[[include LogPlayerBottom]]
+
+[[/div]]
+    
+<%= log %>
