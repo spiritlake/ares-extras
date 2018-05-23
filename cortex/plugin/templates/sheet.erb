@@ -1,0 +1,35 @@
+%lh
+<%= t('cortex.sheet_title', :name => char.name) %>
+
+<%= line_with_text t('cortex.attributes_title') -%>
+<% attrs.each do |a| -%>
+<%= a -%>
+<% end %>
+
+
+<%= line_with_text t('cortex.skills_title') %>
+<% skills.each do |s| %>
+%xh<%= left("#{s.name}:", 15) %>%xn <%= s.die_step %>      <%= specialties(s) %>
+<% end %>
+
+<%= line_with_text t('cortex.assets_title') -%>
+<% assets.each do |a| -%>
+<%= a -%>
+<% end %>
+
+
+<%= line_with_text t('cortex.complications_title') -%>
+<% complications.each do |a| -%>
+<%= a -%>
+<% end %>
+
+
+<%= line_with_text t('cortex.derived_title') %>
+%xh<%= left( t('cortex.endurance_title'), 15 ) %>%xn <%= left( endurance, 20 ) -%>
+%xh<%= left( t('cortex.resistance_title'), 15 ) %>%xn <%= left( resistance, 20 ) %>
+%xh<%= left( t('cortex.initiative_title'), 15 ) %>%xn <%= left( initiative, 20 ) %>
+
+%xh<%= left( t('cortex.plot_points_title'), 15 ) %>%xn <%= left( @char.plot_points, 20 ) -%>
+%xh<%= left( t('cortex.life_points_title'), 15 ) %>%xn <%= left( life_points, 20 ) %>
+%xh<%= t('cortex.advancement_points_title') %>%xn <%= left( @char.advancement_points, 20 ) %>
+%lf

@@ -1,0 +1,31 @@
+---
+cortex:
+    starting_attribute_points: 48
+    starting_skill_points: 68
+    starting_trait_points: 4
+    max_attribute_step: 'd12+d2'
+    max_specialty_skill_step: 'd12'
+    max_complication_step: 'd12'
+    max_asset_step: 'd12'
+    
+    initiative: 
+        - Agility
+        - Alertness
+        
+    life_points:
+        - Vitality
+        - Willpower
+
+    endurance:
+        - Willpower
+        - Vitality
+    
+    resistance:
+        - Vitality
+        - Vitality
+        
+    shortcuts:
+        assets: asset
+        skills: skill
+        complications: complication
+        attributes: attribute
