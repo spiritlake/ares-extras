@@ -1,6 +1,11 @@
 # Simple Traits
 
-<div class="alert alert-success">Status: **Supported**.  Although not part of the main Ares code release, this is a supported plugin.  [Report](https://aresmush.com/feedback) any problems you encounter.</div>
+<div class="alert alert-success">
+<b>Supported</b>
+
+Although not part of the main Ares code release, this is a supported plugin.  Report any problems you encounter: https://aresmush.com/feedback
+</div>
+
 
 **Compatibility:** Designed for AresMUSH 1.0
 
