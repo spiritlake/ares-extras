@@ -1,6 +1,6 @@
 # Teamup Events Integration
 
-<div class="alert alert-warning">Status: **Deprecated**.  May require tweaking to get it to work with the current Ares code.</div>
+> **Deprecated**.  Provided for reference.  May require tweaking to get it to work with the current Ares code.
 
 **Compatibility:** Designed for AresMUSH 0.4
 
