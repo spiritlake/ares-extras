@@ -1,6 +1,6 @@
 # Cortex
 
-<div class="alert alert-success">Status: **Supported**.  Although not part of the main Ares code release, this is a supported plugin.  [Report](https://aresmush.com/feedback) any problems you encounter.</div>
+> **Supported**:  Although not part of the main Ares code release, this is a supported plugin.  [Report](https://aresmush.com/feedback) any problems you encounter.
 
 **Compatibility:** Designed for AresMUSH 1.0
 
