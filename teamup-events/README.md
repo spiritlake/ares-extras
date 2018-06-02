@@ -1,8 +1,12 @@
 # Teamup Events Integration
 
-> **Deprecated**.  Provided for reference.  May require tweaking to get it to work with the current Ares code.
+## Status
 
-**Compatibility:** Designed for AresMUSH 0.4
+**Deprecated**.  Provided for reference.  May require tweaking to get it to work with the current Ares code.
+
+Designed for AresMUSH 0.4.
+
+## Overview
 
 [Teamup.com](https://www.teamup.com/) offers a free, shared, public web calendar for groups.  
 

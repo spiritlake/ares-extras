@@ -1,9 +1,8 @@
 # Simple Traits
 
-> **Supported** Although not part of the main Ares code release, this is a supported plugin.  Report any problems you encounter: https://aresmush.com/feedback
+**Supported** Although not part of the main Ares code release, this is a supported plugin.  Report any problems you encounter: https://aresmush.com/feedback
 
-
-**Compatibility:** Designed for AresMUSH 1.0
+Designed for AresMUSH 1.0
 
 ## Overview
 

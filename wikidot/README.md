@@ -1,14 +1,16 @@
 # Wikidot Integration
 
-<div class="alert alert-warning">Status: **Deprecated**.  May require tweaking to get it to work with the current Ares code.</div>
+## Status
 
-**Compatibility:** Designed for AresMUSH 0.4
+**Deprecated**.  May require tweaking to get it to work with the current Ares code.
+
+Designed for AresMUSH 0.4
+
+## Overview
 
 [Wikidot](http://www.wikidot.com/) is a great free wiki hosting solution.  This plugin integrates with wikidot to help you create scenes and character pages.
 
 I ultimately discarded it because the web portal now has a self-contained wiki that does all of this automatically.  I've left the code here as a reference for anyone who's really in love with wikidot.  
-
-It was designed for an old alpha version of AresMUSH so it may require some tweaking to get it to work with the current code.
 
 ## Sharing Modes
 

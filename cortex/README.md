@@ -1,8 +1,10 @@
 # Cortex
 
-> **Supported**:  Although not part of the main Ares code release, this is a supported plugin.  [Report](https://aresmush.com/feedback) any problems you encounter.
+## Status
 
-**Compatibility:** Designed for AresMUSH 1.0
+**Supported**:  Although not part of the main Ares code release, this is a supported plugin.  [Report](https://aresmush.com/feedback) any problems you encounter.
+
+Designed for AresMUSH 1.0.
 
 ## Overview
 
