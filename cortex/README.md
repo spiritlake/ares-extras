@@ -2,7 +2,7 @@
 
 ## Status
 
-**Supported**:  Although not part of the main Ares code release, this is a supported plugin.  [Report](https://aresmush.com/feedback) any problems you encounter.
+**Supported**  Although not part of the main Ares code release, this is a supported plugin.  [Report](https://aresmush.com/feedback) any problems you encounter.
 
 Designed for AresMUSH 1.0.
 

@@ -1,5 +1,7 @@
 # Simple Traits
 
+## Status
+
 **Supported** Although not part of the main Ares code release, this is a supported plugin.  Report any problems you encounter: https://aresmush.com/feedback
 
 Designed for AresMUSH 1.0

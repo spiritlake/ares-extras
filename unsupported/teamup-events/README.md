@@ -2,7 +2,7 @@
 
 ## Status
 
-**Deprecated**.  Provided for reference.  May require tweaking to get it to work with the current Ares code.
+**Deprecated** Provided for reference.  May require tweaking to get it to work with the current Ares code.
 
 Designed for AresMUSH 0.4.
 
