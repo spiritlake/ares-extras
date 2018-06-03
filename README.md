@@ -8,9 +8,9 @@ The README file in each folder contains details about each item.
 
 These plugins are not part of the Ares core release, but are still officially supported.  They can be installed easily using the add-plugin script, as described in [Ares Extras](https://aresmush.com/tutorials/code/extras/).
 
-* **Cortex** - The Cortex RPG system - chargen and skill rolls.
-* **Prefs** - Roleplay preference tracking.
-* **Traits** - A simple descriptive traits system.
+* **[Cortex](https://github.com/AresMUSH/ares-extras/tree/master/cortex)** - The Cortex RPG system - chargen and skill rolls.
+* **[Roleplay Prefs](https://github.com/AresMUSH/ares-extras/tree/master/rp-prefs)** - Roleplay preference tracking.
+* **[Traits](https://github.com/AresMUSH/ares-extras/tree/master/traits)** - A simple descriptive traits system.
 
 ## Community Plugins
 
