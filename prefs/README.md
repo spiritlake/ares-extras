@@ -36,7 +36,7 @@ And find players with specific preferences.
 ## Installation
 
 1. Connect to the [server shell](https://aresmush.com/tutorials/code/extras/) and change to the aresmush directory.
-2. Run `bin/addplugin rp-prefs`.
+2. Run `bin/addplugin prefs`.
 3. Type `load prefs` in-game.
 
 ## Configuration
