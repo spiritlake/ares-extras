@@ -8,9 +8,9 @@ The README file in each folder contains details about each item.
 
 These plugins are not part of the Ares core release, but are still officially supported.  They can be installed easily using the add-plugin script, as described in [Ares Extras](https://aresmush.com/tutorials/code/extras/).
 
-* **[Cortex](https://github.com/AresMUSH/ares-extras/tree/master/cortex)** - The Cortex RPG system - chargen and skill rolls.
-* **[Roleplay Prefs](https://github.com/AresMUSH/ares-extras/tree/master/prefs)** - Roleplay preference tracking.
-* **[Traits](https://github.com/AresMUSH/ares-extras/tree/master/traits)** - A simple descriptive traits system.
+* **[Cortex](https://github.com/AresMUSH/ares-extras/tree/master/plugins/cortex)** - The Cortex RPG system - chargen and skill rolls.
+* **[Roleplay Prefs](https://github.com/AresMUSH/ares-extras/tree/master/plugins/prefs)** - Roleplay preference tracking.
+* **[Traits](https://github.com/AresMUSH/ares-extras/tree/master/plugins/traits)** - A simple descriptive traits system.
 
 ## Community Plugins
 
@@ -18,7 +18,13 @@ These plugins have been contributed by the community.  See the guidelines in [Ar
 
 * Coming Soon (we hope)
 
-## Unsupported
+## Snippets
+
+Snippets are not complete plugins, but code examples of how to do various things.
+
+* **Multiple Connect Screens** - Allow the game to cycle through multiple connect screens.
+
+## Archived Items
 
 These items are not supported, and may even be based off of an old version of AresMUSH.  They will require some code effort to get working, but you can still try or just use them for ideas.
 
