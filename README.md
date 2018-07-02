@@ -4,6 +4,10 @@ Public contributions and extra plugins for AresMUSH game server.
 
 The README file in each folder contains details about each item.
 
+## Contribution Guidlines
+
+See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/extra-contribs/) if you want to contribute your own plugins or extras.
+
 ## Supported Plugins
 
 These plugins are not part of the Ares core release, but are still officially supported.  They can be installed easily using the add-plugin script, as described in [Ares Extras](https://aresmush.com/tutorials/code/extras/).
@@ -22,7 +26,7 @@ These plugins have been contributed by the community.  See the guidelines in [Ar
 
 Snippets are not complete plugins, but code examples of how to do various things.
 
-* **Multiple Connect Screens** - Allow the game to cycle through multiple connect screens.
+* **Multiple Connect Screens** - Allow the game to cycle through multiple connect screens.  (by @TheStranjer)
 
 ## Archived Items
 
