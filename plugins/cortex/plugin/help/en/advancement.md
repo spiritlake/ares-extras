@@ -1,6 +1,8 @@
 ---
-toc: Cortex
+toc: Cortex Skills
 summary: Advancement points.
+aliases:
+- xp
 ---
 
 # Cortex Advancement

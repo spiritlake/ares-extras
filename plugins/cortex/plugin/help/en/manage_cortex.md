@@ -1,5 +1,5 @@
 ---
-toc: Cortex
+toc: Cortex Skills
 summary: Managing cortex.
 ---
 

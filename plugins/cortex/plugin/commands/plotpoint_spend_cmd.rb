@@ -16,12 +16,12 @@ module AresMUSH
       end      
       
       def check_has_points
-        return nil if enactor.plot_points >= self.points
+        return nil if enactor.cortex_plot_points >= self.points
         return t('cortex.not_enough_points')
       end
       
       def handle
-        enactor.update(plot_points: enactor.plot_points - self.points)
+        enactor.update(cortex_plot_points: enactor.cortex_plot_points - self.points)
         Global.logger.info "#{enactor_name} spends #{self.points} plot points on #{self.reason}."
         Rooms.emit_ooc_to_room enactor_room, t('cortex.plot_point_spent', :name => enactor_name, :reason => self.reason, :points => self.points)
       end

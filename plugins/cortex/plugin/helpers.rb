@@ -26,19 +26,23 @@ module AresMUSH
     end
     
     def self.find_attribute(model, ability_name)
-      model.cortex_attributes.select { |a| a.name == ability_name }.first
+      name_downcase = ability_name.downcase
+      model.cortex_attributes.select { |a| a.name.downcase == name_downcase }.first
     end
     
     def self.find_skill(model, ability_name)
-      model.cortex_skills.select { |a| a.name == ability_name }.first
+      name_downcase = ability_name.downcase
+      model.cortex_skills.select { |a| a.name.downcase == name_downcase }.first
     end
     
     def self.find_asset(model, ability_name)
-      model.cortex_assets.select { |a| a.name == ability_name }.first
+      name_downcase = ability_name.downcase
+      model.cortex_assets.select { |a| a.name.downcase == name_downcase }.first
     end
     
     def self.find_complication(model, ability_name)
-      model.cortex_complications.select { |a| a.name == ability_name }.first
+      name_downcase = ability_name.downcase
+      model.cortex_complications.select { |a| a.name.downcase == name_downcase }.first
     end
     
     def self.find_asset_config(ability_name)

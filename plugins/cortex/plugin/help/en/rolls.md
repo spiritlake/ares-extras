@@ -1,5 +1,5 @@
 ---
-toc: Cortex
+toc: Cortex Skills
 summary: Rolling abilities.
 aliases:
 - roll

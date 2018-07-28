@@ -22,7 +22,7 @@ module AresMUSH
       
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
-          model.update(advancement_points: model.advancement_points + self.points)
+          model.update(cortex_advance_points: model.cortex_advance_points + self.points)
           Global.logger.info "#{enactor_name} awarded #{self.points} advancement points to #{self.target_name}."
           client.emit_success t('cortex.advance_point_award', :name => self.target_name)
         end

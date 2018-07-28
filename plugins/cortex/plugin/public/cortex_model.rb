@@ -5,10 +5,12 @@ module AresMUSH
     collection :cortex_assets, "AresMUSH::CortexAsset"
     collection :cortex_complications, "AresMUSH::CortexComplication"
     
-    attribute :advancement_points, :type => DataType::Integer
-    attribute :plot_points, :type => DataType::Integer
+    attribute :cortex_advance_points, :type => DataType::Integer
+    attribute :cortex_plot_points, :type => DataType::Integer
 
-    def delete_abilities
+    before_delete :delete_cortex_abilities
+    
+    def delete_cortex_abilities
       [ self.cortex_skills, self.cortex_attributes, self.cortex_assets, self.cortex_complications ].each do |list|
         list.each do |a|
           a.delete
