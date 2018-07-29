@@ -1,6 +1,6 @@
 module AresMUSH    
   module Ffg
-    class DestinyPointAwardCmd
+    class StoryPointAwardCmd
       include CommandHandler
       
       attr_accessor :target_name, :points
@@ -22,9 +22,9 @@ module AresMUSH
       
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
-          model.update(ffg_destiny_points: model.ffg_destiny_points + self.points)
-          Global.logger.info "#{enactor_name} awarded #{self.points} destiny points to #{self.target_name}."
-          client.emit_success t('ffg.destiny_point_awarded', :name => self.target_name)
+          model.update(ffg_story_points: model.ffg_story_points + self.points)
+          Global.logger.info "#{enactor_name} awarded #{self.points} story points to #{self.target_name}."
+          client.emit_success t('ffg.story_point_awarded', :name => self.target_name)
         end
       end
     end

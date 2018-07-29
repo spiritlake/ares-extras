@@ -3,38 +3,34 @@ module AresMUSH
     class RollCmd
       include CommandHandler
       
-      attr_accessor :roll_str, :difficulty
+      attr_accessor :roll_str
   
       def parse_args
-         return if !cmd.args
-         self.roll_str = trim_arg(cmd.args.before("vs"))
-         self.difficulty = titlecase_arg(cmd.args.after("vs"))
+         self.roll_str = trim_arg(cmd.args)
       end
       
       def require_args
         [ self.roll_str ]
       end
       
-      def check_difficulty
-        return nil if self.difficulty.blank?
-        return t('cortex.invalid_difficulty', :names => Ffg.difficulties.join(' ')) if !Ffg.difficulties.include?(self.difficulty)
-        return nil
-      end
       
       def handle
-        results = Ffg.roll_ability(enactor, self.roll_str)
+        dice = Ffg.roll_ability(enactor, self.roll_str)
         
-        if (!results)
-          client.emit_failure t('cortex.invalid_ability')
-          return
-        end
-
-        if (results.is_botch?)
-          Rooms.emit_ooc_to_room enactor_room, t('cortex.roll_botch', :name => enactor_name, :roll_str => results.pretty_input, :dice => results.print_dice)
+        if (!dice)
+          client.emit_failure t('ffg.invalid_ability_name')
           return
         end
         
-        message = Ffg.get_success_message(enactor_name, results, self.difficulty)
+        results = Ffg.determine_outcome(dice)
+        special = Ffg.special_roll_effects(results)
+        
+        if (results.successful)
+          message = t('ffg.roll_successful', :dice => dice.join(' '), :special => special, :roll => self.roll_str, :char => enactor_name )
+        else
+          message = t('ffg.roll_failed', :dice => dice.join(' '), :special => special, :roll => self.roll_str, :char => enactor_name )
+        end
+        
         Rooms.emit_ooc_to_room enactor_room, message               
       end
     end

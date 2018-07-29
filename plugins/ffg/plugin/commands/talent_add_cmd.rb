@@ -21,6 +21,11 @@ module AresMUSH
         [self.target_name, self.ability_name]
       end
       
+      def check_archetype_and_career_set
+        return t('ffg.must_set_archetype_and_career') if !enactor.ffg_archetype || !enactor.ffg_career
+        return nil
+      end
+      
       def check_can_set
         return nil if enactor_name == self.target_name
         return nil if Ffg.can_manage_abilities?(enactor)
@@ -45,10 +50,10 @@ module AresMUSH
           talent = Ffg.find_talent(model, self.ability_name)
           
           is_ranked = talent_config['ranked']
-          tier = talent_config['tier']
           is_force = talent_config['force_power']
           specs = talent_config['specializations']
           prereq = talent_config['prereq']
+          tier = talent_config['tier']
             
           if (talent && !is_ranked)
             client.emit_failure t('ffg.already_have_talent')
@@ -75,22 +80,25 @@ module AresMUSH
             return
           end
           
-          if (model.is_approved?)
-            old_rating = talent ? talent.rating : 0
-            xp_cost = Ffg.talent_xp_cost(self.ability_name, old_rating, old_rating + 1)
-            if (xp_cost > model.ffg_xp)
-              client.emit_failure t('ffg.not_enough_xp')
-              return
-            end
-            model.update(ffg_xp: model.ffg_xp - xp_cost)
+          old_rating = talent ? talent.rating : 0
+          
+          if (!Ffg.talent_tree_balanced_for_add(model, talent ? talent.rating_plus_tier + 1 : tier))
+            client.emit_failure t('ffg.talent_add_unbalanced')
+            return
           end
+          
+          xp_cost = Ffg.talent_xp_cost(self.ability_name, old_rating, old_rating + 1)
+          if (xp_cost > model.ffg_xp)
+            client.emit_failure t('ffg.not_enough_xp')
+            return
+          end
+          model.update(ffg_xp: model.ffg_xp - xp_cost)
           
           if (talent)
             talent.update(rating: talent.rating + 1)
             client.emit_success t('ffg.talent_tier_raised', :tier => talent.rating)
           else
-            rating = is_ranked ? 1 : 0
-            FfgTalent.create(name: self.ability_name, rating: rating, character: model)
+            FfgTalent.create(name: self.ability_name, rating: 1, tier: tier, ranked: is_ranked, character: model)
             client.emit_success t('ffg.talent_added')
           end
         end

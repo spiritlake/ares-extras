@@ -21,6 +21,11 @@ module AresMUSH
         [self.target_name, self.ability_name]
       end
       
+      def check_archetype_and_career_set
+        return t('ffg.must_set_archetype_and_career') if !enactor.ffg_archetype || !enactor.ffg_career
+        return nil
+      end
+      
       def check_can_set
         return nil if enactor_name == self.target_name
         return nil if Ffg.can_manage_abilities?(enactor)
@@ -40,6 +45,20 @@ module AresMUSH
             client.emit_failure t('ffg.ability_not_found')
             return
           end
+          
+          talent_config = Ffg.find_talent_config(self.ability_name)
+          tier = talent_config['tier']
+          if (talent_config['ranked'])
+            tier = tier + talent.rating - 1
+          end
+          
+          if (!Ffg.talent_tree_balanced_for_remove(model, tier))
+            client.emit_failure t('ffg.talent_remove_unbalanced')
+            return
+          end
+          
+          xp_cost = -Ffg.talent_xp_cost(self.ability_name, talent.rating - 1, talent.rating)
+          model.update(ffg_xp: model.ffg_xp - xp_cost)
           
           if (talent.rating > 1)
             talent.update(rating: talent.rating - 1)

@@ -21,8 +21,11 @@ Skills and talents are influenced by your character's career.  Some careers allo
 
 `sheet [<name>]` - Views your character sheet.  Specify a name to view someone else's.
 
+`archetypes` - Lists archetypes.
 `careers` - Lists careers.
-`career/set <name>` - Sets your career.
+`reset <archetype>/<career>` - Sets your career and archetype.
+    Note: Since costs, etc. are based on career/archetype, doing this will reset your character.
+
 `specialization/add <name>` - Adds a specialization.
 `specialization/remove <name>` - Removes a specialization.
 

@@ -80,15 +80,20 @@ module AresMUSH
           allow(Ffg).to receive(:is_career_specialization?) { true }
         end
         
-        it "should cost 10 for first spec" do
+        it "should be free for first spec" do
           cost = Ffg.specialization_xp_cost(@char, "Soldier", 0)
-          expect(cost).to eq 10
+          expect(cost).to eq 0
+        end
+        
+        it "should cost 20 for first extra one" do
+          cost = Ffg.specialization_xp_cost(@char, "Soldier", 1)
+          expect(cost).to eq 20
         end
         
         it "should cost 10 extra for non-career spec" do
           expect(Ffg).to receive(:is_career_specialization?).with(@char, "Soldier") { false }
-          cost = Ffg.specialization_xp_cost(@char, "Soldier", 0)
-          expect(cost).to eq 20
+          cost = Ffg.specialization_xp_cost(@char, "Soldier", 1)
+          expect(cost).to eq 30
         end
         
         it "should cost 10x num of specs for existing ones" do

@@ -25,7 +25,7 @@ module AresMUSH
             .map do |a, i| 
               linebreak = i % 2 == 0 ? "\n" : ""
               title = a.name
-              rating = a.rating > 0 ? " (#{a.rating})" : ''
+              rating = a.ranked ? " (#{a.rating})" : ''
               display = left("#{title}#{rating}", 36)
               "#{linebreak}#{display}"
             end

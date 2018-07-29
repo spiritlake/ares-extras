@@ -5,7 +5,7 @@ module AresMUSH
     collection :ffg_talents, "AresMUSH::FfgTalent"
     
     attribute :ffg_xp, :type => DataType::Integer
-    attribute :ffg_destiny_points, :type => DataType::Integer
+    attribute :ffg_story_points, :type => DataType::Integer
     attribute :ffg_force_rating, :type => DataType::Integer
     attribute :ffg_wound_threshold, :type => DataType::Integer
     attribute :ffg_strain_threshold, :type => DataType::Integer
@@ -47,8 +47,14 @@ module AresMUSH
     
     attribute :name
     attribute :rating, :type => DataType::Integer
+    attribute :ranked, :type => DataType::Boolean
+    attribute :tier, :type => DataType::Integer
     reference :character, "AresMUSH::Character"
     index :name
+    
+    def rating_plus_tier
+      self.rating > 1 ? self.tier + self.rating - 1 : self.tier
+    end
   end
   
   

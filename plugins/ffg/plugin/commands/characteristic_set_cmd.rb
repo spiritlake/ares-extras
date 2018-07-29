@@ -24,9 +24,8 @@ module AresMUSH
         [self.target_name, self.ability_name, self.rating]
       end
       
-      def check_valid_rating
-        return nil if !self.rating
-        return t('ffg.invalid_characteristic_rating') if self.rating > 5 || self.rating < 1
+      def check_archetype_and_career_set
+        return t('ffg.must_set_archetype_and_career') if !enactor.ffg_archetype || !enactor.ffg_career
         return nil
       end
       
@@ -47,7 +46,9 @@ module AresMUSH
       end
       
       def check_rating
-        return nil if Ffg.can_manage_abilities?(enactor)
+        return nil if Ffg.can_manage_abilities?(enactor) # Admin can set any rating.
+        return nil if !self.rating
+        return t('ffg.invalid_characteristic_rating') if self.rating > 5 || self.rating < 1
         if (!enactor.is_approved?)
           return Ffg.check_max_starting_rating(self.rating, 'max_cg_characteristic_rating')
         end
@@ -56,6 +57,27 @@ module AresMUSH
       
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
+          config = Ffg.find_archetype_config(model.ffg_archetype)
+          min_rating = config['characteristics'][self.ability_name] || 0
+          
+          if (self.rating < min_rating)
+            client.emit_failure t('ffg.cant_lower_below_archetype_min')
+            return
+          end
+
+          old_rating = Ffg.characteristic_rating(model, self.ability_name)
+          if (self.rating > old_rating)
+            xp_cost = Ffg.characteristic_xp_cost(model, old_rating, self.rating)
+          else
+            xp_cost = -Ffg.characteristic_xp_cost(model, self.rating, old_rating)
+          end
+          
+          if (xp_cost > model.ffg_xp)
+            client.emit_failure t('ffg.not_enough_xp')
+            return
+          end
+          model.update(ffg_xp: model.ffg_xp - xp_cost)
+          
           Ffg.set_characteristic(model, self.ability_name, self.rating)
           client.emit_success t('ffg.ability_set')
         end

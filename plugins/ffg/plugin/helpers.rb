@@ -43,12 +43,17 @@ module AresMUSH
     def self.check_max_starting_rating(rating, config_setting)
       max_rating = Global.read_config("ffg", config_setting)
       return nil if rating <= max_rating
-      return t('ffg.starting_rating_limit', :max => max_rating)
+      return t('ffg.starting_rating_limit', :rating => max_rating)
     end
     
     def self.skill_rating(char, ability_name)
       skill = Ffg.find_skill(char, ability_name)
       skill ? skill.rating : 0
+    end
+    
+    def self.characteristic_rating(char, ability_name)
+      charac = Ffg.find_characteristic(char, ability_name)
+      charac ? charac.rating : 0
     end
     
     def self.find_characteristic(char, ability_name)
@@ -71,6 +76,12 @@ module AresMUSH
       assets = Global.read_config('ffg', 'talents')
       assets.select { |a| a['name'].downcase == ability_name.downcase }.first
     end
+
+    def self.find_skill_config(name)
+      return nil if !name
+      types = Global.read_config('ffg', 'skills')
+      types.select { |a| a['name'].downcase == name.downcase }.first
+    end    
     
     def self.find_archetype_config(name)
       return nil if !name
@@ -92,18 +103,18 @@ module AresMUSH
     
     def self.specializations_for_career(career)
       specs = Global.read_config('ffg', 'specializations')
-      specs.select { |s| s['career'] && s['career'].downcase == career.downcase }
+      specs.select { |s| !s['career'].blank? && s['career'].downcase == career.downcase }
     end
     
     def self.universal_specializations
       specs = Global.read_config('ffg', 'specializations')
-      specs.select { |s| !s['career'] }
+      specs.select { |s| s['career'].blank? }
     end
     
     def self.set_characteristic(char, ability_name, rating)
       charac = Ffg.find_characteristic(char, ability_name)
       
-      if (charac && rating == '0')
+      if (charac && rating < 1)
         charac.delete
         return
       end
@@ -121,7 +132,7 @@ module AresMUSH
     
     def self.set_skill(char, ability_name, rating)
       skill = Ffg.find_skill(char, ability_name)
-      if (skill && rating == '0')
+      if (skill && rating < 1)
         skill.delete
         return
       end
@@ -170,7 +181,7 @@ module AresMUSH
       return career_skills.include?(skill)
     end
     
-    def self.is_career_specialization(char, spec)
+    def self.is_career_specialization?(char, spec)
       config = Ffg.find_specialization_config(spec)
       career = config['career']
       !career || (career == char.ffg_career)

@@ -24,9 +24,15 @@ module AresMUSH
         [self.target_name, self.ability_name, self.rating]
       end
       
+      def check_archetype_and_career_set
+        return t('ffg.must_set_archetype_and_career') if !enactor.ffg_archetype || !enactor.ffg_career
+        return nil
+      end
+      
       def check_valid_rating
+        return nil if Ffg.can_manage_abilities?(enactor) # Admin can set any rating.
         return nil if !self.rating
-        return t('ffg.invalid_skill_rating') if self.rating > 5
+        return t('ffg.invalid_skill_rating') if self.rating > 5 || self.rating < 0
         if (!enactor.is_approved?)
           return Ffg.check_max_starting_rating(self.rating, 'max_cg_skill_rating')
         end
@@ -46,7 +52,7 @@ module AresMUSH
       
       def check_chargen_locked
         return nil if Ffg.can_manage_abilities?(enactor)
-        return nil if enactor.is_approved?
+        return nil if enactor.is_approved? # Can change skills after approval.
         Chargen.check_chargen_locked(enactor)
       end
       
@@ -54,19 +60,22 @@ module AresMUSH
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           old_rating = Ffg.skill_rating(enactor, self.ability_name)
           
-          if (model.is_approved? && !Ffg.can_manage_abilities?(enactor))
-            if (old_rating > 0 && self.rating <= old_rating)
-              client.emit_failure t('ffg.cant_lower_skill_after_approval')
-              return
-            end
-            
-            xp_cost = Ffg.skill_xp_cost(model, self.ability_name, old_rating)
-            if (xp_cost > model.ffg_xp)
-              client.emit_failure t('ffg.not_enough_xp')
-              return
-            end
-            model.update(ffg_xp: model.ffg_xp - xp_cost)
+          if model.is_approved? && !Ffg.can_manage_abilities?(enactor) && old_rating > 0 && self.rating <= old_rating
+            client.emit_failure t('ffg.cant_lower_skill_after_approval')
+            return
           end
+          
+          if (self.rating > old_rating)
+            xp_cost = Ffg.skill_xp_cost(model, self.ability_name, old_rating, self.rating)
+          else
+            xp_cost = -Ffg.skill_xp_cost(model, self.ability_name, self.rating, old_rating)
+          end
+          
+          if (xp_cost > model.ffg_xp)
+            client.emit_failure t('ffg.not_enough_xp')
+            return
+          end
+          model.update(ffg_xp: model.ffg_xp - xp_cost)
           
           Ffg.set_skill(model, self.ability_name, self.rating)
          

@@ -22,6 +22,9 @@ module AresMUSH
     end
     
     def self.specialization_xp_cost(char, spec, num_current_specs)
+      if (num_current_specs == 0)
+        return 0
+      end
       is_career = Ffg.is_career_specialization?(char, spec)
       ((num_current_specs + 1) * 10) + (is_career ? 0 : 10)
     end
@@ -36,6 +39,22 @@ module AresMUSH
         rating = rating + 1
       end
       cost
+    end
+    
+    def self.talent_tree_balanced_for_add(char, tier)
+      return true if tier == 1
+      prior_tier = char.ffg_talents.select { |t| (t.tier == tier - 1) || (t.ranked && t.rating_plus_tier >= tier - 1) }
+      current_tier = char.ffg_talents.select { |t| (t.tier == tier) || (t.ranked && t.rating_plus_tier >= tier) }
+      
+      return (prior_tier.count > current_tier.count + 1)
+    end
+    
+    def self.talent_tree_balanced_for_remove(char, tier)
+      return true if tier == 5
+      next_tier = char.ffg_talents.select { |t| (t.tier == tier + 1) || (t.ranked && t.rating_plus_tier >= tier + 1) }
+      current_tier = char.ffg_talents.select { |t| (t.tier == tier) || (t.ranked && t.rating_plus_tier >= tier) }
+      
+      return (current_tier.count - 1) >= (next_tier.count + 1)
     end
   end
 end

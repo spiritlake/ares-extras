@@ -1,105 +1,179 @@
 module AresMUSH
   module Ffg
 
-    def self.difficulties
-      [ 'Easy', 'Average', 'Hard', 'Formidable', 'Heroic', 'Incredible', 'Ridiculous', 'Impossible' ]
-    end
-    
-    # Returns a CortexRollResults object
-    def self.roll_ability(char, roll_str)
-      step = Ffg.format_die_step(roll_str)
+    class FfgRollParams
+      attr_accessor :boost, :ability, :proficiency, :setback, :difficulty, :challenge, :force, :skill
       
-      if (Ffg.is_valid_die_step?(step))
-        dice = Ffg.roll_die_step(step)
-      
-      elsif (roll_str =~ /\+/)
-        abilities = roll_str.split("+")
-        dice = []
-        
-        abilities.each do |a|
-          result = Ffg.roll_ability(char, a)
-          return nil if !result
-          dice = dice.concat result.roll
-        end
-      else
-        die_step = Ffg.find_ability_step(char, roll_str)
-        if (!die_step)
-          return nil
-        end
-        dice = Ffg.roll_die_step(die_step)
-        Global.logger.debug "CORTEX: Rolling #{roll_str} (#{die_step}) for #{char.name}: #{dice}."
+      def initialize
+        self.boost = 0
+        self.ability = 0
+        self.proficiency = 0
+        self.setback = 0
+        self.difficulty = 0
+        self.challenge = 0
+        self.force = 0 
+        self.skill = nil
       end
-      CortexRollResults.new(roll_str, dice)
     end
     
-    # Returns an array of individual die rolls.
-    def self.roll_die_step(step)
-      return nil if !step
-      step = Ffg.format_die_step(step)
-      
-      case step
-      when 'd2'
-        return [rand(2) + 1]
-      when 'd4'
-        return [rand(4) + 1]
-      when 'd6'
-        return [rand(6) + 1]
-      when 'd8'
-        return [rand(8) + 1]
-      when 'd10'
-        return [rand(10) + 1]
-      when 'd12'
-        return [rand(12) + 1]
-      else
-        if (step =~ /\+/)
-          die1 = step.before("+")
-          die2 = step.after("+")
-          return Ffg.roll_die_step(die1).concat(Ffg.roll_die_step(die2))
+    class FfgRollResults
+      attr_accessor :successful, :net_advantage, :net_threat, :despair, :triumph
+    end
+    
+    # Returns a FfgRollParams object
+    def self.parse_roll_string(roll_str)
+      params = FfgRollParams.new
+      sections = roll_str.split('+')
+      sections.each do |s|
+        s = s.strip.titlecase
+        if (s =~ /([\d]+)b/i)
+          params.boost = $1.to_i
+        elsif (s =~ /([\d]+)a/i)
+          params.ability = $1.to_i
+        elsif (s =~ /([\d]+)p/i)
+          params.proficiency = $1.to_i
+        elsif (s =~ /([\d]+)s/i)
+          params.setback = $1.to_i
+        elsif (s =~ /([\d]+)d/i)
+          params.difficulty = $1.to_i
+        elsif (s =~ /([\d]+)c/i)
+          params.challenge = $1.to_i
+        elsif (s =~ /([\d]+)f/i)
+          params.force = $1.to_i
         else
-          return [0]
+          config = Ffg.find_skill_config(s)
+          return nil if !config
+          params.skill = s
         end
       end
-    end
-          
-    def self.get_difficulty_target(difficulty)
-      case difficulty
-      when "Easy"
-        return 3
-      when "Average"
-        return 7
-      when "Hard"
-        return 11
-      when "Formidable"
-        return 15
-      when "Heroic"
-        return 19
-      when "Incredible"
-        return 23
-      when "Ridiculous"
-        return 27
-      when "Impossible"
-        return 31
-      else
-        raise "Invalid difficulty specified: #{difficulty}."
-      end
+      params
     end
     
-    def self.get_success_message(enactor_name, results, difficulty)
-      if (difficulty.blank?)
-        return t('cortex.roll_open', :name => enactor_name, :roll_str => results.pretty_input, :total => results.total, :dice => results.print_dice)
+    # Returns a FfgRollResults object
+    def self.roll_ability(char, roll_str)
+      params = Ffg.parse_roll_string(roll_str)
+      return nil if !params
+      
+      dice = []
+      
+      if (params.skill)
+        skill_dice = Ffg.find_skill_dice(char, params.skill)
+        
+        params.ability += skill_dice[:ability]
+        params.proficiency += skill_dice[:proficiency]
+      end
+            
+      params.boost.times.each do |d|
+        dice << Ffg.roll_boost_die
+      end
+      params.ability.times.each do |d|
+        dice << Ffg.roll_ability_die
+      end
+      params.proficiency.times.each do |d|
+        dice << Ffg.roll_proficiency_die
+      end
+      params.setback.times.each do |d|
+        dice << Ffg.roll_setback_die
+      end
+      params.difficulty.times.each do |d|
+        dice << Ffg.roll_difficulty_die
+      end
+      params.challenge.times.each do |d|
+        dice << Ffg.roll_challenge_die
+      end
+      params.force.times.each do |d|
+        dice << Ffg.roll_force_die
       end
       
-      difficulty_target = Ffg.get_difficulty_target(difficulty)
-      if (results.total < difficulty_target)
-        return t('cortex.roll_vs_difficulty_fail', :name => enactor_name, :roll_str => results.pretty_input,
-        :difficulty => difficulty, :dice => results.print_dice)
-      elsif (results.total < difficulty_target + 7)
-        return t('cortex.roll_vs_difficulty_success', :name => enactor_name, 
-        :roll_str => results.pretty_input, :difficulty => difficulty, :dice => results.print_dice)
-      else
-        return t('cortex.roll_vs_difficulty_extra_success', :name => enactor_name, 
-        :roll_str => results.pretty_input, :difficulty => difficulty, :dice => results.print_dice)
-      end
+      Global.logger.info "Rolling #{params.inspect} - #{dice}."
+      dice.flatten.sort
     end
+    
+    def self.find_skill_dice(char, skill)
+      skill_rating = Ffg.skill_rating(char, skill)
+      charac_rating = Ffg.related_characteristic_rating(char, skill)
+      
+      if (skill_rating > charac_rating)
+        ability_dice = skill_rating - charac_rating
+        prof_dice = charac_rating
+      else
+        ability_dice = charac_rating - skill_rating
+        prof_dice = skill_rating
+      end
+      {
+        ability: ability_dice,
+        proficiency: prof_dice
+      }
+    end
+    
+    def self.related_characteristic_rating(char, skill)
+      skill_config = Ffg.find_skill_config(skill)
+      return 0 if !skill_config
+      Ffg.characteristic_rating(char, skill_config['characteristic'])
+    end
+      
+    def self.determine_outcome(dice)
+      successes = dice.select { |d| d == 'S' || d == 'TRI' }.count
+      failures = dice.select { |d| d == 'F' || d == 'DES' }.count
+      
+      adv = dice.select { |d| d == 'A' }.count
+      threat = dice.select { |d| d == 'T' }.count
+      
+      results = FfgRollResults.new
+      results.successful = successes > failures
+      results.triumph = dice.any? { |d| d == 'TRI' }
+      results.despair = dice.any? { |d| d == 'DES' }
+      results.net_advantage = adv > threat ? adv - threat : 0
+      results.net_threat = threat > adv ? threat - adv : 0
+      
+      results
+    end
+    
+    def self.special_roll_effects(results)
+      special = ""
+      
+      if (results.net_advantage > 0)
+        special << "#{t('ffg.roll_advantage', :net => results.net_advantage)} "
+      end
+      if (results.net_threat > 0)
+        special << "#{t('ffg.roll_threat', :net => results.net_threat)} "
+      end
+      if (results.triumph)
+        special << "#{t('ffg.roll_triumph')} "
+      end
+      if (results.despair)
+        special << "#{t('ffg.roll_despair')} "
+      end
+      special
+    end
+    
+    def self.roll_boost_die
+      [ ['-'], ['-'], ['S'], [ 'S', 'A' ], [ 'A', 'A' ], [ 'A' ] ].shuffle.first
+    end
+    
+    def self.roll_ability_die
+      [ ['-'], ['S'], ['S'], [ 'S', 'S' ], [ 'A' ], [ 'A' ], [ 'S', 'A' ], [ 'A', 'A' ] ].shuffle.first
+    end
+    
+    def self.roll_proficiency_die
+      [ ['-'], ['S'], ['S'], [ 'S', 'S' ], [ 'S', 'S' ], [ 'A' ], [ 'S', 'A' ], [ 'S', 'A' ], [ 'S', 'A' ], [ 'A', 'A'], [ 'A', 'A' ], [ 'TRI' ]].shuffle.first
+    end
+    
+    def self.roll_setback_die
+      [ ['-'], ['-'], ['F'], [ 'F' ], [ 'T' ], [ 'T' ] ].shuffle.first
+    end
+    
+    def self.roll_difficulty_die
+      [ ['-'], ['F'], ['F', 'F'], ['T'], [ 'T' ], [ 'T' ], [ 'T', 'T' ], [ 'F', 'T' ] ].shuffle.first
+    end
+    
+    def self.roll_challenge_die
+      [ ['-'], ['F'], ['F'], [ 'F', 'F' ], [ 'F', 'F' ], [ 'T' ], [ 'T' ], [ 'F', 'T' ], [ 'F', 'T' ], [ 'T', 'T'], [ 'T', 'T' ], [ 'DES' ]].shuffle.first
+    end
+    
+    def self.roll_force_die
+      [ ['Dark'], ['Dark'], ['Dark'], ['Dark'], ['Dark'], ['Dark'], ['Dark', 'Dark'], ['Light'], ['Light'], ['Light', 'Light'], ['Light', 'Light'], ['Light', 'Light'] ].shuffle.first
+    end
+    
   end
 end

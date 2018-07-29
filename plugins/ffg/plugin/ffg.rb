@@ -14,11 +14,7 @@ module AresMUSH
     def self.get_cmd_handler(client, cmd, enactor)
       case cmd.root
       when "archetype"
-        if (cmd.switch_is?("set"))
-          return ArchetypeSetCmd
-        else
-          return ArchetypesCmd
-        end
+        return ArchetypesCmd
       when "characteristic"
         if (cmd.switch_is?("set"))
           return CharacteristicSetCmd
@@ -46,24 +42,26 @@ module AresMUSH
           return TalentsCmd
         end
       when "career"
-        if (cmd.switch_is?("set"))
-          return CareerSetCmd
-        else
-          return CareersCmd
-        end
+        return CareersCmd
+      when "reset"
+        return ResetCmd
       when "sheet"
         return SheetCmd
       when "roll"
-        return RollCmd
+        if (cmd.args =~ / vs /)
+          return RollOpposedCmd
+        else
+          return RollCmd
+        end
       when "xp"
         if (cmd.switch_is?("award"))
           return XpAwardCmd
         end
-      when "destiny"
+      when "story"
         if (cmd.switch_is?("award"))
-          return DestinyPointAwardCmd
+          return StoryPointAwardCmd
         elsif (cmd.switch_is?("spend"))
-          return DestinyPointSpendCmd
+          return StoryPointSpendCmd
         end
       end
       return nil

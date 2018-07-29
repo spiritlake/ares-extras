@@ -13,6 +13,11 @@ module AresMUSH
         [self.spec]
       end
       
+      def check_archetype_and_career_set
+        return t('ffg.must_set_archetype_and_career') if !enactor.ffg_archetype || !enactor.ffg_career
+        return nil
+      end
+      
       def check_valid_spec
         return t('ffg.invalid_specialization') if !Ffg.is_valid_specialization?(self.spec)
         return nil
@@ -30,14 +35,17 @@ module AresMUSH
           return
         end
         
-        if (enactor.is_approved?)
-          xp_cost = Ffg.specialization_xp_cost(enactor, self.spec, enactor.ffg_specializations.count)
-          if (xp_cost > enactor.ffg_xp)
-            client.emit_failure t('ffg.not_enough_xp')
-            return
-          end
-          enactor.update(ffg_xp: enactor.ffg_xp - xp_cost)
+        if (enactor.ffg_specializations.count == 0 && !Ffg.is_career_specialization?(enactor, self.spec))
+          client.emit_failure t('ffg.first_spec_must_be_career')
+          return
         end
+        
+        xp_cost = Ffg.specialization_xp_cost(enactor, self.spec, enactor.ffg_specializations.count)
+        if (xp_cost > enactor.ffg_xp)
+          client.emit_failure t('ffg.not_enough_xp')
+          return
+        end
+        enactor.update(ffg_xp: enactor.ffg_xp - xp_cost)
         
         specs = enactor.ffg_specializations
         specs << self.spec
