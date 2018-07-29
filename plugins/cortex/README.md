@@ -6,6 +6,8 @@
 
 Designed for AresMUSH 1.0.
 
+> Note: This code has been run through its paces, but hasn't been playtested on a real game yet.  There might be some bugs.
+
 ## Overview
 
 This plugin is a simplified implementation of the Cortex RPG system.  The design of this plugin is described in detail in the [Create Plugin Tutorial](https://aresmush.com/tutorials/code/create-plugin/).
@@ -42,7 +44,8 @@ This plugin is a simplified implementation of the Cortex RPG system.  The design
 
 1. Connect to the [server shell](https://aresmush.com/tutorials/code/extras/) and change to the aresmush directory.
 2. Run `bin/addplugin cortex`.
-3. Type `load cortex` in-game.
+3. Disable the FS3 plugins, as expplained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+4. Type `load cortex` in-game.
 
 ## Setting Up App Review
 
