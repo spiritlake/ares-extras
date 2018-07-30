@@ -6,8 +6,8 @@ en:
       careers_title: "Careers"
       talents_title: "Talents"
       archetypes_title: "Archetypes"
-      talents_headings: "Name                       Tier Ranked?  Specializations"
-      talents_headings_force: "Name                       Tier Ranked?  Force? Specializations"
+      talents_headings: "Name                    Tier Ranked?  Prereq             Specializations"
+      talents_headings_force: "Name                    Tier Ranked?  Force? Prereq             Specializations"
       universal_specializations: "Universal Specializations"
       
       invalid_career: "That is not a valid career."

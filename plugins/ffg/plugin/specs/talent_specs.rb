@@ -67,7 +67,6 @@ module AresMUSH
           talents = [ FfgTalent.new(tier: 2, rating: 1), FfgTalent.new(tier: 2, rating: 1), FfgTalent.new(tier: 2, rating: 1), FfgTalent.new(tier: 3, rating: 1) ]
           allow(@char).to receive(:ffg_talents) { talents }
           balanced = Ffg.talent_tree_balanced_for_remove(@char, 2)
-          pp balanced
           expect(balanced).to eq true
         end
 

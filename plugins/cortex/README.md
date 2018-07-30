@@ -6,7 +6,7 @@
 
 Designed for AresMUSH 1.0.
 
-> Note: This code has been run through its paces, but hasn't been playtested on a real game yet.  There might be some bugs.
+> Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
 ## Overview
 

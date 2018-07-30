@@ -20,7 +20,7 @@ ffg:
                 - Coordination
                 - Deception
                 - Perception
-                - Ranged
+                - Ranged Light
                 - Stealth
                 - Survival
         -
@@ -52,7 +52,7 @@ ffg:
                 - Cool
                 - Coordination
                 - Deception
-                - Ranged
+                - Ranged Light
                 - Skulduggery
                 - Stealth
                 - Streetwise
@@ -75,7 +75,7 @@ ffg:
                 - Coercion
                 - Melee
                 - Perception
-                - Ranged
+                - Ranged Light
                 - Survival
                 - Vigilance
         -

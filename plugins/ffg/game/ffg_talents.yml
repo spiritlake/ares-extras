@@ -133,7 +133,7 @@ ffg:
             tier: 2
             ranked: false
         -
-            name: Improved Defensive Sysops
+            name: Defensive Sysops Improved
             tier: 2
             ranked: false
             prereq: Defensive Sysops
@@ -194,7 +194,7 @@ ffg:
             tier: 3
             ranked: true
         -
-            name: Improved Inspiring Rhetoric
+            name: Inspiring Rhetoric Improved
             tier: 3
             ranked: false
             prereq: Inspiring Rhetoric
@@ -203,7 +203,7 @@ ffg:
             tier: 3
             ranked: true
         -
-            name: Improved Scathing Tirade
+            name: Scathing Tirade Improved
             tier: 3
             ranked: false
             prereq: Scathing Tirade
@@ -216,7 +216,7 @@ ffg:
             tier: 3
             ranked: false
         -
-            name: Improved Parry
+            name: Parry Improved
             tier: 3
             ranked: false
             prereq: Parry
@@ -241,7 +241,7 @@ ffg:
             tier: 4
             ranked: true
         -
-            name: Improved Field Commander
+            name: Field Commander Improved
             tier: 4
             ranked: false
             prereq: Field Commander
@@ -250,7 +250,7 @@ ffg:
             tier: 4
             ranked: false
         -
-            name: Supreme Inspiring Rhetoric
+            name: Inspiring Rhetoric Supreme
             tier: 4
             ranked: false
             prereq: Inspiring Rhetoric
@@ -263,7 +263,7 @@ ffg:
             tier: 4
             ranked: false
         -
-            name: Supreme Scathing Tirade
+            name: Scathing Tirade Supreme
             tier: 4
             ranked: false
         -
@@ -279,7 +279,7 @@ ffg:
             tier: 5
             ranked: false
         -
-            name: Improved Overcharge
+            name: Overcharge Improved
             tier: 5
             ranked: false
             prereq: Overcharge
@@ -287,15 +287,3 @@ ffg:
             name: Ruinous Repartee
             tier: 5
             ranked: false
-        - 
-            name: Sniper Shot
-            tier: 1
-            ranked: true
-            specializations:
-                - Sharpshooter
-                
-        -
-            name: Force Move
-            tier: 1
-            ranked: true
-            force_power: true

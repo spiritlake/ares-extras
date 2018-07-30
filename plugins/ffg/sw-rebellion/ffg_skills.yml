@@ -1,5 +1,9 @@
 ffg:
     skills: 
+        -
+            name: Astrogation
+            description: "Knowledge of hyperspace navigation."
+            characteristic: Intellect
         - 
             name: Athletics
             description: "General fitness and tasks like running, climbing, etc."
@@ -17,6 +21,10 @@ ffg:
             description: "Instill obedience through threats or violence."
             characteristic: Willpower
         -
+            name: Computers
+            description: "Exploiting, repairing, or maintaining computer systems."
+            characteristic: Intellect
+        -
             name: Cool
             description: Maintaining composure in tough situations.
             characteristic: Presence
@@ -24,6 +32,10 @@ ffg:
             name: Coordination
             description: Steadiness, balance and flexibility.
             characteristic: Agility
+        -
+            name: Core Worlds
+            description: General knowledge of systems in the Core.
+            characteristic: Intellect
         -
             name: Deception
             description: Lying to or tricking someone.
@@ -33,13 +45,21 @@ ffg:
             description: "Focus, fortitude, and mental resistance."
             characteristic: Willpower
         -
-            name: Knowledge
+            name: Education
             description: General knowledge and education.
             characteristic: Intellect
+        -
+            name: Gunnery
+            description: Operating vehicle-mounted weaponry.
+            characteristic: Agility
         -
             name: Leadership
             description: Instilling authority in others.
             characteristic: Presence
+        -
+            name: Lore
+            description: General knowledge of lost cultures and ancient legends.
+            characteristic: Intellect
         -
             name: Mechanics
             description: "Build, disassemble or repair mechanical objects."
@@ -57,12 +77,28 @@ ffg:
             description: Making deals.
             characteristic: Presence
         -
+            name: Outer Rim
+            description: General knowledge of systems in the Outer Rim.
+            characteristic: Intellect
+        -
             name: Perception
             description: Using senses to observe surroundings.
             characteristic: Cunning
         -
+            name: Piloting Space
+            description: ''
+            characteristic: Agility
+        -
+            name: Piloting Planet
+            description: ''
+            characteristic: Agility
+        -
             name: Ranged Light
             description: Fighting with ranged weapons.
+            characteristic: Agility
+        -
+            name: Ranged Heavy
+            description: Firing larger rifles and other heavier firearms.
             characteristic: Agility
         -
             name: Resilience
@@ -85,6 +121,18 @@ ffg:
             description: Survive in rough or dangerous outdoor areas.
             characteristic: Cunning
         -
+            name: Underworld
+            description: General knowledge of crime families and criminal elements.
+            characteristic: Intellect
+        -
             name: Vigilance
             description: Being aware of surroundings.
             characteristic: Willpower
+        -
+            name: Warfare
+            description: General knowledge of tactics and strategy.
+            characteristic: Intellect
+        -
+            name: Xenology
+            description: General knowledge of alien species.
+            characteristic: Intellect

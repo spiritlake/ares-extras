@@ -6,6 +6,8 @@
 
 Designed for AresMUSH 1.0
 
+> Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
+
 ## Overview
 
 The traits system provides a simple way to store character stats with a name/description, as one might find on comic games.
@@ -21,7 +23,8 @@ The traits system provides a simple way to store character stats with a name/des
 
 1. Connect to the [server shell](https://aresmush.com/tutorials/code/extras/) and change to the aresmush directory.
 2. Run `bin/addplugin traits`.
-3. Type `load traits` in-game.
+3. Disable the FS3 plugins, as expplained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+4. Type `load traits` in-game.
 
 ## Configuration
 

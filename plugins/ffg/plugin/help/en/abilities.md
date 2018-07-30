@@ -17,6 +17,8 @@ FFG has three kinds of abilities:  Characteristics, Skills and Talents.
 * Skills represent training and knowledge.  They're also rated from 1-5, with 2 representing basic competence.
 * Talents are special abilities or tricks that a character can use to do cool feats.  Some talents are rated from 1-5; others you either have or don't have.
 
+> Note: Talents use the FFG Gensys model of a 'balanced' talent pyramid instead of the FFG Star Wars' maze-like talent tree.  Individual specializations may not get talents in exactly the same order or at the same cost compared to classic FFG Star Wars.
+
 Skills and talents are influenced by your character's career.  Some careers allow *specializations*, which further focus your character's skills.  You can have multiple specializations.
 
 `sheet [<name>]` - Views your character sheet.  Specify a name to view someone else's.

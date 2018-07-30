@@ -35,6 +35,7 @@ module AresMUSH
         specs = talent['specializations']
         specs ? specs.join(", ") : ""
       end
+      
         
   
     end

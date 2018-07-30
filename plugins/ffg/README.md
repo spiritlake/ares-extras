@@ -6,7 +6,7 @@
 
 Designed for AresMUSH 1.0.
 
-> Note: This code has been run through its paces, but hasn't been playtested on a real game yet.  There might be some bugs.
+> Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
 ## Overview
 
@@ -35,31 +35,29 @@ This plugin is a simplified implementation of the [Fantasy Flight Games System](
     Force Rating:   0                   
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
 
+    %% Faraday rolls Melee and is successful. (A A A S) Advantage (3) 
+    
+    %% Faraday rolls Melee+3S and fails. (- A F F S T) 
+
+
 ## Implementation Notes
 
-Some compromises were made when implementing this system - first to allow people to run both Star Wars games and non-Star Wars games, and second to simplify some things that would have been inordinantely difficult to implement in a MUSH setting.
+This system is based upon the Genesys rules.  The simplified talents trees and careers in Genesys allow you to set up your own setting more easily, and are better-suited for a MUSH environment.
 
-> If somebody wants to spend the effort to code a more 'pure' representation, they're welcome to build on this code and submit a contribution or a SW-specific plugin.
+The two big differences between Genesys and FFG Star Wars:
 
-### Talents
+* Genesys uses a "talent pyramid" instead of a maze-like talent tree.  In order to buy a tier 2 talent (or a second rank in a tier 1 talent), 
+* Genesys does not use career specializations, and instead just gives people more career skills out of the gate.
 
-Talents use the Genesys model where you need to have a 'balanced' talent pyramid (as opposed to the Star Wars model where each specialization has its own maze-like talent tree).  In the balanced model, you need to always have more talents in a tier *below* before you can add one in the next tier.  This keeps people from just shooting straight up to tier 5.
+Given the popularity of FFG Star Wars, an effort was made to incorporate force powers and specializations into the Genesys rules.  It's not a perfect model.  Star Wars characters will not get talents in exactly the same order or at the same cost compared to the classic FFG Star Wars rules.  Force Powers are treated as talents, so their costs work out a tiny bit different too.
 
-> For example: Mary has "Know Somebody", a ranked tier 1 talent.  Before she can purchase it again (at tier 2) or purchase some other tier 2 talent, she needs to have **2** total tier 1 talents.
+> If somebody wants to code a more 'pure' representation, they're welcome to build on this code and submit a Star Wars-specific plugin.
 
-You can get about 90% approximation of the Star Wars talent trees by setting prerequisites and specialization requirements on talents.
+A few other miscellaneous notes:
 
-### Starting XP
-
-FFG allows you to start with 4 ranks in career skills for free, and 2 ranks in specialization skills for your first specialization (if your system is using specializations).  To reflect this, the plugin just lets you give people a blanket bonus of XP, and requires them to take a certain number of career skills.  
-
-For example, setting `career_skill_xp` to 20 and `min_career_skills` to 4 effectively makes them buy 4 "free" career skills.
-
-You can also give extra XP to let people start out ahead of the curve, via the `bonus_xp` parameter.  There are no restrictions on how this can be spent.  Staff review should ensure that people don't just crazily pump up characteristics.
-
-### Force Powers
-
-Since this is slanted heavily towards the Genesys generic skill system, Star Wars Force Powers aren't treated as a separate kind of ability, but just a special type of talent.
+* Talents have no coded effects.  You'll have to make adjustments manually.
+* Instead of giving people "4 free career skills", this plugin gives them 20 extra XP to buy them, and makes sure they've bought at least 4 career skills during app review.  If you're using specializations, you can make this 30 to include their 2 free specialization skills.
+* You can also give people extra XP on top of that to let them start out more advanced.  There are no restrictions on how this XP can be spent.
 
 ## Installation
 
@@ -87,7 +85,9 @@ Type `load chargen` in-game when finished.
 
 ## Configuration
 
-This plugin has several configuration options:
+This plugin has several configuration options, explained below.
+
+> Note:  The default configuration is for the generic Genesys rules.  Look in the sw-rebellion folder for the Star Wars configuration.  You'll have to manually copy these files to your game's config directory if you want to use them.
 
 ### Experience Points
 
@@ -108,7 +108,7 @@ You can configure the maximum starting ratings required in chargen.
 * `min_career_skills` - How many career skills everyone must start with.
 * `wound_characteristic` - The characteristic used for calculating wound threshold.  Brawn by default.
 * `strain_characteristic` - The characteristic used for calculating strain threshold.  Willpower by default.
-* `use_force` - Set to 'true' if you're a Star Wars game using force rating.
+* `use_force` - Set to 'true' if you're a Star Wars game to make force rating and force information appear.
 
 ### Archetypes
 
