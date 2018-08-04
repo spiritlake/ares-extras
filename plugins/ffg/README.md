@@ -44,6 +44,8 @@ This plugin is a simplified implementation of the [Fantasy Flight Games System](
 
 This system is based upon the Genesys rules.  The simplified talents trees and careers in Genesys allow you to set up your own setting more easily, and are better-suited for a MUSH environment.
 
+### Genesys vs Star Wars
+
 The two big differences between Genesys and FFG Star Wars:
 
 * Genesys uses a "talent pyramid" instead of a maze-like talent tree.  In order to buy a tier 2 talent (or a second rank in a tier 1 talent), 
@@ -53,11 +55,20 @@ Given the popularity of FFG Star Wars, an effort was made to incorporate force p
 
 > If somebody wants to code a more 'pure' representation, they're welcome to build on this code and submit a Star Wars-specific plugin.
 
+### General Notes
+
 A few other miscellaneous notes:
 
 * Talents have no coded effects.  You'll have to make adjustments manually.
 * Instead of giving people "4 free career skills", this plugin gives them 20 extra XP to buy them, and makes sure they've bought at least 4 career skills during app review.  If you're using specializations, you can make this 30 to include their 2 free specialization skills.
 * You can also give people extra XP on top of that to let them start out more advanced.  There are no restrictions on how this XP can be spent.
+
+### Configuring Another Setting
+
+The `sw-rebellion` folder contains a pre-built configuration for Star Wars Age of Rebellion.  If you want to convert another Star Wars setting, here are a few tips:
+
+* If a talent appears in more than one talent tree, use the _lowest_ place it appears to determine the cost.
+* If a species/archetype gets some extra skills (like Humans getting 2 free non-career skills) just give them extra XP instead.
 
 ## Installation
 
@@ -65,6 +76,8 @@ A few other miscellaneous notes:
 2. Run `bin/addplugin ffg`.
 3. Disable the FS3 plugins, as expplained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
 4. Type `load ffg` in-game.
+
+> Note:  The default configuration is for the generic Genesys setting.  If you want to use Star Wars Age of Rebellion, copy the files from `/tmp/ares-extras/plugins/ffg/sw-rebellion` to your `aresmush/game` directory or copy/paste the configuration from those files using the advanced config editor.
 
 ## Setting Up App Review
 
@@ -86,8 +99,6 @@ Type `load chargen` in-game when finished.
 ## Configuration
 
 This plugin has several configuration options, explained below.
-
-> Note:  The default configuration is for the generic Genesys rules.  Look in the sw-rebellion folder for the Star Wars configuration.  You'll have to manually copy these files to your game's config directory if you want to use them.
 
 ### Experience Points
 

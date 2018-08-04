@@ -13,16 +13,20 @@ module AresMUSH
         @char.name
       end
       
+      def prefs
+        @char.prefs || {}
+      end
+      
       def positive
-        @char.prefs.select { |k, v| v['setting'] == '+' }.sort
+        prefs.select { |k, v| v['setting'] == '+' }.sort
       end
       
       def negative
-        @char.prefs.select { |k, v| v['setting'] == '-' }.sort
+        prefs.select { |k, v| v['setting'] == '-' }.sort
       end
       
       def maybe
-        @char.prefs.select { |k, v| v['setting'] == '~' }.sort
+        prefs.select { |k, v| v['setting'] == '~' }.sort
       end
       
       def note(data)

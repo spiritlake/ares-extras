@@ -30,6 +30,13 @@ The traits system provides a simple way to store character stats with a name/des
 
 This plugin has no config options.
 
+If you are using _just_ traits (without any other skills system), you probably want to alias the 'sheet' command to 'traits'.   Players usually expect 'sheet' to show them something useful.  You can do this by editing the shortcuts config in the `custom.yml` config file.
+
+    ---
+    custom:
+      shortcuts:
+          sheet: traits
+
 ## Web Portal
 
 This plugin has no web portal component.

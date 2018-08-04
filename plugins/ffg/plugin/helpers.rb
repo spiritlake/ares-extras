@@ -148,7 +148,7 @@ module AresMUSH
     def self.is_force_user?(char)
       return false if !Ffg.use_force?
       return false if !char
-      return char.ffg_specializations.any? { |s| Ffg.is_force_spec?(s) }
+      return char.ffg_specializations && char.ffg_specializations.any? { |s| Ffg.is_force_spec?(s) }
     end 
     
     def self.is_force_spec?(spec)

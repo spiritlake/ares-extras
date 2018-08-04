@@ -41,6 +41,8 @@ module AresMUSH
         else
           return TalentsCmd
         end
+      when "force", "wound", "strain"
+        return StatSetCmd
       when "career"
         return CareersCmd
       when "reset"
@@ -48,7 +50,7 @@ module AresMUSH
       when "sheet"
         return SheetCmd
       when "roll"
-        if (cmd.args =~ / vs /)
+        if (cmd.args && cmd.args =~ / vs /)
           return RollOpposedCmd
         else
           return RollCmd

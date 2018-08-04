@@ -13,7 +13,7 @@ module AresMUSH
         if (char.ffg_career)
           summ << "/#{char.ffg_career}"
         end
-        if (char.ffg_specializations.any?)
+        if (char.ffg_specializations && char.ffg_specializations.any?)
           summ << " (#{char.ffg_specializations.join(', ')})"
         end
         summ

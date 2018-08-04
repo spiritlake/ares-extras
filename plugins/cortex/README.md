@@ -10,7 +10,7 @@ Designed for AresMUSH 1.0.
 
 ## Overview
 
-This plugin is a simplified implementation of the Cortex RPG system.  The design of this plugin is described in detail in the [Create Plugin Tutorial](https://aresmush.com/tutorials/code/create-plugin/).
+This game uses a simplified implementation of the [Cortex System](http://www.drivethrurpg.com/product/58488/Cortex-Classic-System-Role-Playing-Game) used in the Firefly and Leverage RPGs.
 
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
     Character Sheet for Carter
@@ -39,6 +39,8 @@ This plugin is a simplified implementation of the Cortex RPG system.  The design
     Plot Points:    0                   Life Points:    10                  
     Advance Points: 4                   
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
+
+The design of this plugin is described in detail in the [Create Plugin Tutorial](https://aresmush.com/tutorials/code/create-plugin/).
 
 ## Installation
 

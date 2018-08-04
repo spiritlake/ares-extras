@@ -38,5 +38,6 @@ Skills and talents are influenced by your character's career.  Some careers allo
 `skill/set <name>=<rating>` - Sets a skill.
 
 `talents` - Lists talents.
+`talents/spec <specialization>` - Lists only talents that are available to a given specialization.
 `talent/add <name>` - Adds a talent.  Adding a ranked talent more than once increases its rank.
 `talent/remove <name>` - Removes a talent.  Removing a ranked talent decreases its rank.
