@@ -63,12 +63,18 @@ A few other miscellaneous notes:
 * Instead of giving people "4 free career skills", this plugin gives them 20 extra XP to buy them, and makes sure they've bought at least 4 career skills during app review.  If you're using specializations, you can make this 30 to include their 2 free specialization skills.
 * You can also give people extra XP on top of that to let them start out more advanced.  There are no restrictions on how this XP can be spent.
 
-### Configuring Another Setting
+### Configuring Other Star Wars Games
 
-The `sw-rebellion` folder contains a pre-built configuration for Star Wars Age of Rebellion.  If you want to convert another Star Wars setting, here are a few tips:
+The `sw-rebellion` folder contains a pre-built configuration for Star Wars Age of Rebellion (AoR).  Some compromises had to be made when converting the complex talent trees from AoR to the more simplistic Genesys model.  Here's how it works:
 
-* If a talent appears in more than one talent tree, use the _lowest_ place it appears to determine the cost.
-* If a species/archetype gets some extra skills (like Humans getting 2 free non-career skills) just give them extra XP instead.
+1. For each talent, find the **lowest cost** it appears in any talent tree.  For example:  Grit costs 5XP for a Gunner and 10XP for a Driver.  The lowest cost is 5XP.  This determines the **tier** (tier 1 = 5XP, tier 2 = 10XP, etc.)
+2. If a talent appears multiple times in anyone's talent tree at different costs, it's considered a **ranked** talent.  For example:  Gunner has the Durable talent at both 5XP and 15XP, so that is treated as a ranked talent.
+3. If a talent can only be purchased by force users, it's considered a force talent.
+4. Force powers are also converted into talents, with tiers based on their costs.
+
+Obviously this loses some of the nuance inherent in the talent trees.  The aforementioned Driver can now buy Grit at 5XP instead of 10.  The Gunner can buy Durable at every rank, instead of just 5 / 15.  You may want to fudge the cost of certain talents or impose manual limits for game balance.
+
+Also worth noting:  If a species/archetype gets some extra skills (like Humans getting 2 free non-career skills) just give them extra XP instead.
 
 ## Installation
 
