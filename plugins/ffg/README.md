@@ -77,7 +77,7 @@ The `sw-rebellion` folder contains a pre-built configuration for Star Wars Age o
 3. Disable the FS3 plugins, as expplained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
 4. Type `load ffg` in-game.
 
-> Note:  The default configuration is for the generic Genesys setting.  If you want to use Star Wars Age of Rebellion, copy the files from `/tmp/ares-extras/plugins/ffg/sw-rebellion` to your `aresmush/game` directory or copy/paste the configuration from those files using the advanced config editor.
+> Note:  The default configuration is for the generic Genesys setting.  If you want to use Star Wars Age of Rebellion, copy the files from `/tmp/ares-extras/plugins/ffg/sw-rebellion` to your `aresmush/game/config` directory or copy/paste the configuration from those files using the advanced config editor.
 
 ## Setting Up App Review
 
