@@ -7,6 +7,8 @@ aliases:
 - complications
 - skills
 - attributes
+- sheet
+- sheets
 ---
 
 # Cortex Abilities
