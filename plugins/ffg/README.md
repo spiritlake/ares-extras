@@ -48,12 +48,34 @@ This system is based upon the Genesys rules.  The simplified talents trees and c
 
 The two big differences between Genesys and FFG Star Wars:
 
-* Genesys uses a "talent pyramid" instead of a maze-like talent tree.  In order to buy a tier 2 talent (or a second rank in a tier 1 talent), 
 * Genesys does not use career specializations, and instead just gives people more career skills out of the gate.
+* Genesys uses a "talent pyramid" instead of a maze-like talent tree.  See notes below.
 
 Given the popularity of FFG Star Wars, an effort was made to incorporate force powers and specializations into the Genesys rules.  It's not a perfect model.  Star Wars characters will not get talents in exactly the same order or at the same cost compared to the classic FFG Star Wars rules.  Force Powers are treated as talents, so their costs work out a tiny bit different too.
 
 > If somebody wants to code a more 'pure' representation, they're welcome to build on this code and submit a Star Wars-specific plugin.
+
+### Talent Pyramid
+
+The talent pyramid in Genesys ensures that people don't max out a single talent.  You always have to have more talents at lower tiers to balance ones at higher tiers.  For example:
+
+Mary has Grit(2), Dodge(1).  This talent tree IS balanced, because tier 1 has more talents than tier 2.
+
+     Tier 2: -
+     Tier 1: - -
+
+Bob has Grit(3), Dodge(3), Reaction (2).  This talent tree is NOT balanced.  Tier 2 has the same number talents than tier 1.  That's not allowed.
+
+     Tier 3: - -
+     Tier 2: - - -
+     Tier 1: - - -
+
+To make Bob's talent tree balanced, he would need to have an additional talent at tier 1.
+
+     Tier 3: - -
+     Tier 2: - - -
+     Tier 1: - - - -
+
 
 ### General Notes
 
