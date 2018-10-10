@@ -5,6 +5,8 @@ aliases:
 - aspects
 - skills
 - stunts
+- sheet
+- sheets
 ---
 
 # Fate Abilities
