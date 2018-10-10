@@ -7,6 +7,7 @@ aliases:
 - careers
 - skills
 - specializations
+- sheet
 ---
 
 # FFG Abilities
