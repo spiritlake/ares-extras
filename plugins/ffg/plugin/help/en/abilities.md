@@ -8,6 +8,7 @@ aliases:
 - skills
 - specializations
 - sheet
+- sheets
 ---
 
 # FFG Abilities
