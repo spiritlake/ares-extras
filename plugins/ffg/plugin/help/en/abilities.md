@@ -7,8 +7,6 @@ aliases:
 - careers
 - skills
 - specializations
-- sheet
-- sheets
 ---
 
 # FFG Abilities
@@ -22,8 +20,6 @@ FFG has three kinds of abilities:  Characteristics, Skills and Talents.
 > Note: Talents use the FFG Gensys model of a 'balanced' talent pyramid instead of the FFG Star Wars' maze-like talent tree.  Individual specializations may not get talents in exactly the same order or at the same cost compared to classic FFG Star Wars.
 
 Skills and talents are influenced by your character's career.  Some careers allow *specializations*, which further focus your character's skills.  You can have multiple specializations.
-
-`sheet [<name>]` - Views your character sheet.  Specify a name to view someone else's.
 
 `archetypes` - Lists archetypes.
 `careers` - Lists careers.

@@ -7,15 +7,11 @@ aliases:
 - complications
 - skills
 - attributes
-- sheet
-- sheets
 ---
 
 # Cortex Abilities
 
 Cortex has three kinds of abilities:  Attributes, Skills and Traits (which are further divided into Assets and Complications).  Each are rated with a die step - d2, d4, d6, d8, d10, d12, d12+d2, etc.  Set any ability to 0 to erase it from your character sheet.
-
-`sheet [<name>]` - Views your character sheet.  Specify a name to view someone else's.
 
 `attributes` - Lists attributes.
 `attribute/set <name>=<dice step>` - Sets an attribute.

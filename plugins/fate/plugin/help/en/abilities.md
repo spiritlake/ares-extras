@@ -5,8 +5,6 @@ aliases:
 - aspects
 - skills
 - stunts
-- sheet
-- sheets
 ---
 
 # Fate Abilities
@@ -16,8 +14,6 @@ Fate has three kinds of abilities:  Aspects, Skills and Stunts
 * Aspects describe important things about your character, including your "High Concept" and "Big Trouble".
 * Skills reflect what your character knows and can do.
 * Stunts are cool bonuses or tricks your character can do when using skills.
-
-`sheet [<name>]` - Views your character sheet.  Specify a name to view someone else's.
 
 `aspect/add <aspect>` - Adds an aspect.
 `aspect/remove <aspect>` - Removes an aspect.

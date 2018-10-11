@@ -37,6 +37,22 @@ If you are using _just_ traits (without any other skills system), you probably w
       shortcuts:
           sheet: traits
 
+You'll probably also want to tweak the chargen instructions.  Edit `chargen.yml` and remove these two stages:
+
+    stages:
+      sheet:
+        help: sheets
+      ...
+      abilities:
+        help: skills
+
+Then add (in whatever position you want it to appear) a new stage:
+
+    stages:
+      ...
+      traits:
+        help: traits
+
 ## Web Portal
 
 This plugin has no web portal component.
