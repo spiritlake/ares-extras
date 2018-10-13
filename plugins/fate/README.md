@@ -8,6 +8,13 @@ Designed for AresMUSH 1.0.
 
 > Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
+## Installation
+
+1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+2. In the game, run `plugin/install fate`.
+
+See additional setup instructions below.
+
 ## Overview
 
 This plugin is a simplified implementation of the Fate RPG system.  
@@ -33,13 +40,6 @@ This plugin is a simplified implementation of the Fate RPG system.
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
 
     %% Opposed Roll: Faraday/Will - Superb (5) vs Kitty/Good - Good (3).  Faraday wins.
-
-## Installation
-
-1. Connect to the [server shell](https://aresmush.com/tutorials/code/extras/) and change to the aresmush directory.
-2. Run `bin/addplugin fate`.
-3. Disable the FS3 plugins, as expplained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
-4. Type `load fate` in-game.
 
 ## Setting Up App Review
 

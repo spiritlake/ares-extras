@@ -8,6 +8,13 @@ Designed for AresMUSH 1.0.
 
 > Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
+## Installation
+
+1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+2. In the game, run `plugin/install ffg`.
+
+See additional setup instructions below.
+
 ## Overview
 
 This plugin is a simplified implementation of the [Fantasy Flight Games System](https://www.fantasyflightgames.com/en/index/), used in the generic Genesys system and the various Star Wars RPGs (Edge of Empire, Age of Rebellion and Force and Destiny).  
@@ -85,28 +92,6 @@ A few other miscellaneous notes:
 * Instead of giving people "4 free career skills", this plugin gives them 20 extra XP to buy them, and makes sure they've bought at least 4 career skills during app review.  If you're using specializations, you can make this 30 to include their 2 free specialization skills.
 * You can also give people extra XP on top of that to let them start out more advanced.  There are no restrictions on how this XP can be spent.
 
-### Configuring Other Star Wars Games
-
-The `sw-rebellion` folder contains a pre-built configuration for Star Wars Age of Rebellion (AoR).  Some compromises had to be made when converting the complex talent trees from AoR to the more simplistic Genesys model.  Here's how it works:
-
-1. For each talent, find the **lowest cost** it appears in any talent tree.  For example:  Grit costs 5XP for a Gunner and 10XP for a Driver.  The lowest cost is 5XP.  This determines the **tier** (tier 1 = 5XP, tier 2 = 10XP, etc.)
-2. If a talent appears multiple times in anyone's talent tree at different costs, it's considered a **ranked** talent.  For example:  Gunner has the Durable talent at both 5XP and 15XP, so that is treated as a ranked talent.
-3. If a talent can only be purchased by force users, it's considered a force talent.
-4. Force powers are also converted into talents, with tiers based on their costs.
-
-Obviously this loses some of the nuance inherent in the talent trees.  The aforementioned Driver can now buy Grit at 5XP instead of 10.  The Gunner can buy Durable at every rank, instead of just 5 / 15.  You may want to fudge the cost of certain talents or impose manual limits for game balance.
-
-Also worth noting:  If a species/archetype gets some extra skills (like Humans getting 2 free non-career skills) just give them extra XP instead.
-
-## Installation
-
-1. Connect to the [server shell](https://aresmush.com/tutorials/code/extras/) and change to the aresmush directory.
-2. Run `bin/addplugin ffg`.
-3. Disable the FS3 plugins, as expplained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
-4. Type `load ffg` in-game.
-
-> Note:  The default configuration is for the generic Genesys setting.  If you want to use Star Wars Age of Rebellion, copy the files from `/tmp/ares-extras/plugins/ffg/sw-rebellion` to your `aresmush/game/config` directory or copy/paste the configuration from those files using the advanced config editor.
-
 ## Setting Up App Review
 
 You have to make a change to the Chargen plugin to make it display the FFG ability status in the `app` command.
@@ -127,6 +112,29 @@ Type `load chargen` in-game when finished.
 ## Configuration
 
 This plugin has several configuration options, explained below.
+
+### Using the Star Wars Configuration
+
+The default configuration is for the generic Genesys setting.  A set of configuration files is also available for Star Wars: Age of Rebellion. To use the Star Wars config:
+
+1. Get the raw config files from GitHub: https://github.com/AresMUSH/ares-extras/tree/master/plugins/ffg/sw-rebellion.
+2. In the web portal, go to Admin -> Setup.
+3. One by one, edit each config file.  Use the Advanced Editor mode so you can copy/paste the whole file at once.
+
+Alternately, you can download the files and FTP them to your `aresmush/game/config` directory.
+
+### Configuring Other Star Wars Games
+
+The `sw-rebellion` config described above contains a pre-built configuration for Star Wars Age of Rebellion (AoR).  Some compromises had to be made when converting the complex talent trees from AoR to the more simplistic Genesys model.  Here's how it works:
+
+1. For each talent, find the **lowest cost** it appears in any talent tree.  For example:  Grit costs 5XP for a Gunner and 10XP for a Driver.  The lowest cost is 5XP.  This determines the **tier** (tier 1 = 5XP, tier 2 = 10XP, etc.)
+2. If a talent appears multiple times in anyone's talent tree at different costs, it's considered a **ranked** talent.  For example:  Gunner has the Durable talent at both 5XP and 15XP, so that is treated as a ranked talent.
+3. If a talent can only be purchased by force users, it's considered a force talent.
+4. Force powers are also converted into talents, with tiers based on their costs.
+
+Obviously this loses some of the nuance inherent in the talent trees.  The aforementioned Driver can now buy Grit at 5XP instead of 10.  The Gunner can buy Durable at every rank, instead of just 5 / 15.  You may want to fudge the cost of certain talents or impose manual limits for game balance.
+
+Also worth noting:  If a species/archetype gets some extra skills (like Humans getting 2 free non-career skills) just give them extra XP instead.
 
 ### Experience Points
 

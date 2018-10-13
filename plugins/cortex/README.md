@@ -8,6 +8,11 @@ Designed for AresMUSH 1.0.
 
 > Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
+## Installation
+
+1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+2. In the game, run `plugin/install cortex`.
+
 ## Overview
 
 This game uses a simplified implementation of the [Cortex System](http://www.drivethrurpg.com/product/58488/Cortex-Classic-System-Role-Playing-Game) used in the Firefly and Leverage RPGs.
@@ -41,13 +46,6 @@ This game uses a simplified implementation of the [Cortex System](http://www.dri
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
 
 The design of this plugin is described in detail in the [Create Plugin Tutorial](https://aresmush.com/tutorials/code/create-plugin/).
-
-## Installation
-
-1. Connect to the [server shell](https://aresmush.com/tutorials/code/extras/) and change to the aresmush directory.
-2. Run `bin/addplugin cortex`.
-3. Disable the FS3 plugins, as expplained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
-4. Type `load cortex` in-game.
 
 ## Setting Up App Review
 

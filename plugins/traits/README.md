@@ -21,10 +21,8 @@ The traits system provides a simple way to store character stats with a name/des
 
 ## Installation
 
-1. Connect to the [server shell](https://aresmush.com/tutorials/code/extras/) and change to the aresmush directory.
-2. Run `bin/addplugin traits`.
-3. Disable the FS3 plugins, as expplained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
-4. Type `load traits` in-game.
+1. Unless you are planning to use traits in conjunction with FS3, you probably want to disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+2. In the game, run `plugin/install traits`.
 
 ## Configuration
 

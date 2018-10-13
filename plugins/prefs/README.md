@@ -6,6 +6,12 @@
 
 Designed for AresMUSH 1.0
 
+## Installation
+
+In the game, run `plugin/install prefs`.
+
+See additional setup instructions below.
+
 ## Overview
 
 The RP preferences system provides a way to record RP preferences in a yes/no/maybe fashion with detailed notes.  You can view preferences:
@@ -32,12 +38,6 @@ And find players with specific preferences.
     Mary            More!
     John          
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
-
-## Installation
-
-1. Connect to the [server shell](https://aresmush.com/tutorials/code/extras/) and change to the aresmush directory.
-2. Run `bin/addplugin prefs`.
-3. Type `load prefs` in-game.
 
 ## Configuration
 
