@@ -26,8 +26,11 @@ Skills and talents are influenced by your character's career.  Some careers allo
 `reset <archetype>/<career>` - Sets your career and archetype.
     Note: Since costs, etc. are based on career/archetype, doing this will reset your character.
 
+`specializations` - Lists specializations.  Not all games use specializations.
 `specialization/add <name>` - Adds a specialization.
 `specialization/remove <name>` - Removes a specialization.
+    Note: Since specializations affect ability costs, you can't change them after you've
+    started buying skills and talents.
 
 `charac` - Lists characteristics.
 `charac/set <name>=<rating>` - Sets a characteristic.

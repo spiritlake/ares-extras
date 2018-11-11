@@ -130,6 +130,13 @@ module AresMUSH
       end
     end
     
+    def self.has_bought_abilities?(char)
+      return false if !char
+      return true if char.ffg_skills.count > 0
+      return true if char.ffg_talents.count > 0
+      return false
+    end
+    
     def self.set_skill(char, ability_name, rating)
       skill = Ffg.find_skill(char, ability_name)
       if (skill && rating < 1)
@@ -184,7 +191,7 @@ module AresMUSH
     def self.is_career_specialization?(char, spec)
       config = Ffg.find_specialization_config(spec)
       career = config['career']
-      !career || (career == char.ffg_career)
+      career.blank? || (career == char.ffg_career)
     end
   end
 end

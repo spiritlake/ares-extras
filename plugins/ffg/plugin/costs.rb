@@ -50,6 +50,7 @@ module AresMUSH
     end
     
     def self.talent_tree_balanced_for_remove(char, tier)
+      return true if char.ffg_talents.count == 1
       return true if tier == 5
       next_tier = char.ffg_talents.select { |t| (t.tier == tier + 1) || (t.ranked && t.rating_plus_tier >= tier + 1) }
       current_tier = char.ffg_talents.select { |t| (t.tier == tier) || (t.ranked && t.rating_plus_tier >= tier) }

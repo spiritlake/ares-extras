@@ -29,6 +29,11 @@ module AresMUSH
         Chargen.check_chargen_locked(enactor)
       end
       
+      def check_skills
+        return t('ffg.specs_locked_with_abilities') if (Ffg.has_bought_abilities?(enactor))
+        return nil
+      end
+      
       def handle
         if (enactor.ffg_specializations.include?(self.spec))
           client.emit_failure t('ffg.already_have_spec')

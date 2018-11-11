@@ -32,6 +32,8 @@ module AresMUSH
           return SpecAddCmd
         elsif (cmd.switch_is?("remove"))
           return SpecRemoveCmd
+        else
+          return SpecializationsCmd
         end
       when "talent"
         if (cmd.switch_is?("add"))

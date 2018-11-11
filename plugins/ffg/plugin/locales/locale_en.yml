@@ -9,6 +9,7 @@ en:
       talents_headings: "Name                    Tier Ranked?  Prereq             Specializations"
       talents_headings_force: "Name                    Tier Ranked?  Force? Prereq             Specializations"
       universal_specializations: "Universal Specializations"
+      specs_title: "Specializations"
       
       invalid_career: "That is not a valid career."
       career_set: "You set your career."
@@ -21,6 +22,7 @@ en:
       specialization_removed: "Specialization removed."
       invalid_specialization: "That is not a valid specialization."
       first_spec_must_be_career: "Your first specialization must be a career or universal specialization."
+      specs_locked_with_abilities: "Specializations are locked once you've started buying skills and talents.  Reset if you want to change them."
       
       invalid_characteristic_rating: "Characteristics are rated 1-5."
       invalid_skill_rating: "Skills are rated 1-5."
@@ -53,6 +55,8 @@ en:
       force_title: "Force Rating:"
       strain_title: "Strain Thresh:"
       wound_title: "Wound Thresh:"
+      force_user_title: "Force User:"
+      career_title: "Career:"
       
       not_enough_xp: "You don't have enough XP for that."
       career_skills_taken: "%{taken} career skills taken (%{min} min)."

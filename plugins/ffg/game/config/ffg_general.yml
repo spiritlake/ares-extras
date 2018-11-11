@@ -17,6 +17,7 @@ ffg:
         archetypes: archetype
         spec: specialization
         career/add: career/set
+        specializations: specialization
         
         
     
