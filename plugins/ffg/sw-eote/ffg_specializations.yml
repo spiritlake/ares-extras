@@ -1,5 +1,5 @@
 ffg:
-    specializations:        
+    specializations:
         -
             name: Force Sensitive
             career_skills: []
