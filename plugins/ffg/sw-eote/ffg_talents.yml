@@ -49,7 +49,7 @@ ffg:
             name: Black Market Contacts
             ranked: true
             tier: 1
-            fspecializations:
+            specializations:
                 - Scoundrel
                 - Thief
                 - Trader
@@ -158,7 +158,7 @@ ffg:
             tier: 4
             ranked: true
             specializations:
-                - Fringer 3
+                - Fringer
                 - Pilot
         -
             name: Defensive Slicing
@@ -926,7 +926,7 @@ ffg:
         - 
             name: Stim Application Supreme
             ranked: false
-            prereq: Stim Application
+            prereq: Stim Application Improved
             tier: 5
             specializations:
                 - Doctor
