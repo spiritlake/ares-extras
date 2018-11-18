@@ -1,0 +1,169 @@
+ffg:
+    specializations:        
+        -
+            name: Force Sensitive
+            career_skills: []
+            force_user: true
+            career: ''
+        -
+            name: Assassin
+            career_skills:
+                - Melee
+                - Ranged Heavy
+                - Skulduggery
+                - Stealth
+            force_user: false
+            career: Bounty Hunter
+        -
+            name: Gadgeteer
+            career_skills:
+                - Brawl
+                - Coercion
+                - Mechanics
+                - Ranged Light
+            force_user: false
+            career: Bounty Hunter
+        -
+            name: Survivalist
+            career_skills:
+                - Xenology
+                - Perception
+                - Resilience
+                - Survival
+            force_user: false
+            career: Bounty Hunter
+        -
+            name: Doctor
+            career_skills:
+                - Cool
+                - Education
+                - Medicine
+                - Resilience
+            force_user: false
+            career: Colonist
+        -
+            name: Politico
+            career_skills:
+                - Charm
+                - Coercion
+                - Deception
+                - Core Worlds
+            force_user: false
+            career: Colonist
+        -
+            name: Scholar
+            career_skills:
+                - Outer Rim
+                - Underworld
+                - Xenology
+                - Perception
+            force_user: false
+            career: Colonist
+        -
+            name: Fringer
+            career_skills:
+                - Astrogation
+                - Coordination
+                - Negotiation
+                - Streetwise
+            force_user: false
+            career: Explorer
+        -
+            name: Scout
+            career_skills:
+                - Athletics
+                - Medicine
+                - Piloting  Planet
+                - Survival
+            force_user: false
+            career: Explorer
+        -
+            name: Trader
+            career_skills:
+                - Deception
+                - Core Worlds
+                - Underworld
+                - Negotiation
+            force_user: false
+            career: Explorer
+        -
+            name: Bodyguard
+            career_skills:
+                - Gunnery
+                - Perception
+                - Piloting Planet
+                - Ranged Heavy
+            force_user: false
+            career: Hired Gun
+        -
+            name: Marauder
+            career_skills:
+                - Coercion
+                - Melee
+                - Resilience
+                - Survival
+            force_user: false
+            career: Hired Gun
+        -
+            name: Mercenary Soldier
+            career_skills:
+                - Discipline
+                - Gunnery
+                - Leadership
+                - Ranged Heavy
+            force_user: false
+            career: Hired Gun
+        -
+            name: Pilot
+            career_skills:
+                - Astrogation
+                - Gunnery
+                - Pilot Planet
+                - Pilot Space
+            force_user: false
+            career: Smuggler
+        -
+            name: Scoundrel
+            career_skills:
+                - Charm
+                - Cool
+                - Deception
+                - Ranged Light
+            force_user: false
+            career: Smuggler
+        -
+            name: Thief
+            career_skills:
+                 - Computers
+                 - Skulduggery
+                 - Stealth
+                 - Vigilance
+            force_user: false
+            career: Smuggler
+        -
+            name: Mechanic
+            career_skills:
+                 - Brawl
+                 - Mechanics
+                 - Pilot Space
+                 - Skulduggery
+            force_user: false
+            career: Technician
+        -
+            name: Outlaw Tech
+            career_skills:
+                - Education
+                - Underworld
+                - Mechanics
+                - Streetwise
+            force_user: false
+            career: Technician
+        -
+            name: Slicer
+            career_skills:
+                - Computers
+                - Education
+                - Underworld
+                - Stealth
+            force_user: false
+            career: Technician

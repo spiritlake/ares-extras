@@ -1,0 +1,1065 @@
+ffg:
+    talents:        
+        -
+            name: Anatomy Lessons
+            ranked: false
+            tier: 3
+            specializations:
+                - Assassin
+                - Doctor
+        -
+            name: Armor Master
+            ranked: false
+            tier: 3
+            specializations:
+                - Gadgeteer
+        - 
+            name: Armor Master Improved
+            ranked: false
+            tier: 5
+            prereq: Armor Master
+            specializations:
+                - Gadgeteer
+        - 
+            name: Bacta Specialist
+            ranked: true
+            tier: 1
+            specializations:
+                - Doctor
+        -
+            name: Bad Motivator
+            ranked: false
+            tier: 3        
+            specializations:
+                - Mechanic       
+        -
+            name: Balance
+            ranked: false
+            tier: 3
+            force_power: true
+            specializations:
+                - Force Sensitive
+        - 
+            name: Barrage
+            ranked: true
+            tier: 1
+            specializations:
+                - Bodyguard
+        -
+            name: Black Market Contacts
+            ranked: true
+            tier: 1
+            fspecializations:
+                - Scoundrel
+                - Thief
+                - Trader
+        - 
+            name: Blooded
+            ranked: true
+            tier: 4
+            specializations:
+                - Survivalist
+        -
+            name: Body Guard
+            ranked: true
+            tier: 2
+            specializations:
+                - Bodyguard       
+        -
+            name: Brace
+            tier: 1
+            ranked: true
+            specializations:
+                - Bodyguard
+                - Gadgeteer
+                - Outlaw Tech
+                - Scholar
+        -
+            name: Brilliant Evasion
+            ranked: false
+            tier: 5
+            specializations:
+                - Pilot
+        -
+            name: Bypass Security
+            ranked: true
+            tier: 1
+            specializations:
+                - Slicer
+                - Thief
+        -
+            name: Codebreaker
+            tier: 1
+            ranked: true
+            specializations:
+                - Scholar
+                - Slicer
+        -
+            name: Command
+            ranked: true
+            tier: 1
+            specializations:
+                - Mercenary Soldier
+        -
+            name: Confidence
+            ranked: true
+            tier: 2
+            specializations:
+                - Scholar
+                - Mercenary Soldier
+        -
+            name: Contraption
+            ranked: false
+            tier: 4
+            specializations:
+                - Mechanic
+        -
+            name: Convincing Demeanor
+            ranked: true
+            tier: 1
+            specializations:
+                - Force Sensitive
+                - Scoundrel
+                - Trader
+        -
+            name: Crippling Blow
+            ranked: false
+            tier: 5
+            specializations:
+                - Gadgeteer
+        -
+            name: Dead To Rights
+            ranked: false
+            tier: 2
+            specializations:
+                - Pilot
+        -
+            name: Dead To Rights Improved
+            ranked: false
+            tier: 3
+            prereq: Dead To Rights
+            specializations:
+                - Pilot
+        -
+            name: Deadly Accuracy
+            ranked: true
+            tier: 4
+            specializations:
+                - Assassin
+                - Gadgeteer
+                - Mercenary Soldier
+        -
+            name: Dedication
+            ranked: true
+            tier: 5
+            specializations: []
+        -
+            name: Defensive Driving
+            tier: 4
+            ranked: true
+            specializations:
+                - Fringer 3
+                - Pilot
+        -
+            name: Defensive Slicing
+            ranked: true
+            tier: 2
+            specializations:
+                - Slicer          
+        -
+            name: Defensive Slicing Improved
+            ranked: false
+            tier: 4
+            prereq: Defensive Slicing
+            specializations:
+                - Slicer
+        -
+            name: Defensive Stance
+            ranked: true
+            tier: 1
+            specializations:
+                - Bodyguard
+                - Gadgeteer
+                - Marauder
+                - Outlaw Tech
+        -
+            name: Disorient
+            ranked: true
+            tier: 2
+            specializations:
+                - Gadgeteer
+                - Scout
+        -
+            name: Dodge
+            ranked: true
+            tier: 1
+            specializations:
+                - Assassin
+                - Doctor
+                - Fringer
+                - Politico
+                - Thief
+        -
+            name: Durable
+            ranked: true
+            tier: 1
+            specializations:
+                - Bodyguard
+                - Fringer     
+        -
+            name: Enduring
+            ranked: true
+            tier: 3
+            specializations:
+                - Bodyguard
+                - Marauder
+                - Mechanic
+                - Survivalist
+        -
+            name: Expert Tracker
+            ranked: true
+            tier: 1
+            specializations:
+                - Survivalist
+        -
+            name: Familiar Suns
+            ranked: false
+            tier: 3
+            specializations:
+                - Scout
+        -
+            name: Feral Strength
+            ranked: true
+            tier: 1
+            specializations:
+                - Marauder
+        -
+            name: Field Commander
+            ranked: true
+            tier: 3
+            specializations:
+                - Mercenary Soldier
+        -
+            name: Field Commander Improved
+            ranked: false
+            tier: 4
+            prereq: Field Commander
+            specializations:
+                - Mercenary Soldier
+        -
+            name: Fine Tuning
+            tier: 1
+            ranked: true
+            specializations:
+                - Mechanic       
+        -
+            name: Forager
+            tier: 1
+            ranked: false
+            specializations:
+                - Force Sensitive
+                - Scout
+                - Survivalist
+        -
+            name: Force Rating
+            ranked: true
+            force_power: true
+            tier: 5
+            specializations:
+                - Force Sensitive
+        -
+            name: Force Move
+            ranked: false
+            tier: 1
+            force_power: true
+        -
+            name: Force Move Magnitude
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Move
+        -
+            name: Force Move Range
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Move
+        -
+            name: Force Move Strength
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Move
+        -
+            name: Force Move Control
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Move
+        -
+            name: Force Enhance
+            ranked: false
+            tier: 1
+            force_power: true
+        -
+            name: Force Enhance Control
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Enhance
+        -
+            name: Force Enhance Range
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Enhance
+        -
+            name: Force Forsee
+            ranked: false
+            tier: 1
+            force_power: true
+        -
+            name: Force Forsee Magnitude
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Forsee
+        -
+            name: Force Forsee Range
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Forsee
+        -
+            name: Force Forsee Strength
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Forsee
+        -
+            name: Force Forsee Control
+            ranked: true
+            tier: 1
+            force_power: true
+            prereq: Force Forsee
+        -
+            name: Frenzied Attack
+            ranked: true
+            tier: 1
+            specializations:
+                - Marauder
+        -
+            name: Full Throttle
+            tier: 1
+            ranked: false
+            specializations:
+                - Pilot
+        -
+            name: Full Throttle Improved
+            ranked: false
+            tier: 3
+            prereq: Full Throttle
+            specializations:
+                - Pilot
+        -
+            name: Full Throttle Supreme
+            ranked: false
+            prereq: Full Throttle
+            tier: 4
+            specializations:
+                - Pilot
+        -
+            name: Galaxy Mapper
+            tier: 1
+            ranked: true
+            specializations:
+                - Fringer
+                - Pilot
+        -
+            name: Gearhead
+            ranked: true
+            tier: 1
+            specializations:
+                - Mechanic
+        -
+            name: Grit
+            ranked: true
+            tier: 1
+            specializations: []
+        -
+            name: Hard Headed
+            ranked: true
+            tier: 2
+            specializations:
+                - Bodyguard
+                - Mechanic
+        -
+            name: Hard Headed Improved
+            ranked: false
+            tier: 5
+            prereq: Hard Headed
+            specializations:
+                - Bodyguard
+                - Mechanic
+        -
+            name: Heightened Awareness
+            ranked: false
+            tier: 4
+            specializations:
+                - Scout
+        -
+            name: Heroic Fortitude
+            ranked: false
+            tier: 2
+            specializations:
+                - Marauder
+                - Survivalist
+        -
+            name: Hidden Storage
+            ranked: true
+            tier: 2
+            specializations:
+                - Scoundrel
+                - Thief
+        -
+            name: Hold Together
+            ranked: false
+            tier: 5
+            specializations:
+                - Mechanic
+        -
+            name: Hunter
+            ranked: Yes
+            tier: 2
+            specializations:
+                - Survivalist
+        -
+            name: Indistinguishable
+            ranked: true
+            tier: 1
+            specializations:
+                - Thief
+        -
+            name: Insight
+            tier: 1
+            ranked: false
+            force_power: true
+            specializations:
+                - Force Sensitive
+        -
+            name: Inspiring Rhetoric
+            ranked: false
+            tier: 2
+            specializations:
+                - Politico
+        -
+            name: Inspiring Rhetoric Improved
+            ranked: false
+            tier: 3
+            prereq: Inspiring Rhetoric
+            specializations:
+                - Politico
+        -
+            name: Inspiring Rhetoric Supreme
+            ranked: false
+            prereq: Inspiring Rhetoric
+            tier: 4
+            specializations:
+                - Politico
+        -
+            name: Intense Focus
+            ranked: false
+            tier: 2
+            specializations:
+                - Force Sensitive
+                - Scholar
+        -
+            name: Intense Presence
+            ranked: false
+            tier: 5
+            specializations:
+                - Politico
+        -
+            name: Intimidating
+            ranked: true
+            tier: 1
+            specializations:
+                - Gadgeteer
+        -
+            name: Inventor
+            ranked: true
+            tier: 4
+            specializations:
+                - Outlaw Tech
+        -
+            name: Jump Up
+            tier: 2
+            ranked: false
+            specializations:
+                - Assassin
+                - Fringer
+                - Thief
+        -
+            name: Jury Rigged
+            tier: 2
+            ranked: true
+            specializations:
+                - Gadgeteer
+                - Outlaw Tech
+        -
+            name: Kill With Kindness
+            ranked: true
+            tier: 1
+            specializations:
+                - Politico
+        -
+            name: Knockdown
+            ranked: false
+            tier: 2
+            specializations:
+                - Fringer
+                - Marauder
+        -
+            name: Know Somebody
+            ranked: true
+            tier: 1
+            specializations:
+                - Trader
+        -
+            name: Knowledge Specialization
+            ranked: true
+            tier: 3
+            specializations:
+                - Scholar
+        -
+            name: Known Schematic
+            ranked: false
+            tier: 5
+            specializations:
+                - Outlaw Tech
+        -
+            name: Let's Ride
+            ranked: false
+            tier: 1
+            specializations:
+                - Pilot
+                - Scout
+        -
+            name: Lethal Blows
+            ranked: true
+            tier: 1
+            specializations:
+                - Assassin
+                - Marauder
+                - Mercenary Soldier
+        -
+            name: Master Doctor
+            ranked: false
+            tier: 5
+            specializations:
+                - Doctor
+        -
+            ame: Master Merchant
+            ranked: false
+            tier: 5
+            specializations:
+                - Trader
+        -
+            name: Master Of Shadows
+            ranked: false
+            tier: 5
+            specializations:
+                - Assassin
+                - Thief
+        -
+            name: Master Pilot
+            ranked: false
+            tier: 5
+            specializations:
+                - Pilot
+        -
+            name: Master Slicer
+            ranked: false
+            tier: 5
+            specializations:
+                - Slicer
+        -
+            name: Master Starhopper
+            ranked: false
+            tier: 3
+            specializations:
+                - Fringer
+        -
+            name: Mental Fortress
+            ranked: false
+            tier: 5
+            specializations:
+                - Scholar
+                - Slicer
+        -
+            name: Natural Brawler
+            ranked: false
+            tier: 4
+            specializations:
+                - Marauder
+        -
+            name: Natural Charmer
+            ranked: false
+            tier: 5
+            specializations:
+                - Politico
+                - Scoundrel
+        -
+            name: Natural Doctor
+            ranked: false
+            tier: 4
+            specializations:
+                - Doctor
+        - 
+            name: Natural Enforcer
+            ranked: false
+            tier: 3
+            specializations:
+                - Gadgeteer
+        -
+            name: Natural Hunter
+            ranked: false
+            tier: 3
+            specializations:
+                - Scout
+        -
+            name: Natural Marksman
+            ranked: false
+            tier: 3
+            specializations:
+                - Mercenary Soldier
+        -
+            name: Natural Negotiator
+            ranked: false
+            tier: 3
+            specializations:
+                - Trader
+        -
+            name: Natural Outdoorsman
+            ranked: false
+            tier: 3
+            specializations:
+                - Survivalist
+        -
+            name: Natural Pilot
+            ranked: false
+            tier: 3
+            specializations:
+                - Pilot
+        -
+            name: Natural Programmer
+            ranked: false
+            tier: 3
+            specializations:
+                - Slicer
+        -
+            name: Natural Rogue
+            ranked: false
+            tier: 4
+            specializations:
+                - Thief
+        -
+            name: Natural Scholar
+            ranked: false
+            tier: 3
+            specializations:
+                - Scholar
+        -
+            name: Natural Tinkerer
+            ranked: false
+            tier: 5
+            specializations:
+                - Mechanic
+        -
+            name: Nobody's Fool
+            ranked: true
+            tier: 3
+            specializations:
+                - Politico
+                - Trader
+        -
+            name: Outdoorsman
+            ranked: true
+            tier: 1
+            specializations:
+                - Survivalist
+        - 
+            name: Overwhelm Emotions
+            tier: 2
+            ranked: false
+            force_power: true
+            specializations:
+                - Force Sensitive
+        -
+            name: Plausible Deniability
+            ranked: true
+            tier: 1
+            specializations:
+                - Politico
+        -
+            name: Point Blank
+            ranked: true
+            tier: 2
+            specializations:
+                - Gadgeteer
+                - Mercenary Soldier
+        - 
+            name: Precise Aim
+            ranked: true
+            tier: 2
+            specializations:
+                - Assassin
+        - 
+            name: Pressure Point
+            ranked: false
+            tier: 2
+            specializations:
+                - Doctor
+        -
+            name: Quick Draw
+            ranked: false
+            tier: 1
+            specializations:
+                - Assassin
+                - Force Sensitive
+                - Scoundrel
+        -
+            name: Quick Strike
+            ranked: true
+            tier: 2
+            specializations:
+                - Assassin
+                - Scoundrel
+                - Scout
+        -
+            name: Rapid Reaction
+            ranked: true
+            tier: 1
+            specializations:
+                - Scoundrel
+                - Thief
+        -
+            name: Rapid Recovery
+            ranked: true
+            tier: 1
+            specializations:
+                - Fringer
+                - Pilot
+                - Scout
+        -
+            name: Redundant Systems
+            ranked: false
+            tier: 2
+            specializations:
+                - Mechanic
+        -
+            name: Researcher
+            ranked: true
+            tier: 2
+            specializations:
+                - Scholar
+        - 
+            name: Resolve
+            ranked: true
+            tier: 1
+            specializations:
+                - Doctor
+                - Scholar
+                - Slicer
+        - 
+            name: Respected Scholar
+            ranked: true
+            tier: 1
+            specializations:
+                - Scholar
+        - 
+            name: Scathing Tirade
+            ranked: false
+            tier: 2
+            specializations:
+                - Politico
+        - 
+            name: Scathing Tirade Improved
+            ranked: false
+            tier: 3
+            prereq: Scathing Tirade
+            specializations:
+                - Politico
+        - 
+            name: Scathing Tirade Supreme
+            ranked: false
+            prereq: Scathing Tirade
+            tier: 4
+            specializations:
+                - Politico
+        - 
+            name: Second Wind
+            ranked: true
+            tier: 2
+            specializations:
+                - Mercenary Soldier
+        - 
+            name: Sense Danger
+            tier: 3
+            ranked: false
+            force_power: true
+            specializations:
+                - Force Sensitive
+        - 
+            name: Sense Emotions
+            tier: 3
+            ranked: false
+            force_power: true
+            specializations:
+                - Force Sensitive        
+        - 
+            name: Shortcut
+            ranked: true
+            tier: 1
+            specializations:
+                - Scout
+                - Thief
+        - 
+            name: Side Step
+            ranked: true
+            tier: 1
+            specializations:
+                - Bodyguard
+                - Mercenary Soldier
+                - Scoundrel
+                - Outlaw Tech
+        - 
+            name: Sixth Sense
+            ranked: false
+            tier: 5
+            specializations:
+                - Force Sensitive
+        - 
+            name: Skilled Jockey
+            ranked: true
+            tier: 1
+            specializations:
+                - Fringer
+                - Pilot
+        - 
+            name: Skilled Slicer
+            ranked: false
+            tier: 5
+            specializations:
+                - Slicer
+        - 
+            name: Smooth Talker
+            ranked: true
+            tier: 1
+            specializations:
+                - Trader
+        - 
+            name: Sniper Shot
+            ranked: true
+            tier: 3
+            specializations:
+                - Assassin
+                - Mercenary Soldier
+        - 
+            name: Soft Spot
+            ranked: false
+            tier: 2
+            specializations:
+                - Scoundrel
+                - Survivalist
+        - 
+            name: Solid Repairs
+            ranked: true
+            tier: 1
+            specializations:
+                - Mechanic
+                - Outlaw Tech
+                   
+        - 
+            name: Spare Clip
+            tier: 2
+            ranked: false
+            specializations:
+                - Gadgeteer
+                - Trader
+        - 
+            name: Speaks Binary
+            ranked: true
+            tier: 1
+            specializations:
+                - Outlaw Tech
+                - Scholar
+        - 
+            name: Stalker
+            ranked: true
+            tier: 1
+            specializations:
+                - Assassin
+                - Scout
+                - Survivalist
+                - Thief
+        - 
+            name: Steely Nerves
+            ranked: false
+            tier: 5
+            specializations:
+                - Politico
+                - Trader
+        - 
+            name: Stim Application
+            ranked: false
+            tier: 2
+            specializations:
+                - Doctor
+        - 
+            name: Stim Application Improved
+            ranked: false
+            tier: 4
+            prereq: Stim Application
+            specializations:
+                - Doctor
+        - 
+            name: Stim Application Supreme
+            ranked: false
+            prereq: Stim Application
+            tier: 5
+            specializations:
+                - Doctor
+        -
+            name: Street Smarts
+            ranked: true
+            tier: 1
+            specializations:
+                - Fringer
+                - Force Sensitive
+                - Thief
+        -
+            name: Stroke Of Genius
+            ranked: false
+            tier: 5
+            specializations:
+                - Scholar
+        -
+            name: Strong Arm
+            ranked: false
+            tier: 2
+            specializations:
+                - Mercenary Soldier
+        -
+            name: Stunning Blow
+            ranked: false
+            tier: 3
+            specializations:
+                - Gadgeteer
+        -
+            name: Stunning Blow Improved
+            ranked: false
+            tier: 4
+            prereq: Stunning Blow
+            specializations:
+                - Gadgeteer
+        -
+            name: Superior Reflexes
+            ranked: false
+            tier: 5
+            specializations:
+                - Force Sensitive
+        -
+            name: Surgeon
+            ranked: true
+            tier: 1
+            specializations:
+                - Doctor
+        -
+            name: Swift
+            ranked: false
+            tier: 2
+            specializations:
+                - Survivalist        
+        -
+            name: Targeted Blow
+            ranked: false
+            tier: 3
+            specializations:
+                - Assassin
+        -
+            name: Technical Aptitude
+            ranked: true
+            tier: 1
+            specializations:
+                - Slicer        
+        -
+            name: Tinkerer
+            ranked: true
+            tier: 1
+            specializations:
+                - Gadgeteer
+                - Outlaw Tech
+        -
+            name: Touch Of Fate
+            ranked: false
+            tier: 3
+            specializations:
+                - Force Sensitive
+        -
+            name: Toughened
+            ranked: true
+            tier: 1
+            specializations: []
+        -
+            name: Tricky Target
+            tier: 4
+            ranked: false
+            specializations:
+                - Pilot
+        -
+            name: True Aim
+            tier: 5
+            ranked: true
+            specializations:
+                - Mercenary Soldier
+        -
+            name: Uncanny Reactions
+            ranked: true
+            force_power: true
+            tier: 1
+            specializations:
+                - Force Sensitive
+        -
+            name: Uncanny Senses
+            ranked: true
+            force_power: true
+            tier: 1
+            specializations:
+                - Force Sensitive
+        - 
+            name: Utility Belt
+            ranked: false
+            tier: 3
+            specializations:
+                - Outlaw Tech
+                - Scout
+        - 
+            name: Utinni!
+            ranked: false
+            tier: 2
+            specializations:
+                - Outlaw Tech
+        -
+            name: Well Rounded
+            ranked: true
+            tier: 3
+            specializations:
+                - Politico 
+                - Scholar
+        -
+            name: Wheel And Deal
+            ranked: true
+            tier: 4
+            specializations:
+                - Trader
