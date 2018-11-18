@@ -427,7 +427,7 @@ ffg:
             tier: 5
             specializations:
                 - Mechanic
-         -
+        -
             name: Hunter
             ranked: Yes
             tier: 2
