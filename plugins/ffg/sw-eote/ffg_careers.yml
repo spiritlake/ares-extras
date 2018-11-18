@@ -1,0 +1,69 @@
+---
+ffg:
+    careers:
+        - 
+            name: Bounty Hunter
+            career_skills:
+                - Athletics
+                - Brawl
+                - Perception
+                - Piloting Planet
+                - Piloting Space
+                - Ranged Heavy
+                - Streetwise
+                - Vigilance
+        -
+            name: Colonist
+            career_skills:
+                - Charm
+                - Deception
+                - Core Worlds
+                - Education
+                - Lore
+                - Leadership
+                - Negotiation
+                - Streetwise
+        -
+            name: Explorer
+            career_skills:
+                - Astrogation
+                - Cool
+                - Lore
+                - Outer Rim
+                - Xenology
+                - Perception
+                - Piloting Space
+                - Survival
+        - 
+            name: Hired Gun
+            career_skills:
+                - Athletics
+                - Brawl
+                - Discipline
+                - Melee
+                - Piloting Planet
+                - Ranged Light
+                - Resilience
+                - Vigilance
+        -
+            name: Smuggler
+            career_skills:
+                - Coordination
+                - Deception
+                - Underworld
+                - Perception
+                - Piloting Space
+                - Skulduggery
+                - Streetwise
+                - Vigilance
+        -
+            name: Technician
+            career_skills:
+                - Astrogation
+                - Computers
+                - Coordination
+                - Discipline
+                - Outer Rim
+                - Mechanics
+                - Perception
+                - Piloting Planet
