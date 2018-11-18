@@ -1,5 +1,5 @@
 ffg:
-    talents:        
+    talents:
         -
             name: Anatomy Lessons
             ranked: false
@@ -31,7 +31,7 @@ ffg:
             ranked: false
             tier: 3        
             specializations:
-                - Mechanic       
+                - Mechanic
         -
             name: Balance
             ranked: false
@@ -49,7 +49,7 @@ ffg:
             name: Black Market Contacts
             ranked: true
             tier: 1
-            fspecializations:
+            specializations:
                 - Scoundrel
                 - Thief
                 - Trader
@@ -64,7 +64,7 @@ ffg:
             ranked: true
             tier: 2
             specializations:
-                - Bodyguard       
+                - Bodyguard
         -
             name: Brace
             tier: 1
@@ -158,14 +158,14 @@ ffg:
             tier: 4
             ranked: true
             specializations:
-                - Fringer 3
+                - Fringer
                 - Pilot
         -
             name: Defensive Slicing
             ranked: true
             tier: 2
             specializations:
-                - Slicer          
+                - Slicer
         -
             name: Defensive Slicing Improved
             ranked: false
@@ -251,7 +251,7 @@ ffg:
             tier: 1
             ranked: true
             specializations:
-                - Mechanic       
+                - Mechanic
         -
             name: Forager
             tier: 1
@@ -559,7 +559,7 @@ ffg:
             specializations:
                 - Doctor
         -
-            ame: Master Merchant
+            name: Master Merchant
             ranked: false
             tier: 5
             specializations:
@@ -816,7 +816,7 @@ ffg:
             ranked: false
             force_power: true
             specializations:
-                - Force Sensitive        
+                - Force Sensitive
         - 
             name: Shortcut
             ranked: true
@@ -926,7 +926,7 @@ ffg:
         - 
             name: Stim Application Supreme
             ranked: false
-            prereq: Stim Application
+            prereq: Stim Application Improved
             tier: 5
             specializations:
                 - Doctor
@@ -980,7 +980,7 @@ ffg:
             ranked: false
             tier: 2
             specializations:
-                - Survivalist        
+                - Survivalist
         -
             name: Targeted Blow
             ranked: false
@@ -992,7 +992,7 @@ ffg:
             ranked: true
             tier: 1
             specializations:
-                - Slicer        
+                - Slicer
         -
             name: Tinkerer
             ranked: true
