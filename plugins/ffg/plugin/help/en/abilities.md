@@ -2,35 +2,20 @@
 toc: FFG Skills
 summary: Setting abilities.
 aliases:
-- talents
-- characteristics
-- careers
-- skills
-- specializations
+- talent
+- characteristic
+- skill
 ---
 
 # FFG Abilities
 
-FFG has three kinds of abilities:  Characteristics, Skills and Talents.
+FFG has three kinds of abilities:  Characteristics, Skills and Talents.  You buy these with XP, though certain careers and archetypes may give you certain abilities for free.
 
-* Characteristics represent basic abilities all characters possess.  They're rated from 1-5, with 2 representing average human ability.
-* Skills represent training and knowledge.  They're also rated from 1-5, with 2 representing basic competence.
-* Talents are special abilities or tricks that a character can use to do cool feats.  Some talents are rated from 1-5; others you either have or don't have.
+* **Characteristics** represent basic abilities all characters possess.  They're rated from 1-5, with 2 representing average human ability.
+* **Skills** represent training and knowledge.  They're also rated from 1-5, with 2 representing basic competence.
+* **Talents** are special abilities or tricks that a character can use to do cool feats.  Some talents are rated from 1-5; others you either have or don't have.
 
-> Note: Talents use the FFG Gensys model of a 'balanced' talent pyramid instead of the FFG Star Wars' maze-like talent tree.  Individual specializations may not get talents in exactly the same order or at the same cost compared to classic FFG Star Wars.
-
-Skills and talents are influenced by your character's career.  Some careers allow *specializations*, which further focus your character's skills.  You can have multiple specializations.
-
-`archetypes` - Lists archetypes.
-`careers` - Lists careers.
-`reset <archetype>/<career>` - Sets your career and archetype.
-    Note: Since costs, etc. are based on career/archetype, doing this will reset your character.
-
-`specializations` - Lists specializations.  Not all games use specializations.
-`specialization/add <name>` - Adds a specialization.
-`specialization/remove <name>` - Removes a specialization.
-    Note: Since specializations affect ability costs, you can't change them after you've
-    started buying skills and talents.
+> Note: Talents use the FFG Gensys model of a 'balanced' talent pyramid instead of the talent tree.  To purchase a tier/rating 2 talent, you must first have **two** tier/rating 1 talents beneath it.  To purchase a tier/rating 3 talent, you must first have **three** tier/rating 2 talents beneath it, and so on.
 
 `charac` - Lists characteristics.
 `charac/set <name>=<rating>` - Sets a characteristic.

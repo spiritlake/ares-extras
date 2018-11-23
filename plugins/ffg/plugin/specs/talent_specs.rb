@@ -59,6 +59,7 @@ module AresMUSH
         end
 
         it "should always return balanced for tier 5" do
+          allow(@char).to receive(:ffg_talents) { [] }
           balanced = Ffg.talent_tree_balanced_for_remove(@char, 5)
           expect(balanced).to eq true
         end

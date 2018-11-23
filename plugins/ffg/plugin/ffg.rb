@@ -43,7 +43,7 @@ module AresMUSH
         else
           return TalentsCmd
         end
-      when "force", "wound", "strain"
+      when "force", "wounds", "strain", "woundthresh", "strainthresh"
         return StatSetCmd
       when "career"
         return CareersCmd

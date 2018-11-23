@@ -53,8 +53,8 @@ en:
       xp_title: "Experience:"
       story_title: "Story Points:"
       force_title: "Force Rating:"
-      strain_title: "Strain Thresh:"
-      wound_title: "Wound Thresh:"
+      strain_title: "Strain:"
+      wound_title: "Wounds:"
       force_user_title: "Force User:"
       career_title: "Career:"
       

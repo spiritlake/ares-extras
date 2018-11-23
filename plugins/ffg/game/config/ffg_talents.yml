@@ -253,7 +253,7 @@ ffg:
             name: Inspiring Rhetoric Supreme
             tier: 4
             ranked: false
-            prereq: Inspiring Rhetoric
+            prereq: Inspiring Rhetoric Improved
         -
             name: Mad Inventor
             tier: 4
@@ -264,6 +264,7 @@ ffg:
             ranked: false
         -
             name: Scathing Tirade Supreme
+            prereq: Scathing Tirade Improved
             tier: 4
             ranked: false
         -

@@ -9,6 +9,8 @@ module AresMUSH
     attribute :ffg_force_rating, :type => DataType::Integer
     attribute :ffg_wound_threshold, :type => DataType::Integer
     attribute :ffg_strain_threshold, :type => DataType::Integer
+    attribute :ffg_wounds, :type => DataType::Integer
+    attribute :ffg_strain, :type => DataType::Integer
     
     attribute :ffg_career
     attribute :ffg_archetype

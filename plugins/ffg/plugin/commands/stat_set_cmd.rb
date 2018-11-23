@@ -13,10 +13,14 @@ module AresMUSH
         case cmd.root
         when "force"
           self.ability_name = :force
-        when "wound"
-          self.ability_name = :wound
+        when "wounds"
+          self.ability_name = :wounds
         when "strain"
           self.ability_name = :strain
+        when "woundthresh"
+          self.ability_name = :woundthresh
+        when "strainthresh"
+          self.ability_name = :strainthresh
         end
       end
       
@@ -34,9 +38,13 @@ module AresMUSH
           case (self.ability_name)
           when :force
             model.update(ffg_force_rating: self.rating)
-          when :wound
-            model.update(ffg_wound_threshold: self.rating)
+          when :wounds
+            model.update(ffg_wounds: self.rating)
           when :strain
+            model.update(ffg_strain: self.rating)
+          when :woundthresh
+            model.update(ffg_wound_threshold: self.rating)
+          when :strainthresh
             model.update(ffg_strain_threshold: self.rating)
           end
           client.emit_success t('ffg.ability_set')

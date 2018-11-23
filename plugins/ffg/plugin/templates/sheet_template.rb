@@ -39,6 +39,22 @@ module AresMUSH
         format_two_per_line @char.ffg_skills
       end
       
+      def strain
+        format_bar(@char.ffg_strain, @char.ffg_strain_threshold)
+      end
+      
+      def wounds
+        format_bar(@char.ffg_wounds, @char.ffg_wound_threshold)
+      end
+      
+      def format_bar(current, max)
+        current = current || 0
+        max = max || 10
+        x = current.times.map { |i| 'X' }.join
+        o = (max - current).times.map { |i| 'o' }.join
+        "#{x}#{o} (#{current}/#{max})"
+      end
+      
       def format_two_per_line(list)
         list.to_a.sort_by { |a| a.name }
           .each_with_index

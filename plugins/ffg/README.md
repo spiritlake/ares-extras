@@ -113,15 +113,17 @@ Type `load chargen` in-game when finished.
 
 This plugin has several configuration options, explained below.
 
-### Using the Star Wars Configuration
+### Using the Star Wars Configurations
 
-The default configuration is for the generic Genesys setting.  A set of configuration files is also available for Star Wars: Age of Rebellion. To use the Star Wars config:
+The default configuration is for the generic Genesys setting.  A set of configuration files is also available for Star Wars: Age of Rebellion and (thanks to Xango@ChontioMUSH) Star Wars: Edge of Empire. To use either of the the Star Wars configurations:
 
-1. Get the raw config files from GitHub: https://github.com/AresMUSH/ares-extras/tree/master/plugins/ffg/sw-rebellion.
+1. Get the raw config files from GitHub: https://github.com/AresMUSH/ares-extras/tree/master/plugins/ffg/sw-rebellion or https://github.com/AresMUSH/ares-extras/tree/master/plugins/ffg/sw-eote.
 2. In the web portal, go to Admin -> Setup.
 3. One by one, edit each config file.  Use the Advanced Editor mode so you can copy/paste the whole file at once.
 
 Alternately, you can download the files and FTP them to your `aresmush/game/config` directory.
+
+> Note:  You can only use one set of configuration files at a time.
 
 ### Configuring Other Star Wars Games
 

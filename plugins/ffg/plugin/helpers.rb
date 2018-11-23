@@ -130,11 +130,25 @@ module AresMUSH
       end
     end
     
-    def self.has_bought_abilities?(char)
+    def self.can_change_specs?(char)
       return false if !char
-      return true if char.ffg_skills.count > 0
-      return true if char.ffg_talents.count > 0
-      return false
+      return true if char.is_approved?
+      return false if !char.ffg_archetype
+      
+      archetype_config = Ffg.find_archetype_config(char.ffg_archetype)
+      
+      char.ffg_talents.each do |t|
+        if (!archetype_config['talents'].include?(t.name) || t.rating > 1)
+          return false
+        end
+      end
+      
+      char.ffg_skills.each do |t|
+        if (!archetype_config['skills'].include?(t.name) || t.rating > 1)
+          return false
+        end
+      end
+      return true
     end
     
     def self.set_skill(char, ability_name, rating)

@@ -17,8 +17,10 @@ Admin can set abilities manually and award story and experience points.
 `talent/add <name>=<talent name>` - Adds a talent.
 `talent/remove <name>=<talent name>` - Removes a talent.
 
-`force/set <name>=<force rating>` - Set someone's force rating.
-`wound/set <name>=<wound thresh>` - Sets someone's wound threshold.
-`strain/set <name>=<strain thresh>` - Sets someone's strain threshold.
+`force/set <name>=<force rating>` - Sets someone's force rating.
+`wounds/set <name>=<wounds>` - Sets someone's wound level.
+`strain/set <name>=<wounds>` - Sets someone's strain level.
+`woundthresh/set <name>=<wound thresh>` - Sets someone's wound threshold.  (Some talents affect this.)
+`strainthresh/set <name>=<strain thresh>` - Sets someone's strain threshold.  (Some talents affect this.)
 
 Set a rating to 0 to remove an ability.

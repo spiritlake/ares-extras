@@ -434,7 +434,7 @@ ffg:
         -
             name: Full Throttle Supreme
             ranked: false
-            prereq: Full Throttle
+            prereq: Full Throttle Improved
             tier: 4
             specializations:
                 - Driver
@@ -1053,7 +1053,7 @@ ffg:
         - 
             name: Stim Application Supreme
             ranked: false
-            prereq: Stim Application
+            prereq: Stim Application Improved
             tier: 5
             specializations:
                 - Medic

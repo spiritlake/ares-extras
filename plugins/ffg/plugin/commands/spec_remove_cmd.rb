@@ -24,7 +24,7 @@ module AresMUSH
       end
       
       def check_skills
-        return t('ffg.specs_locked_with_abilities') if (Ffg.has_bought_abilities?(enactor))
+        return t('ffg.specs_locked_with_abilities') if !Ffg.can_change_specs?(enactor)
         return nil
       end
       
