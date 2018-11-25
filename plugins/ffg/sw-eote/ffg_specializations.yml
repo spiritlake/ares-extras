@@ -73,7 +73,7 @@ ffg:
             career_skills:
                 - Athletics
                 - Medicine
-                - Piloting  Planet
+                - Piloting Planet
                 - Survival
             force_user: false
             career: Explorer
@@ -118,8 +118,8 @@ ffg:
             career_skills:
                 - Astrogation
                 - Gunnery
-                - Pilot Planet
-                - Pilot Space
+                - Piloting Planet
+                - Piloting Space
             force_user: false
             career: Smuggler
         -
@@ -145,7 +145,7 @@ ffg:
             career_skills:
                  - Brawl
                  - Mechanics
-                 - Pilot Space
+                 - Piloting Space
                  - Skulduggery
             force_user: false
             career: Technician
