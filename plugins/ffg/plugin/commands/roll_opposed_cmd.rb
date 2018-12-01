@@ -30,14 +30,14 @@ module AresMUSH
           charac = Ffg.related_characteristic_rating(model, self.vs_ability)
           
           if (skill > charac)
-            setback = skill - charac
-            difficulty = skill
-          else
-            setback = charac - skill
+            challenge = skill - charac
             difficulty = charac
+          else
+            challenge = charac - skill
+            difficulty = skill
           end
           
-          self.roll_str = "#{self.roll_str}+#{setback}S+#{difficulty}D"
+          self.roll_str = "#{self.roll_str}+#{challenge}C+#{difficulty}D"
           
           dice = Ffg.roll_ability(enactor, self.roll_str)
           
