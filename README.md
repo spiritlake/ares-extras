@@ -28,6 +28,7 @@ These plugins have been contributed by the community.  See the guidelines in [Ar
 
 Snippets are not complete plugins, but code examples of how to do various things.
 
+* **Cropped Log Icons** - Auto crop log icons to fit.  (by skew@AresCentral)
 * **Multiple Connect Screens** - Allow the game to cycle through multiple connect screens.  (by @TheStranjer)
 
 ## Archived Items
