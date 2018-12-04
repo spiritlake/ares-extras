@@ -51,14 +51,7 @@ This plugin is a simplified implementation of the [Fantasy Flight Games System](
 
 This system is based upon the Genesys rules.  The simplified talents trees and careers in Genesys allow you to set up your own setting more easily, and are better-suited for a MUSH environment.
 
-### Genesys vs Star Wars
-
-The two big differences between Genesys and FFG Star Wars:
-
-* Genesys does not use career specializations, and instead just gives people more career skills out of the gate.
-* Genesys uses a "talent pyramid" instead of a maze-like talent tree.  See notes below.
-
-Given the popularity of FFG Star Wars, an effort was made to incorporate force powers and specializations into the Genesys rules.  It's not a perfect model.  Star Wars characters will not get talents in exactly the same order or at the same cost compared to the classic FFG Star Wars rules.  Force Powers are treated as talents, so their costs work out a tiny bit different too.
+Given the popularity of FFG Star Wars, an effort was made to incorporate force powers and career specializations into the Genesys rules.  It's not a perfect model.  Star Wars characters will not get talents in exactly the same order or at the same cost compared to the classic FFG Star Wars rules.  Force Powers are treated as talents, so their costs work out a tiny bit different too.
 
 > If somebody wants to code a more 'pure' representation, they're welcome to build on this code and submit a Star Wars-specific plugin.
 
@@ -250,6 +243,7 @@ Talent configuration includes:
 
 * Tier - Set this to 1-5 for the talent tier.
 * Ranked - Set this to true if the talent can be purchased multiple times at different ranks, false if it can only be purchased once.
+* Max_Rank - Optionally set this to limit the talent's maximum rank.  If not set, the max rank is 5.  Only applies to ranked talents.
 * Prereq - Optionally list a talent the character has to have before they can purchase this one.
 * Specializations - Optionally list a specizalization the character has to have before they can purchase this one.
 * Force_power - Set this to true if this is a force power talent.  Only characters with force user specializations can purchase force powers.

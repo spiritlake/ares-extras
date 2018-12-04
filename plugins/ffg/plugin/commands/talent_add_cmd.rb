@@ -59,8 +59,9 @@ module AresMUSH
             client.emit_failure t('ffg.already_have_talent')
             return
           end
-            
-          if (talent && is_ranked && talent.rating >= 5)
+          
+          max_rank = talent_config['max_rank'] || 5
+          if (talent && is_ranked && talent.rating >= max_rank)
             client.emit_failure t('ffg.talent_at_maximum')
             return
           end
