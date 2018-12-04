@@ -4,7 +4,7 @@ The default log icon format makes the icon fit within the icon box.  While this 
 
 You can see the difference in the following image.  Notice how in the cropped version - Viggo's icon (in the teal box) looks better better because extraneous background was cropped out, but the blue guy (in the orange box) got his head chopped off.
 
-[Cropped vs Scaled Images]()
+![Cropped vs Scaled Images](cropped-icons.jpg)
 
 > Remember that players can always upload their own log icon image, separate from their main profile image, that's cropped the way they want it to be.  See `Help -> Game Help -> Web Icon` in your game's web portal.
 
