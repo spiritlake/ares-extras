@@ -55,7 +55,7 @@ module AresMUSH
       next_tier = char.ffg_talents.select { |t| (t.tier == tier + 1) || (t.ranked && t.rating_plus_tier >= tier + 1) }
       current_tier = char.ffg_talents.select { |t| (t.tier == tier) || (t.ranked && t.rating_plus_tier >= tier) }
       
-      return (current_tier.count - 1) >= (next_tier.count + 1)
+      return (current_tier.count - 1) >= (next_tier.count == 0 ? 0 : (next_tier.count + 1))
     end
   end
 end

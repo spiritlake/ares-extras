@@ -71,6 +71,14 @@ module AresMUSH
           expect(balanced).to eq true
         end
 
+        it "should succeed if no talents at next level" do
+          talents = [ FfgTalent.new(tier: 2), FfgTalent.new(tier: 1, rating: 1), FfgTalent.new(tier: 1, rating: 1) ]
+          pp talents
+          allow(@char).to receive(:ffg_talents) { talents }
+          balanced = Ffg.talent_tree_balanced_for_remove(@char, 2)
+          expect(balanced).to eq true
+        end
+
         it "should fail if removing talent would make it short" do
           talents = [ FfgTalent.new(tier: 2, rating: 1), FfgTalent.new(tier: 2, rating: 1), FfgTalent.new(tier: 3, rating: 1) ]
           allow(@char).to receive(:ffg_talents) { talents }

@@ -8,6 +8,10 @@ module AresMUSH
 
       describe :parse_roll_string do
         
+        before do 
+          allow(Ffg).to receive(:find_skill_config).with("Melee") { {} }
+        end
+        
         it "should handle a skill" do
           params = Ffg.parse_roll_string("Melee")
           expect(params.skill).to eq "Melee"
@@ -50,6 +54,7 @@ module AresMUSH
           expect(Ffg).to receive(:roll_ability_die) { [ 'A', 'A' ] }
           expect(Ffg).to receive(:roll_proficiency_die) { [ 'S' ] }
           expect(Ffg).to receive(:find_skill_dice).with(@char, 'Melee') { { ability: 2, proficiency: 1 }}
+          expect(Ffg).to receive(:find_skill_config).with("Melee") { {} }
 
           result = Ffg.roll_ability(@char, "Melee+1A+2D")
           expect(result).to eq [ 'A', 'A', 'A', 'F', 'S', 'S', 'T' ]
