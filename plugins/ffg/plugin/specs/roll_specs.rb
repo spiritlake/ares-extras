@@ -28,6 +28,13 @@ module AresMUSH
           expect(params.boost).to eq 2
           expect(params.ability).to eq 3
         end
+        
+        it "should handle a die promotion" do
+          params = Ffg.parse_roll_string("Melee+1P-1A")
+          expect(params.skill).to eq "Melee"
+          expect(params.ability).to eq -1
+          expect(params.proficiency).to eq 1
+        end
       end
       
       describe :roll_ability do
@@ -58,6 +65,17 @@ module AresMUSH
 
           result = Ffg.roll_ability(@char, "Melee+1A+2D")
           expect(result).to eq [ 'A', 'A', 'A', 'F', 'S', 'S', 'T' ]
+        end
+        
+        it "should subtract skill dice" do
+          expect(Ffg).to receive(:roll_ability_die) { [ 'A', 'A' ] }
+          expect(Ffg).to receive(:roll_proficiency_die) { [ 'S' ] }
+          expect(Ffg).to receive(:roll_proficiency_die) { [ 'F' ] }
+          expect(Ffg).to receive(:find_skill_dice).with(@char, 'Melee') { { ability: 2, proficiency: 1 }}
+          expect(Ffg).to receive(:find_skill_config).with("Melee") { {} }
+
+          result = Ffg.roll_ability(@char, "Melee+1P-1A")
+          expect(result).to eq [ 'A', 'A', 'F', 'S' ]
         end
       end
       

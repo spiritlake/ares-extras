@@ -23,22 +23,24 @@ module AresMUSH
     # Returns a FfgRollParams object
     def self.parse_roll_string(roll_str)
       params = FfgRollParams.new
-      sections = roll_str.split('+')
+      sections = roll_str.split(/([\+-]\d+\w)/)
       sections.each do |s|
-        s = s.strip.titlecase
-        if (s =~ /([\d]+)b/i)
+        s = s.strip.titlecase.gsub("+", "")
+        next if s.blank?
+
+        if (s =~ /([-\d]+)b/i)
           params.boost = $1.to_i
-        elsif (s =~ /([\d]+)a/i)
+        elsif (s =~ /([-\d]+)a/i)
           params.ability = $1.to_i
-        elsif (s =~ /([\d]+)p/i)
+        elsif (s =~ /([-\d]+)p/i)
           params.proficiency = $1.to_i
-        elsif (s =~ /([\d]+)s/i)
+        elsif (s =~ /([-\d]+)s/i)
           params.setback = $1.to_i
-        elsif (s =~ /([\d]+)d/i)
+        elsif (s =~ /([-\d]+)d/i)
           params.difficulty = $1.to_i
-        elsif (s =~ /([\d]+)c/i)
+        elsif (s =~ /([-\d]+)c/i)
           params.challenge = $1.to_i
-        elsif (s =~ /([\d]+)f/i)
+        elsif (s =~ /([-\d]+)f/i)
           params.force = $1.to_i
         else
           config = Ffg.find_skill_config(s)
