@@ -14,7 +14,7 @@ module AresMUSH
        end
       end
       
-      def require_args
+      def required_args
         [ self.roll_str, self.opponent, self.vs_ability ]
       end
       

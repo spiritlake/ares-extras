@@ -9,7 +9,7 @@ module AresMUSH
          self.roll_str = trim_arg(cmd.args)
       end
       
-      def require_args
+      def required_args
         [ self.roll_str ]
       end
       

@@ -11,7 +11,7 @@ module AresMUSH
          self.difficulty = titlecase_arg(cmd.args.after("vs"))
       end
       
-      def require_args
+      def required_args
         [ self.roll_str ]
       end
       
