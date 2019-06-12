@@ -41,6 +41,8 @@ module AresMUSH
         end
       when "sheet"
         return SheetCmd
+      when "reset"
+        return ResetCmd
       when "roll"
         return RollCmd
       when "advance"

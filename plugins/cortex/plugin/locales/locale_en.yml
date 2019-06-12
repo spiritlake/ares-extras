@@ -42,3 +42,4 @@ en:
       not_enough_points: "You don't have enough points."
       plot_point_spent: "%{name} spends %{points} plot points on %{reason}."
       advance_point_award: "You award advancement points to %{name}."
+      reset_abilities: "You reset your abilities back to starting values."

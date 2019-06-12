@@ -7,6 +7,7 @@ aliases:
 - complications
 - skills
 - attributes
+- reset
 ---
 
 # Cortex Abilities
@@ -27,6 +28,8 @@ General skills can only be rated up to d6.  To go higher, you must add one or mo
 
 `complications` - Lists attributes.
 `complication/set <name>=<dice step>` - Sets a complication.
+  
+`reset` - Resets abilities back to starting values.
 
 
 
