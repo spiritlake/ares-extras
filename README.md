@@ -12,11 +12,17 @@ See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/ext
 
 These plugins are not part of the Ares core release, but are still officially supported.  They can be installed easily using the add-plugin script, as described in [Ares Extras](https://aresmush.com/tutorials/code/extras/).
 
+### Skill Systems
+
 * **[Cortex](https://github.com/AresMUSH/ares-extras/tree/master/plugins/cortex)** - The Cortex RPG system - chargen and skill rolls.
 * **[Fate](https://github.com/AresMUSH/ares-extras/tree/master/plugins/fate)** - The Fate RPG system - chargen and skill rolls.
 * **[FFG Genesys/Star Wars](https://github.com/AresMUSH/ares-extras/tree/master/plugins/ffg)** - The Fantasy Flight Games Genesys RPG system - chargen and skill rolls.  Genesys is very close to the FFG Star Wars system, and a Star Wars configuration is available.
 * **[Traits](https://github.com/AresMUSH/ares-extras/tree/master/plugins/traits)** - A simple descriptive traits system.
+
+### Other Systems
+
 * **[Roleplay Prefs](https://github.com/AresMUSH/ares-extras/tree/master/plugins/prefs)** - Roleplay preference tracking.
+* **[Cookies](https://github.com/AresMUSH/ares-extras/tree/master/plugins/cookies)** - Fluffy virtual cookies to give out as rewards for RP.
 
 ## Community Plugins
 
