@@ -30,6 +30,10 @@ These plugins have been contributed by the community.  See the guidelines in [Ar
 
 * Coming Soon (we hope)
 
+## Themes
+
+Visit the [themes](https://github.com/AresMUSH/ares-extras/tree/master/themes) folder to find color/style themes for your web portal.
+
 ## Snippets
 
 Snippets are not complete plugins, but code examples of how to do various things.
@@ -39,7 +43,7 @@ Snippets are not complete plugins, but code examples of how to do various things
 
 ## Archived Items
 
-These items are not supported, and may even be based off of an old version of AresMUSH.  They will require some code effort to get working, but you can still try or just use them for ideas.
+These items are **not supported**, and may even be based off of an old version of AresMUSH.  They will require some code effort to get working, but you can still try or just use them for ideas.
 
 * **Teamup Events** - An events system that integrates with the web-based Teamup calendar.
 * **Wikidot** - Adding characters and scenes to a Wikidot wiki.
