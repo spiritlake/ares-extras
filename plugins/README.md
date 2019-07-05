@@ -1,4 +1,4 @@
-# Themes
+# Plugins
 
 Here you can browse additional plugins available for your game. 
 
