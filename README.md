@@ -14,7 +14,7 @@ Within the [plugins](https://github.com/AresMUSH/ares-extras/tree/master/plugins
 
 You can install plugins directly from the game using `plugin/install <name>`.
   
-> **Note:!** Many plugins require some additional manual install steps.  Be sure to check the README file in each plugin's folder for detailed information on installation and configuration.
+> **Note:** Many plugins require some additional manual install steps.  Be sure to check the README file in each plugin's folder for detailed information on installation and configuration.
 
 ## Themes
 
@@ -22,7 +22,7 @@ In the [themes](https://github.com/AresMUSH/ares-extras/tree/master/themes) fold
 
 You can install a theme from the game using `theme/install <name>`.
   
-> **Note:!** This will replace your current theme and theme images (if images are provided).  Your old theme files are backed up to the `aresmush/theme_archive` directory in case you need to get them back.
+> **Note:** This will replace your current theme and theme images (if images are provided).  Your old theme files are backed up to the `aresmush/theme_archive` directory in case you need to get them back.
 
 ## Snippets
 
