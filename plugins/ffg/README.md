@@ -12,6 +12,19 @@ Designed for AresMUSH 1.0.
 
 1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
 2. In the game, run `plugin/install ffg`.
+3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
+
+Old:
+
+    abilities:
+      help: skills
+
+New:
+
+    ffg:
+      help: ffg
+    abilities:
+      help: abilities
 
 See additional setup instructions below.
 
