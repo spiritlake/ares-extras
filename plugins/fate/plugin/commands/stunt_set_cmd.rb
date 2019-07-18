@@ -11,12 +11,12 @@ module AresMUSH
           args = cmd.parse_args(ArgParser.arg1_equals_arg2_slash_optional_arg3)
           self.target_name = titlecase_arg(args.arg1)
           self.stunt_name = titlecase_arg(args.arg2)
-          self.stunt_description = titlecase_arg(args.arg3)
+          self.stunt_description = trim_arg(args.arg3)
         else
           args = cmd.parse_args(ArgParser.arg1_equals_optional_arg2)
           self.target_name = enactor_name
           self.stunt_name = titlecase_arg(args.arg1)
-          self.stunt_description = titlecase_arg(args.arg2)
+          self.stunt_description = trim_arg(args.arg2)
         end
       end
       

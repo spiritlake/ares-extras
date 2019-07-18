@@ -43,7 +43,7 @@ This plugin is a simplified implementation of the Fate RPG system.
 
 ## Setting Up App Review
 
-You have to make a change to the Chargen plugin to make it display the cortex ability status in the `app` command.
+You have to make a change to the Chargen plugin to make it display the Fate ability status in the `app` command.
 
 In `aresmush/plugins/chargen/templates/app.erb`, add:
 
