@@ -43,6 +43,8 @@ module AresMUSH
           return FatePointAwardCmd
         when "spend"
           return FatePointSpendCmd
+        when "refresh"
+          return FateRefreshCmd
         end
       when "skill"
         case cmd.switch
