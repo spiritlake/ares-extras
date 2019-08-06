@@ -10,14 +10,14 @@ module AresMUSH
         self.names = []
       else
         args = cmd.parse_args(ArgParser.arg1_equals_arg2)
-        if (args.arg1 && (args.arg1.include?("http://") || args.arg1.include?("https://")) )
-          self.names = []
-        else
-          self.names = list_arg(args.arg1)
-          self.names_raw = trim_arg(args.arg1)
-          self.message = trim_arg(args.arg2)
-        end
+        self.names = list_arg(args.arg1)
+        self.names_raw = trim_arg(args.arg1)
+        self.message = trim_arg(args.arg2)
       end
+    end
+
+    def required_args
+      [ self.names, self.message ]
     end
 
     def check_txt_target
