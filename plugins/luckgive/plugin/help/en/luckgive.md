@@ -1,5 +1,5 @@
 ---
-toc: Community
+toc: Using FS3
 summary: Giving someone luck.
 aliases:
 - give_luck

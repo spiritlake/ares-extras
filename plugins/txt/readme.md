@@ -1,9 +1,14 @@
+#TXT
+
+##Credit
+This plugin was originally coded by skew @ Ares Central, with a few updates and packaging by Tat @ Ares Central.
+
 ## Installation
 In the game, run plugin/install txt.
 
 ### Page Command
 
-This plugin references the default AresMUSH page command. If that is not installed, this won't work! Specifically, it uses the DND and page lock features. If a person is set DND or page locked, you cannot txt them!
+This plugin references the default AresMUSH page command. If that is not installed, this won't work. Specifically, it uses the DND and page lock features. If a person is set DND or page locked, you cannot txt them!
 
 See additional setup instructions below.
 
@@ -38,6 +43,3 @@ For example:
     <button {{action 'addPose' 'ooc'}} class="btn btn-default">Add OOC Comment</button>
     <button {{action 'addPose' 'pose'}} class="btn btn-primary">Add Pose</button>
 {{/if}}`
-
-##Credit
-This plugin was originally coded by skew @ Ares Central, with a few updates and packaging by Tat @ Ares Central.

@@ -1,4 +1,7 @@
-# Cookies
+# Luck Give
+
+## Credits
+Tat @ Ares Central
 
 ## Installation
 
@@ -25,6 +28,3 @@ There is no configuration for this plugin. Although there is a helpfile included
 ## Web Portal
 
 This plugin has no web portal code.  
-
-## Credits
-Tat @ Ares Central
