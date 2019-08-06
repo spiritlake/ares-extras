@@ -17,6 +17,10 @@ module AresMUSH
         return nil
       end
 
+      def required_args
+        [ self.target, self.reason ]
+      end
+
       def handle
         date = Time.now.strftime("%Y-%m-%d")
 
