@@ -21,7 +21,7 @@ module AresMUSH
                 error = Website.check_login(request)
                 return error if error
 
-                if (!Scenes.can_join_scene?(enactor, scene))
+                if (!Scenes.can_edit_scene?(enactor, scene))
                     return { error: t('scenes.access_not_allowed') }
                 end
 
@@ -86,7 +86,7 @@ module AresMUSH
                           recipients.concat [char.name]
                         end
 
-                        can_txt_scene = Scenes.can_join_scene?(char, scene)
+                        can_txt_scene = Scenes.can_edit_scene?(char, scene)
                         if (!can_txt_scene)
                             Scenes.add_to_scene(scene, t('txt.recipient_added_to_scene',
                             :name => char.name ),

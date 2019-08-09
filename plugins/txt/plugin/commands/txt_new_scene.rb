@@ -35,9 +35,7 @@ module AresMUSH
         end
       end
 
-      scene = Scenes.start_scene(enactor, "Text", true, false, "Text", true)
-
-      Scenes.create_scene_temproom(scene)
+      scene = Scenes.start_scene(enactor, "Text", true, "Text", true)
 
       Global.logger.info "Scene #{scene.id} started by #{enactor.name} in Temp Txt Room."
 
