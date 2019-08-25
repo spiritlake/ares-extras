@@ -74,9 +74,8 @@ module AresMUSH
                 recipient_names = recipient_names.join(" ")
 
                 scene_room = scene.room
-
-                if !names.empty?
-                  recipients = []
+                recipients = []
+                if !names.empty?                  
                     names.each do |name|
                         char = Character.named(name)
 
@@ -164,6 +163,10 @@ module AresMUSH
 
                 {
                 }
+            end
+
+            def log_command
+                # Don't log texts
             end
         end
     end

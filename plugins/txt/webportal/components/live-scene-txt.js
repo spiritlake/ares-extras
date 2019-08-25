@@ -27,7 +27,6 @@ export default Component.extend({
                 this.get('flashMessages').error(response.error);
                 return;
             }
-            this.scrollSceneWindow();
         });
     }
 
