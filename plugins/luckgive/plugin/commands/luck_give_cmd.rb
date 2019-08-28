@@ -13,6 +13,8 @@ module AresMUSH
 
       def check_errors
         return t('luckgive.invalid_name') if !self.target
+        max_luck = Global.read_config("fs3skills", "max_luck")
+        return t('luckgive.max_luck', :name => self.target.name) if self.target.luck == max_luck
         return t('luckgive.not_enough_luck') if enactor.luck < 1
         return nil
       end
