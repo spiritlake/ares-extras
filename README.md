@@ -27,7 +27,3 @@ You can install a theme from the game using `theme/install <name>`.
 ## Snippets
 
 The [snippets](https://github.com/AresMUSH/ares-extras/tree/master/snippets) folder contains code snippets that are not full plugins.
-
-## Archived Items
-
-Archived items are **not supported**, and may even be based off of an old version of AresMUSH.  They will require some code effort to get working, or you can just use them for ideas.
