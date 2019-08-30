@@ -13,6 +13,7 @@ It assumes that you are using the FS3Skills plugin and will not work without tha
 
 This plugin allows players to transfer one of their luck points to another character. It creates a record of the transaction, including both parties, the date, and the reason given.
 
+```
 +============================================================================+
 LUCK GIVEN TO NESSIE (3 LP)
 
@@ -20,6 +21,7 @@ Luck from Joel                                                    2019-07-05
 For a Minor Heal potion.
 
 -----[   page 1 of 1   ]------------------------------------------------------
+```
 
 ## Configuration
 
