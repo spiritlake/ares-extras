@@ -4,7 +4,7 @@
 This plugin was originally coded by skew @ Ares Central, with a few updates and packaging by Tat @ Ares Central.
 
 ## Installation
-In the game, run plugin/install txt.
+In the game, run `plugin/install txt`.
 
 ### Page Command
 
