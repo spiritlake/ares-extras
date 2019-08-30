@@ -38,10 +38,12 @@ Insert the following with the other pose buttons:
 
 For example:
 
-`{{#if (not scene.completed)}}
+```
+{{#if (not scene.completed)}}
     {{live-scene-txt scenePose=scenePose scene=scene}}
     <button {{action 'addPose' 'setpose'}} class="btn btn-default">Add Scene Set</button>
     <button {{action 'addPose' 'gm'}} class="btn btn-default">Add GM Pose</button>
     <button {{action 'addPose' 'ooc'}} class="btn btn-default">Add OOC Comment</button>
     <button {{action 'addPose' 'pose'}} class="btn btn-primary">Add Pose</button>
-{{/if}}`
+{{/if}}
+```
