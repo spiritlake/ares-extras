@@ -11,6 +11,10 @@ module AresMUSH
       Global.read_config("compliments", "shortcuts")
     end
 
+    def self.achievements
+      Global.read_config('compliments', 'achievements')
+    end
+
     def self.get_cmd_handler(client, cmd, enactor)
       case cmd.root
       when "comp"

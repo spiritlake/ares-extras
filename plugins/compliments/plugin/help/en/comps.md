@@ -3,6 +3,7 @@ toc: Community
 summary: Giving someone a compliment.
 aliases:
 - compliment
+- compliments
 ---
 #Compliments
 Comps are a fun way to tell people what you like about them or their RP. Comps should always be positive. Please report any abuse.
