@@ -6,11 +6,11 @@ The README file in each folder contains details about each item.
 
 ## Contribution Guidlines
 
-See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/extra-contribs/) if you want to contribute your own plugins or extras.
+See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/extra-contribs.html) if you want to contribute your own plugins or extras.
 
 ## Plugins
 
-Within the [plugins](https://github.com/AresMUSH/ares-extras/tree/master/plugins) folder are additional plugins that you can add to your game.  They can be installed easily using the add-plugin script, as described in [Ares Extras](https://aresmush.com/tutorials/code/extras/).  
+Within the [plugins](https://github.com/AresMUSH/ares-extras/tree/master/plugins) folder are additional plugins that you can add to your game.  They can be installed easily using the add-plugin script, as described in [Ares Extras](https://aresmush.com/tutorials/code/extras.html).  
 
 You can install plugins directly from the game using `plugin/install <name>`.
   
