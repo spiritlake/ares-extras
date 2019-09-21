@@ -23,17 +23,23 @@ The traits system provides a simple way to store character stats with a name/des
 
 1. Unless you are planning to use traits in conjunction with FS3, you probably want to disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
 2. In the game, run `plugin/install traits`.
-3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
+3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stages with a stage for traits:
 
 Old:
 
-    abilities:
-      help: skills
+    stages:
+      sheet:
+        help: sheets
+      ...
+      abilities:
+        help: skills
 
 New:
 
-    traits:
-      help: traits
+    stages:
+      ...
+      traits:
+        help: traits
 
 ## Configuration
 
@@ -46,21 +52,7 @@ If you are using _just_ traits (without any other skills system), you probably w
       shortcuts:
           sheet: traits
 
-You'll probably also want to tweak the chargen instructions.  Edit `chargen.yml` and remove these two stages:
 
-    stages:
-      sheet:
-        help: sheets
-      ...
-      abilities:
-        help: skills
-
-Then add (in whatever position you want it to appear) a new stage:
-
-    stages:
-      ...
-      traits:
-        help: traits
 
 ## Web Portal
 
