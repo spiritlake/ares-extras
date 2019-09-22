@@ -10,7 +10,7 @@ It's based off [OpenWeatherLite](https://github.com/zsyed91/) Ruby library.
 1. Use plugin/install openweather to install the plugin
 1. Edit your ~/aresmush/game/config/sercrets.yml and add the API_KEY
 <pre>
-openweather_api_key: YOUR_AP_KEY
+openweather_api_key: YOUR_API_KEY
 </pre>
 
 1. Edit ~/aresmush/plugins/describe/room_desc_builder.rb and slip in the room
