@@ -51,9 +51,7 @@ module AresMUSH
         if (!response)
           raise "Could not call API climate for #{climate}."
         end
-  
-        #season_config = climate_config.select { |k, v| k.downcase == season.downcase }.values.first
-  
+        
         # Save the weather!
         Openweather.current_weather[area.titlecase] = response.weather
       end
