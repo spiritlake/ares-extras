@@ -21,6 +21,7 @@ You can install plugins directly from the game using `plugin/install <name>`.
 * **Prefs** - RP preference registry.
 * **Traits** - Simple system for tracking character traits.
 * **Txt** - Simulate text message conversations in scenes.
+* **Openweather** - Weather system that uses real weather data from https://openweathermap.org/
 
 ## Contribution Guidlines
 
