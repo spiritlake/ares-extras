@@ -16,9 +16,12 @@ module AresMUSH
         # Set an initial weather for each area and the default one
         Openweather.current_weather = {}
         areas = Global.read_config("openweather", "climate_for_area").keys + ["default"]
-        areas.each do |a|
-          Openweather.change_weather(a)
-        end
+
+        Global.dispatcher.spawn("Querying Openweather API", nil) do
+            areas.each do |a|
+                Openweather.change_weather(a)
+            end
+          end
       end
   
       def self.change_weather(area)
