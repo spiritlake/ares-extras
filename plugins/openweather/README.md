@@ -7,13 +7,13 @@ It's based off [OpenWeatherLite](https://github.com/zsyed91/) Ruby library.
 * [An OpenWeather Map API Key](https://openweathermap.org/)
 
 # Configuration
-1. Use plugin/install openweather to install the plugin
-1. Edit your ~/aresmush/game/config/sercrets.yml and add the API_KEY
+* Use plugin/install openweather to install the plugin
+* Edit your ~/aresmush/game/config/sercrets.yml and add the API_KEY
 <pre>
 openweather_api_key: YOUR_API_KEY
 </pre>
 
-1. Edit ~/aresmush/plugins/describe/room_desc_builder.rb and slip in the room
+* Edit ~/aresmush/plugins/describe/room_desc_builder.rb and slip in the room
 description hook for Openweather plugin. Change the lines from the standard
 weather module to Openweather.
 
