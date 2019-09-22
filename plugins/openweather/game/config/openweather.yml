@@ -1,11 +1,15 @@
 ---
 openweather:
-  api_key: YOUR_API_KEY
+  # Units can be set to imperial or metric
   units: imperial
   shortcuts: {}
 
+  # Default climate for rooms without an area set.
   default_climate:
       zip: 78132
+
+  # List of ares. Provide none for no weather, a zip code, or even coordinates
+  # For openweather to pull weather data.
 
   climate_for_area:
       Offstage: none
@@ -16,12 +20,15 @@ openweather:
       Vegas:
         zip: 89109
 
+  # Runs every hour to update weather data.
+
   weather_cron:
       minute:
       - 0
 
 # These result codes are from https://openweathermap.org/weather-conditions
 # If not defined it will use the default description from api
+
   weather_code_desc:
     # Group 2xx: Thunderstorm
     200: A thunderstorm with light rain falls from the sky.

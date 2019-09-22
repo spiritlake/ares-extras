@@ -32,7 +32,7 @@ module AresMUSH
         end
   
         oweather = Weather.new
-        oweather.api_key =   Global.read_config("openweather", "api_key")
+        oweather.api_key =  Global.read_config('secrets', 'openweather_api_key')
         oweather.units = Global.read_config("openweather", "units")
 
         if (climate.has_key?("zip"))
