@@ -47,6 +47,20 @@ Seasons and time of day (ie, it's day or night) are not provided by Openweather.
 Feel free to change the descriptions in the openweather.yml file, and or 
 language in the ~/aresmush/plugins/openweather/locales/locale_en.yml
 
+# Common Gotchas
+* Make sure when adding the API key that it is on one line (no dashes) and falls
+under the secrets subkey. 
+
+<pre>
+secrets:
+    openweather_api_key: your_api_key
+</pre>
+
+* If you need to make a change or fix, simply reload the plugin for it
+to take effect in your game.
+<pre>
+load openweather
+</pre>
 # Author
 Dennis De Marco (dennis@demarco.com)/Fenris@SpirtLakeMU
 # Reference Links
