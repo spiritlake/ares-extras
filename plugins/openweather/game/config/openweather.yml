@@ -15,8 +15,8 @@ openweather:
       Offstage: none
       Polar:
         coords:
-            lon: 40.92
             lat: -74.7
+            lon: 40.92   
       Vegas:
         zip: 89109
 
