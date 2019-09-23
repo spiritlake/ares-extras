@@ -58,12 +58,8 @@ secrets:
     openweather_api_key: your_api_key
 </pre>
 
-* If you need to make a change or fix, simply reload the plugin for it
-to take effect in your game or do an **openweather/reset**.
+* If you need to make a change or fix in the config files do an **openweather/reset**. That will force a weather update using the new configs.
 
-<pre>
-load openweather
-</pre>
 # Author
 Dennis De Marco (dennis@demarco.com)/Fenris@SpirtLakeMU
 # Reference Links
