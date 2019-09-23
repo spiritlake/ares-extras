@@ -59,7 +59,8 @@ secrets:
 </pre>
 
 * If you need to make a change or fix, simply reload the plugin for it
-to take effect in your game.
+to take effect in your game or do an **openweather/reset**.
+
 <pre>
 load openweather
 </pre>
