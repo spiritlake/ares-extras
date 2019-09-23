@@ -40,8 +40,10 @@ in game do
 ruby Openweather.current_weather
 </pre> This should give all the variables the API got for the area and will help in debugging.
 
-# Oddities.
-Seasons and time of day (ie, it's day or night) are not provided by Openweather. These come from the ICTime plugin in base AresMUSH. The base ICTime module does not have timezones, but there are code hooks where you can differentiate ICTime by area if you add custom code.
+# Oddities and wierdness
+* Seasons and time of day (ie, it's day or night) are not provided by Openweather. These come from the ICTime plugin in base AresMUSH. The base ICTime module does not have timezones, but there are code hooks where you can differentiate ICTime by area if you add custom code.
+* Openweather makes the API call in the background, so inital startup may take
+a second or two to populate the data. 
 
 # Customizations
 Feel free to change the descriptions in the openweather.yml file, and or 
