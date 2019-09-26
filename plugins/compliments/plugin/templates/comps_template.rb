@@ -9,6 +9,10 @@ module AresMUSH
          super File.dirname(__FILE__) + "/comps.erb"
       end
 
+      def date(c)
+        OOCTime.format_date_for_entry(c.created_at)
+      end
+
     end
   end
 end
