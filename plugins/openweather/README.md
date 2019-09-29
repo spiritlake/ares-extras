@@ -63,6 +63,14 @@ secrets:
 * Some users report that OpenWeather API_KEY takes a couple of hours to register/activate from openweather.org There
 may be an e-mail that you need to click to complete the setup. So check your spam folder.
 
+* Use a single quote for zip codes in openweather.yml.  ie, 
+<pre>
+      Brookline:
+        zip: '03033'
+</pre>
+
+
+
 
 # Author
 Dennis De Marco (dennis@demarco.com)/Fenris@SpirtLakeMU
