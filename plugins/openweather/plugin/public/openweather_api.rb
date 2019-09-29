@@ -20,6 +20,8 @@ module AresMUSH
   
         # This handles the 'no weather' case, returning nil.
         return nil if !weather || weather.empty?
+        # This handles any 404 errors
+        return nil if weather[:cod]=="404"
   
         season = ICTime.season(area_name)
 
