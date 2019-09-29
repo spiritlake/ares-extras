@@ -8,7 +8,7 @@ It's based off [OpenWeatherLite](https://github.com/zsyed91/) Ruby library.
 
 # Configuration
 * Use plugin/install openweather to install the plugin
-* Edit your ~/aresmush/game/config/sercrets.yml and add the API_KEY
+* Edit your ~/aresmush/game/config/secrets.yml and add the API_KEY
 <pre>
 openweather_api_key: YOUR_API_KEY
 </pre>
@@ -58,7 +58,11 @@ secrets:
     openweather_api_key: your_api_key
 </pre>
 
-* If you need to make a change or fix in the config files do an **openweather/reset**. That will force a weather update using the new configs.
+* If you need to make a change or fix in the config files do an **openweather/reset**. That will force a weather update using the new configs. If that does not work, do **load openweather** to reload the plugin.
+
+* Some users report that OpenWeather API_KEY takes a couple of hours to register/activate from openweather.org There
+may be an e-mail that you need to click to complete the setup. So check your spam folder.
+
 
 # Author
 Dennis De Marco (dennis@demarco.com)/Fenris@SpirtLakeMU
