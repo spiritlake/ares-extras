@@ -6,7 +6,7 @@ openweather:
 
   # Default climate for rooms without an area set.
   default_climate:
-      zip: 78132
+      zip: '78132'
 
   # List of ares. Provide none for no weather, a zip code, or even coordinates
   # For openweather to pull weather data.
@@ -18,7 +18,7 @@ openweather:
             lat: -74.7
             lon: 40.92   
       Vegas:
-        zip: 89109
+        zip: '89109'
 
   # Runs every hour to update weather data.
 
