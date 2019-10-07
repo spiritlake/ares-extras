@@ -8,7 +8,7 @@ It's based off [OpenWeatherLite](https://github.com/zsyed91/) Ruby library.
 
 # Configuration
 * Use plugin/install openweather to install the plugin
-* Edit your ~/aresmush/game/config/sercrets.yml and add the API_KEY
+* Edit your ~/aresmush/game/config/secrets.yml and add the API_KEY
 <pre>
 openweather_api_key: YOUR_API_KEY
 </pre>
@@ -40,12 +40,37 @@ in game do
 ruby Openweather.current_weather
 </pre> This should give all the variables the API got for the area and will help in debugging.
 
-# Oddities.
-Seasons and time of day (ie, it's day or night) are not provided by Openweather. These come from the ICTime plugin in base AresMUSH. The base ICTime module does not have timezones, but there are code hooks where you can differentiate ICTime by area if you add custom code.
+# Oddities and wierdness
+* Seasons and time of day (ie, it's day or night) are not provided by Openweather. These come from the ICTime plugin in base AresMUSH. The base ICTime module does not have timezones, but there are code hooks where you can differentiate ICTime by area if you add custom code.
+* Openweather makes the API call in the background, so inital startup may take
+a second or two to populate the data. 
 
 # Customizations
 Feel free to change the descriptions in the openweather.yml file, and or 
 language in the ~/aresmush/plugins/openweather/locales/locale_en.yml
+
+# Common Gotchas
+* Make sure when adding the API key that it is on one line (no dashes) and falls
+under the secrets subkey. 
+
+<pre>
+secrets:
+    openweather_api_key: your_api_key
+</pre>
+
+* If you need to make a change or fix in the config files do an **openweather/reset**. That will force a weather update using the new configs. If that does not work, do **load openweather** to reload the plugin.
+
+* Some users report that OpenWeather API_KEY takes a couple of hours to register/activate from openweather.org There
+may be an e-mail that you need to click to complete the setup. So check your spam folder.
+
+* Use a single quote for zip codes in openweather.yml.  ie, 
+<pre>
+      Brookline:
+        zip: '03033'
+</pre>
+
+
+
 
 # Author
 Dennis De Marco (dennis@demarco.com)/Fenris@SpirtLakeMU
