@@ -22,6 +22,9 @@ module AresMUSH
           end
           chars = scene.participants
           message = t('cookies.giving_cookies_to_scene', :scene => scene.id)
+        elsif (enactor_room.scene)
+          chars = enactor_room.scene.participants
+          message = t('cookies.giving_cookies_to_scene', :scene => enactor_room.scene.id)
         else
           chars = enactor_room.characters.select { |c| c != enactor && Login.is_online?(c) }
           message = t('cookies.giving_cookies_to_room')
