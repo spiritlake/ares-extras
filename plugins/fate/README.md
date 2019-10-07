@@ -135,3 +135,7 @@ You can configure a list of sample stunts for people to choose from, but players
 ## Web Portal
 
 This plugin has no web portal component.
+
+## Uninstalling
+
+Removing the plugin requires some code fiddling.  Contact Faraday for help.

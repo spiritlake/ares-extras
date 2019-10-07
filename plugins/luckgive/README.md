@@ -30,3 +30,7 @@ There is no configuration for this plugin. Although there is a helpfile included
 ## Web Portal
 
 This plugin has no web portal code.  
+
+## Uninstalling
+
+Removing the plugin requires some code fiddling.  Contact Faraday for help.

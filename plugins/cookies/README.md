@@ -52,3 +52,7 @@ In the `scene.js` file you'll want it to be `this.get('model.id')` instead of `t
               this.get('flashMessages').success('You give cookies to the scene participants.');
           });
       },
+
+## Uninstalling
+
+Removing the plugin requires some code fiddling.  Contact Faraday for help.

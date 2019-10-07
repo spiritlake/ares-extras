@@ -57,3 +57,7 @@ If you are using _just_ traits (without any other skills system), you probably w
 ## Web Portal
 
 This plugin has no web portal component.
+
+## Uninstalling
+
+Removing the plugin requires some code fiddling.  Contact Faraday for help.

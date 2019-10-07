@@ -47,3 +47,7 @@ For example:
     <button {{action 'addPose' 'pose'}} class="btn btn-primary">Add Pose</button>
 {{/if}}
 ```
+
+## Uninstalling
+
+Removing the plugin requires some code fiddling.  Contact Faraday for help.

@@ -51,4 +51,6 @@ You can configure the list of categories that players can set a preference for.
 
 This plugin has no web portal component.
 
+## Uninstalling
 
+Removing the plugin requires some code fiddling.  Contact Faraday for help.
