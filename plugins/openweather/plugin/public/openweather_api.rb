@@ -49,11 +49,10 @@ module AresMUSH
         
         wind_dir = t("Openweather.wind_#{x.round}")
 
-        # Weather is in an array list, I've only seen 1 element, but adding
-        # first here
+        # Weather is in an array list, The most recent the last element.
 
-        condition = weather[:weather].first[:description]
-        condition_id = weather[:weather].first[:id]
+        condition = weather[:weather].last[:description]
+        condition_id = weather[:weather].last[:id]
 
         # Read the code desc from config, or use the api crappy description
 
