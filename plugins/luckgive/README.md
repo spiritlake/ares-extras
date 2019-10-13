@@ -33,4 +33,4 @@ This plugin has no web portal code.
 
 ## Uninstalling
 
-Removing the plugin requires some code fiddling.  Contact Faraday for help.
+Removing the plugin requires some code fiddling.  See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).
