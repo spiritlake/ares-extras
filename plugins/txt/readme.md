@@ -30,23 +30,9 @@ This outputs as: `<TXT> From Skew -> (to Pikachu) Hello there!`
 
 ## Web Portal
 
-In addition to the included web portal files, you'll want to add a line of code to `/app/templates/components/live-scene-control.hbs` if you want to enable texting from portal scenes.
-
-Insert the following with the other pose buttons:
+In addition to the included web portal files, you'll want to add a line of code to `/app/templates/components/live-scene-custom-scenepose.hbs` if you want to enable texting from portal scenes.
 
 `{{live-scene-txt scenePose=scenePose scene=scene}}`
-
-For example:
-
-```
-{{#if (not scene.completed)}}
-    {{live-scene-txt scenePose=scenePose scene=scene}}
-    <button {{action 'addPose' 'setpose'}} class="btn btn-default">Add Scene Set</button>
-    <button {{action 'addPose' 'gm'}} class="btn btn-default">Add GM Pose</button>
-    <button {{action 'addPose' 'ooc'}} class="btn btn-default">Add OOC Comment</button>
-    <button {{action 'addPose' 'pose'}} class="btn btn-primary">Add Pose</button>
-{{/if}}
-```
 
 ## Uninstalling
 
