@@ -13,18 +13,6 @@ It's based off [OpenWeatherLite](https://github.com/zsyed91/) Ruby library.
 openweather_api_key: YOUR_API_KEY
 </pre>
 
-* Edit ~/aresmush/plugins/describe/room_desc_builder.rb and slip in the room
-description hook for Openweather plugin. Change the lines from the standard
-weather module to Openweather.
-
-In room_desc_builder.rb, change it to look like the below
-<pre>
-    def self.weather(room)
-        return nil if !AresMUSH::Openweather.is_enabled?
-        w = Openweather.weather_for_area(room.area_name)
-        w ? "%R%R#{w}" : nil
-      end
-</pre>
 # Commands
 * openweather - will display a table of your areas and the weather for that area pulled from real time data!
 * openweather/reset - Reset weather by forcing an internet update to the API fetching real time data.

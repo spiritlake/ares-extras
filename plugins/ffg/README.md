@@ -96,23 +96,6 @@ A few other miscellaneous notes:
 * Instead of giving people "4 free career skills", this plugin gives them 20 extra XP to buy them, and makes sure they've bought at least 4 career skills during app review.  If you're using specializations, you can make this 30 to include their 2 free specialization skills.
 * You can also give people extra XP on top of that to let them start out more advanced.  There are no restrictions on how this XP can be spent.
 
-## Setting Up App Review
-
-You have to make a change to the Chargen plugin to make it display the FFG ability status in the `app` command.
-
-In `aresmush/plugins/chargen/templates/app.erb`, add:
-
-    <%= section_title(t('chargen.abilities_review_title')) %>
-    <%= ffg_abilities %> 
-
-In `aresmush/plugins/chargen/templates/app_template.rb`, add:
-
-      def ffg_abilities
-        Ffg.app_review(@char)
-      end
-
-Type `load chargen` in-game when finished.
-
 ## Configuration
 
 This plugin has several configuration options, explained below.

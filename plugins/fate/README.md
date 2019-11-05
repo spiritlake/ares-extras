@@ -54,23 +54,6 @@ This plugin is a simplified implementation of the Fate RPG system.
 
     %% Opposed Roll: Faraday/Will - Superb (5) vs Kitty/Good - Good (3).  Faraday wins.
 
-## Setting Up App Review
-
-You have to make a change to the Chargen plugin to make it display the Fate ability status in the `app` command.
-
-In `aresmush/plugins/chargen/templates/app.erb`, add:
-
-    <%= section_title(t('chargen.abilities_review_title')) %>
-    <%= fate_abilities %> 
-
-In `aresmush/plugins/chargen/templates/app_template.rb`, add:
-
-      def fate_abilities
-        Fate.app_review(@char)
-      end
-
-Type `load chargen` in-game when finished.
-
 ## Refresh
 
 Fate points in the core mechanic are refreshed every "session".  You'll need to decide what constitutes a "session" for your game and trigger the refresh accordingly.  Some games may do a refresh monthly; others may do so after a natural break in the metaplot.  It's up to you.

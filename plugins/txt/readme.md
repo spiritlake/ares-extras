@@ -28,12 +28,6 @@ The message format is contained in `/aresmush/plugins/txt/locales/local_en.yml`.
 
 This outputs as: `<TXT> From Skew -> (to Pikachu) Hello there!`
 
-## Web Portal
-
-In addition to the included web portal files, you'll want to add a line of code to `/app/templates/components/live-scene-custom-scenepose.hbs` if you want to enable texting from portal scenes.
-
-`{{live-scene-txt scenePose=scenePose scene=scene}}`
-
 ## Uninstalling
 
 Removing the plugin requires some code fiddling.  See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).

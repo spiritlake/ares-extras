@@ -60,23 +60,6 @@ This game uses a simplified implementation of the [Cortex System](http://www.dri
 
 The design of this plugin is described in detail in the [Create Plugin Tutorial](https://aresmush.com/tutorials/code/create-plugin/).
 
-## Setting Up App Review
-
-You have to make a change to the Chargen plugin to make it display the cortex ability status in the `app` command.
-
-In `aresmush/plugins/chargen/templates/app.erb`, add:
-
-    <%= section_title(t('chargen.abilities_review_title')) %>
-    <%= cortex_abilities %> 
-
-In `aresmush/plugins/chargen/templates/app_template.rb`, add:
-
-      def cortex_abilities
-        Cortex.app_review(@char)
-      end
-
-Type `load chargen` in-game when finished.
-
 ## Configuration
 
 This plugin has several configuration options:
