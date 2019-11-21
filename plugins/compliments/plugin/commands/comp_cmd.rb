@@ -20,16 +20,22 @@ module AresMUSH
         targets = []
         if (self.scene_or_names.is_integer?)
           self.scene_id = self.scene_or_names.to_i
-          puts "Scene ID: #{self.scene_id}"
           self.scene = Scene[self.scene_id]
-          puts "Scene: #{  self.scene}"
-          return "That is not a scene number." if !  self.scene
+          if !self.scene
+            client.emit_failure t('compliments.not_scene')
+            return
+          end
         else
           self.target_names = self.scene_or_names.split(" ").map { |n| InputFormatter.titlecase_arg(n) }
           self.target_names.each do |name|
             target = Character.named(name)
-            return t('compliments.invalid_name') if !target
-            return t('compliments.cant_comp_self') if target.name == enactor_name
+             if !target
+               client.emit_failure t('compliments.invalid_name')
+               return
+             elsif target.name == enactor_name
+               client.emit_failure t('compliments.cant_comp_self') if
+               return
+             end
             targets << target
           end
         end
