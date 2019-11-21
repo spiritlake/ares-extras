@@ -6,7 +6,7 @@
 <% paginator.page_items.each do |a| -%>
 <%= "%xcFrom "  -%>
 <%=  a.from -%>
-<%=  right(a.created_at.strftime("%Y-%m-%d"), 65 ) -%>
+<%=  right(date(c), 65 ) -%>
 <%= "%xn"  %>
 <%=  a.comp_msg %>
 
