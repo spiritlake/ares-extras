@@ -33,7 +33,7 @@ module AresMUSH
                client.emit_failure t('compliments.invalid_name')
                return
              elsif target.name == enactor_name
-               client.emit_failure t('compliments.cant_comp_self') if
+               client.emit_failure t('compliments.cant_comp_self')
                return
              end
             targets << target
