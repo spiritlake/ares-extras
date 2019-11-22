@@ -44,22 +44,27 @@ module AresMUSH
         date = Time.now.strftime("%Y-%m-%d")
         luck_amount = Global.read_config("compliments", "luck_amount")
         give_luck = Global.read_config("compliments", "give_luck")
+        comp_scenes = Global.read_config("compliments", "comp_scenes")
         if self.scene_id
-          self.target_names = []
-          self.scene.participants.each do |target|
-            if target == enactor
+          if comp_scenes
+            self.target_names = []
+            self.scene.participants.each do |target|
+              if target == enactor
 
-            else
-              Comps.create(character: target, comp_msg: self.comp, from: enactor.name)
-              if give_luck
-                FS3Skills.modify_luck(target, luck_amount)
+              else
+                Comps.create(character: target, comp_msg: self.comp, from: enactor.name)
+                if give_luck
+                  FS3Skills.modify_luck(target, luck_amount)
+                end
+                message = t('compliments.has_left_comp', :from => enactor.name)
+                Login.emit_if_logged_in target, message
+                self.target_names << target.name
               end
-              message = t('compliments.has_left_comp', :from => enactor.name)
-              Login.emit_if_logged_in target, message
-              self.target_names << target.name
             end
+            client.emit_success t('compliments.left_comp', :name =>  self.target_names.join(", "))
+          else
+            client.emit_failure t('compliments.comp_scenes_not_enabled')
           end
-          client.emit_success t('compliments.left_comp', :name =>  self.target_names.join(", "))
         else
           targets.each do |target|
             Comps.create(character: target, comp_msg: self.comp, from: enactor.name)
