@@ -23,6 +23,9 @@ Here is a test compliment. Compliments can be as long or as short as people like
 ```
 
 ## Configuration
+
+Configuration options can be set in `compliments.yml`.
+
 `give_luck` - By default, giving a compliment also gives a fraction of a luck point. If you're not using the FS3Skills plugin, disable this by setting `give_luck` to `false`.
 
 `luck_amount` - You can configure how much luck each compliment gives. By default, a compliment gives 1/20th of a luck point.
@@ -31,7 +34,8 @@ Here is a test compliment. Compliments can be as long or as short as people like
 
 If you turn off comp'ing scenes or earning luck, you'll want to adjust the helpfile text.
 
-###Comp Achievement
+### Comp Achievement
+
 This plugin adds an achievement for giving comps. You'll want to add `comp: fa-hand-holding-heart` as a type to `/game/config/achievements.yml`
 
 ## Web Portal
