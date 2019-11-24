@@ -11,6 +11,7 @@ In the game, run `plugin/install compliments`.
 
 This plugin allows players to give compliments to other players. Players can view each other's compliments.
 
+```
 +============================================================================+
 ADELAIDE'S COMPLIMENTS
 
@@ -19,6 +20,7 @@ Here is a test compliment. Compliments can be as long or as short as people like
 - there is no character requirement or limit.
 
 -----[   page 1 of 1   ]------------------------------------------------------
+```
 
 ## Configuration
 `give_luck` - By default, giving a compliment also gives a fraction of a luck point. If you're not using the FS3Skills plugin, disable this by setting `give_luck` to `false`.
