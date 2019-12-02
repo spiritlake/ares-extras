@@ -5,10 +5,10 @@
 
 <% paginator.page_items.each do |c| -%>
 <%= "%xcFrom "  -%>
-<%=  a.from -%>
+<%=  c.from -%>
 <%=  right(date(c), 65 ) -%>
 <%= "%xn"  %>
-<%=  a.comp_msg %>
+<%=  c.comp_msg %>
 
 <% end %>
 <%= paginator.page_footer %>
