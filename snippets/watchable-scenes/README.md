@@ -2,7 +2,7 @@ Watchable scenes are scenes which anyone can view on the portal (ie, watch), but
 
 Because it interacts heavily with the scene system, Watchable doesn't work well as a plug-in. You'll have to do some custom code in order to enable it. You can make the changes listed below in order to create Watchable scenes on your game.
 
-##On game
+## On game
 
 **In `aresmush\plugins\scenes\public\scene.rb`**
 
@@ -50,7 +50,7 @@ Because it interacts heavily with the scene system, Watchable doesn't work well 
 
 * Change `can_join = Scenes.can_read_scene?(enactor, scene) || !scene.private_scene` to `can_join = Scenes.can_join_scene?(enactor, scene)`
 
-##Web API Files
+## Web API Files
 
 **In `plugins\scenes\helpers\web_data.rb`**
 
@@ -119,7 +119,7 @@ The whole section should read:
      append_to_group(groups['private'], room, name)
     end
 
-##Web Portal
+## Web Portal
 **In `app\controllers\scene-create.js` AND in `app\controllers\scene-edit.js`**
 
 Change the scenePrivacyValues to read
@@ -175,7 +175,7 @@ Change the Join Scene button to read
 
 You'll probably want to change the `scene_is_private` message in the locale file to read `"That scene is private or watchable.  You must get an invitation/meetme from one of the participants to join."`
 
-##Texting
+## Texting
 
 If you  have the txt plugin installed, you'll want to also make changes here:
 
