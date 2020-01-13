@@ -9,21 +9,21 @@ By default, if an image used as a Profile Icon is not exactly square, it gets sq
 ![The default positioning/ratio as of Jan 2020](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/log-icon-default.jpg?raw=true)<br/>
 ![Same for the small icons](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/small-icon-default.jpg?raw=true)
 
-Notice how Cecilia's image is vertically squished in the small icon, and Maximillian's is squished horizontally in both large and small icons. The CSS can be adjusted to always preserve the aspect ratio, but there is a trade-off here: portions that don't fit in the square will be cropped off. However, adding 'object-position', which determines where the image is anchored, can minimize that as an issue. Without it, the image window will be centered on the center of the image; as written in this CSS, the picture will be anchored at the center horizontally, and vertically, it will begin 10% into the image from the top. This seems to be about the sweet spot for a low incidence of any really odd croppings.
+Notice how Cecilia's image is vertically squished in the small icon, and Maximillian's is squished horizontally in both large and small icons. The CSS can be adjusted to always preserve the aspect ratio, but there is a trade-off here: portions that don't fit in the square will be cropped off. 
 
 #### Cropped Only:
 
 ![The above with only object-fit applied](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/log-icon-cropped.jpg?raw=true)<br/>
 ![Same for the small icons](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/small-icon-cropped.jpg?raw=true)
 
-Note how none of the images are squished now, but that Cecilia is a bit high in the frame; on a really tall and thin image, her head might be cut off entirely.
+Note how none of the images are squished now, but that Cecilia is a bit high in the frame; on a really tall and thin image, her head might be cut off entirely. However, adding 'object-position', which determines where the image is anchored, can minimize that as an issue. Without it, the image window will be centered on the center of the image; as written in this CSS, the picture will be anchored at the center horizontally, and vertically, it will begin 10% into the image from the top. This seems to be about the sweet spot for a low incidence of any really odd croppings.
 
 #### Cropped and positioned at center & 10%:
 
 ![The above also positioned with object-position](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/log-icon-positioned.jpg?raw=true)<br/>
 ![Same for the small icons](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/small-icon-positioned.jpg?raw=true)
 
-This creates a relatively pleasing arrangement for all the images.
+This creates a relatively pleasing arrangement for all the images. If someone's face is very low down on a tall, thin image, that probably won't look ideal, but it'll at least be almost identical to how it already looks in the default arrangement!
 
 To make these changes, this CSS can be copied and pasted into 'Custom CSS Style' (a.k.a custom_style.scss) under 'Website' in 'Admin > Setup'.
 
