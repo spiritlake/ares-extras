@@ -23,9 +23,11 @@ Note how none of the images are squished now, but that Cecilia is a bit high in 
 ![The above also positioned with object-position](log-icon-positioned.jpg)
 ![Same for the small icons](small-icon-positioned.jpg)
 
-This creates a relatively pleasing arrangement for all the images. If someone's face is very low down on a tall, thin image, that probably won't look ideal, but it'll at least be almost identical to how it already looks in the default arrangement!
+This creates a relatively pleasing arrangement for all the images. If someone's face is very low down on a tall, thin image, that probably won't look ideal, but it'll at least be almost identical to how it already looks in the default arrangement! 
 
-To make these changes, this CSS can be copied and pasted into 'Custom CSS Style' (a.k.a custom_style.scss) under 'Website' in 'Admin > Setup'.
+(And remember: any player can always upload a version of their Profile Icon cropped exactly the way they want it, while still using whatever they like for the main Profile Image on their wiki page. See `/help/profile_tutorial#profile-image-and-icon` on your game's web portal for instructions.)
+
+To set up cropping-and-positioning, this CSS can be copied and pasted into 'Custom CSS Style' (a.k.a custom_style.scss) under 'Website' in 'Admin > Setup'.
 
     /* crop and position icons */
     .log-icon,
