@@ -6,22 +6,22 @@ By default, if an image used as a Profile Icon is not exactly square, it gets sq
 
 #### Defaults:
 
-![The default positioning/ratio as of Jan 2020](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/log-icon-default.jpg?raw=true)<br/>
-![Same for the small icons](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/small-icon-default.jpg?raw=true)
+![The default positioning/ratio as of Jan 2020](log-icon-default.jpg)<br/>
+![Same for the small icons](small-icon-default.jpg)
 
 Notice how Cecilia's image is vertically squished in the small icon, and Maximillian's is squished horizontally in both large and small icons. The CSS can be adjusted to always preserve the aspect ratio, but there is a trade-off here: portions that don't fit in the square will be cropped off. 
 
 #### Cropped Only:
 
-![The above with only object-fit applied](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/log-icon-cropped.jpg?raw=true)<br/>
-![Same for the small icons](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/small-icon-cropped.jpg?raw=true)
+![The above with only object-fit applied](log-icon-cropped.jpg)<br/>
+![Same for the small icons](small-icon-cropped.jpg)
 
 Note how none of the images are squished now, but that Cecilia is a bit high in the frame; on a really tall and thin image, her head might be cut off entirely. However, adding 'object-position', which determines where the image is anchored, can minimize that as an issue. Without it, the image window will be centered on the center of the image; as written in this CSS, the picture will be anchored at the center horizontally, and vertically, it will begin 10% into the image from the top. This seems to be about the sweet spot for a low incidence of any really odd croppings.
 
 #### Cropped and positioned at center & 10%:
 
-![The above also positioned with object-position](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/log-icon-positioned.jpg?raw=true)<br/>
-![Same for the small icons](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/small-icon-positioned.jpg?raw=true)
+![The above also positioned with object-position](log-icon-positioned.jpg)<br/>
+![Same for the small icons](small-icon-positioned.jpg)
 
 This creates a relatively pleasing arrangement for all the images. If someone's face is very low down on a tall, thin image, that probably won't look ideal, but it'll at least be almost identical to how it already looks in the default arrangement!
 
@@ -43,7 +43,7 @@ To make these changes, this CSS can be copied and pasted into 'Custom CSS Style'
 
 If you would prefer your small and tiny icons to be **squares with rounded corners**:
 
-![Small icons as rounded squares](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/small-icon-rounded-square.jpg?raw=true)
+![Small icons as rounded squares](small-icon-rounded-square.jpg)
 
     /* small and tiny icons as round-cornered squares */
     .small-profile-icon,
@@ -53,7 +53,7 @@ If you would prefer your small and tiny icons to be **squares with rounded corne
     
 ...or if you'd like them to be **squares with sharp corners**:
 
-![Small icons as sharp squares](https://github.com/SerendipityJones/ares-extras/blob/master/snippets/profile-icon-tweaks/small-icon-square.jpg?raw=true)
+![Small icons as sharp squares](small-icon-square.jpg)
 
     /* small and tiny icons as sharp-cornered squares */
     .small-profile-icon,
