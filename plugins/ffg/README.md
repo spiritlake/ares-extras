@@ -6,26 +6,6 @@
 
 Designed for AresMUSH 1.0.
 
-## Installation
-
-1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
-2. In the game, run `plugin/install ffg`.
-3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
-
-Old:
-
-    abilities:
-      help: skills
-
-New:
-
-    ffg:
-      help: ffg
-    abilities:
-      help: abilities
-
-See additional setup instructions below.
-
 ## Overview
 
 This plugin is a simplified implementation of the [Fantasy Flight Games RPG](https://www.fantasyflightgames.com/en/index/).  It is primarily based on their generic Genesys system, but it does incorporate a few things from the various Star Wars RPGs (Edge of Empire, Age of Rebellion and Force and Destiny).  
@@ -57,6 +37,29 @@ This plugin is a simplified implementation of the [Fantasy Flight Games RPG](htt
     
     %% Faraday rolls Melee+3S and fails. (- A F F S T) 
 
+## Web Portal
+
+This plugin has no web portal component.  Nor is it ever likely to, given its complexity.
+
+## Installation
+
+1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+2. In the game, run `plugin/install ffg`.
+3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
+
+Old:
+
+    abilities:
+      help: skills
+
+New:
+
+    ffg:
+      help: ffg
+    abilities:
+      help: abilities
+
+See additional setup instructions below.
 
 ## Implementation Notes
 
@@ -86,7 +89,6 @@ To make Bob's talent tree balanced, he would need to have an additional talent a
      Tier 3: - -
      Tier 2: - - -
      Tier 1: - - - -
-
 
 ### General Notes
 
@@ -257,10 +259,6 @@ Talent configuration includes:
                 ranked: true
                 specializations:
                     - Sharpshooter
-
-## Web Portal
-
-This plugin has no web portal component.
 
 ## Uninstalling
 

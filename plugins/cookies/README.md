@@ -6,12 +6,6 @@
 
 Designed for AresMUSH 1.0
 
-## Installation
-
-In the game, run `plugin/install cookies`.
-
-See additional setup instructions below.
-
 ## Overview
 
 The cookies system allows you to give virtual cookies to players as a 'thank you' for RPing with them.  Cookies have no intrinsic value.  They have no coded purpose.  They don't do anything for you.  They're just a fun thing to collect and get achievements for.
@@ -19,6 +13,17 @@ The cookies system allows you to give virtual cookies to players as a 'thank you
     %% You give Susie a cookie.
     
     %% You have received 92 cookies.
+    
+
+## Web Portal
+
+The plugin includes a new scene menu item to give cookies to everyone in a scene.
+
+## Installation
+
+In the game, run `plugin/install cookies`.
+
+Additional configuration options are described below.
 
 ## Configuration
 
