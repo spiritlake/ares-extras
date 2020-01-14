@@ -1,0 +1,9 @@
+ <p class="cg-tip">Enter your character's traits.</p>
+
+     {{#each model.char.traits as |trait|}}
+     <b>{{input type="text" value=trait.name size=25}}</b> 
+     <button class="btn btn-default" {{action 'removeTrait' trait.name}}><i class="fa fa-trash" aria-label="Remove Trait"></i></button>
+     {{textarea value=trait.desc cols="80" rows=5}} 
+     {{/each}}
+
+     <button class="btn btn-default" id="addtrait" {{action 'addTrait'}}>Add Trait</button>

@@ -13,4 +13,5 @@ You can set descriptive traits on your character.
 
 Admins with the `manage\_apps` permission can set other peoples' traits:
 
+`trait/remove <name>=<title>`
 `trait/set <name>=<title>/<description>`

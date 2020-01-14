@@ -15,9 +15,17 @@ The traits system provides a simple way to store character stats with a name/des
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
     Traits - Steve
     
-    Shield - Cap has a super shield.
-    Strong - Cap is very strong.
+    ------------------------------------------------------------------------------
+    Shield
+    Cap has a super shield.
+    ------------------------------------------------------------------------------
+    Strong
+    Cap is very strong.
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
+
+## Web Portal
+
+The plugin includes web portal controls to set traits during chargen and view them on a character profile.
 
 ## Installation
 
@@ -51,12 +59,6 @@ If you are using _just_ traits (without any other skills system), you probably w
     custom:
       shortcuts:
           sheet: traits
-
-
-
-## Web Portal
-
-This plugin has no web portal component.
 
 ## Uninstalling
 
