@@ -1,3 +1,5 @@
+**Contributed by Tat**
+
 Watchable scenes are scenes which anyone can view on the portal (ie, watch), but which only invited participants and admin can pose into.
 
 Because it interacts heavily with the scene system, Watchable doesn't work well as a plug-in. You'll have to do some custom code in order to enable it. You can make the changes listed below in order to create Watchable scenes on your game.
