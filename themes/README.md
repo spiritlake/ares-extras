@@ -2,6 +2,10 @@
 
 Here you can browse themes for your web portal.  Themes will include colors, custom styles and/or images.
 
+## Browsing Themes
+
+Each theme folder has a README file with example images showing what the theme looks like.
+
 ## Installing Themes
 
 To install a theme, use `theme/install <name>` with an admin character in-game.
