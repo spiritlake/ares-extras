@@ -28,6 +28,7 @@ In the game, run `plugin/install compliments`.
 Additional configuration options are described below.
 
 ## Configuration
+Configuration options can be set in `compliments.yml`.
 `give_luck` - By default, giving a compliment also gives a fraction of a luck point. If you're not using the FS3Skills plugin, disable this by setting `give_luck` to `false`.
 
 `luck_amount` - You can configure how much luck each compliment gives. By default, a compliment gives 1/20th of a luck point.
