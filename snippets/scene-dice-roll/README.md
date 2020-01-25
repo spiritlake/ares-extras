@@ -6,13 +6,13 @@ This snippet outlines how to add a "Roll Dice" option to the "Play" menu in web 
 
 In `ares-webportal/app/templates/components/live-scene-custom-play.hbs`, add a menu button and a popup window that will be toggled visible when the menu is clicked.
 
-[Full code](live-scene-custom-play.hbs).
+[Full code](https://github.com/AresMUSH/ares-extras/blob/master/snippets/scene-dice-roll/live_scene_custom_play.hbs).
 
 ## Live Scene Custom Component Javascript
 
 In `ares-webportal/app/components/live-scene-custom-play.js`, add a click handler for our menu button.  
 
-[Full code](live-scene-custom-play.js).
+[Full code](https://github.com/AresMUSH/ares-extras/blob/master/snippets/scene-dice-roll/live_scene_custom_play.js).
 
 ## Web Request Handler and Dispatcher
 
