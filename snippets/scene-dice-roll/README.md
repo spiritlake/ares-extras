@@ -10,9 +10,9 @@ In `ares-webportal/app/templates/components/live-scene-custom-play.hbs`, add a m
 
 ## Live Scene Custom Component Javascript
 
-In `ares-webportal/app/templates/components/live-scene-custom-play.hbs`, add a click handler for our menu button.  
+In `ares-webportal/app/components/live-scene-custom-play.js`, add a click handler for our menu button.  
 
-[Full code](live-scene-custom-play.hbs).
+[Full code](live-scene-custom-play.js).
 
 ## Web Request Handler and Dispatcher
 
