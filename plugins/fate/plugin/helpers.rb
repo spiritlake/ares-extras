@@ -41,7 +41,7 @@ module AresMUSH
       if Fate.rating_ladder[ability]
         rating = Fate.rating_ladder[ability]
       elsif char
-        rating = Fate.skill_rating(char, roll_str)
+        rating = Fate.skill_rating(char, ability)
       else 
         rating = 0
       end
@@ -93,7 +93,7 @@ module AresMUSH
     end
     
     def self.skill_rating(model, skill)
-      model.fate_skills[skill.titlecase] || 0
+      (model.fate_skills || {})[skill.titlecase] || 0
     end
     
     def self.rating_name(rating)

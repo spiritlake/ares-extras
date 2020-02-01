@@ -1,0 +1,25 @@
+<div id="systemfate" class="tab-pane fade">
+  <div class="char-ability-title">Aspects</div>
+  
+  <ul>
+    {{#each char.fate.aspects as |aspect| }}
+      <li><AnsiFormat @text={{aspect}} /></li>
+    {{/each}}
+  </ul>
+  
+  <div class="char-ability-title">Skills</div>
+  
+  <ul>
+    {{#each char.fate.skills as |skill| }}
+      <li><b>{{skill.name}}</b>: {{skill.rating_name}}</li>
+    {{/each}}
+  </ul>
+  
+  <div class="char-ability-title">Stunts</div>
+  
+  <ul>
+    {{#each char.fate.stunts as |stunt| }}
+      <li><b>{{stunt.name}}</b>: <AnsiFormat @text={{stunt.desc}} /></li>
+    {{/each}}
+  </ul>
+</div>

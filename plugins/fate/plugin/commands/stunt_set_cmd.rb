@@ -8,10 +8,9 @@ module AresMUSH
       def parse_args
         # Admin version
         if (cmd.args =~ /\//)
-          args = cmd.parse_args(ArgParser.arg1_equals_arg2_slash_optional_arg3)
-          self.target_name = titlecase_arg(args.arg1)
-          self.stunt_name = titlecase_arg(args.arg2)
-          self.stunt_description = trim_arg(args.arg3)
+          self.target_name = titlecase_arg(cmd.args.before("/"))
+          self.stunt_name = titlecase_arg(cmd.args.after("/").before("="))
+          self.stunt_description = trim_arg(cmd.args.after("/").after("="))
         else
           args = cmd.parse_args(ArgParser.arg1_equals_optional_arg2)
           self.target_name = enactor_name
@@ -38,7 +37,7 @@ module AresMUSH
       def handle
         ClassTargetFinder.with_a_character(self.target_name, client, enactor) do |model|
           
-          if (!self.stunt_description)
+          if (!self.stunt_description || self.stunt_description.blank?)
             stunts_config = Global.read_config('fate', 'stunts')
             if (stunts_config.any? { |s| s['name'].titlecase == self.stunt_name })
               self.stunt_description = t('fate.see_stunts_list')

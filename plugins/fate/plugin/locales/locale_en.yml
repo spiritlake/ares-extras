@@ -26,6 +26,7 @@ en:
       skill_removed: "Skill removed."
       skill_set: "Skill set."
       invalid_rating: "That is not a valid skill rating."
+      invalid_skill_name: "That is not a valid skill."
       
       roll_results: "%{name} rolls %{roll_str} and gets %{result} (%{roll})."
       opposed_roll_results: "Opposed Roll: %{name1}/%{roll_str1} - %{result1} (%{roll1}) vs %{name2}/%{roll_str2} - %{result2} (%{roll2}).  %{overall}"

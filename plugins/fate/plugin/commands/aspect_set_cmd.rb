@@ -45,7 +45,7 @@ module AresMUSH
           aspects << self.aspect_name
           model.update(fate_aspects: aspects)
           
-          client.emit_success t('fate.aspect_removed')
+          client.emit_success t('fate.aspect_added')
         end
       end
     end
