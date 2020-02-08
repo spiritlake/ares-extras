@@ -27,3 +27,7 @@ You can install a theme from the game using `theme/install <name>`.
 ## Snippets
 
 The [snippets](https://github.com/AresMUSH/ares-extras/tree/master/snippets) folder contains code, style or configuration tidbits.
+
+## License
+
+See [License](https://github.com/AresMUSH/ares-extras/blob/master/LICENSE.md)
