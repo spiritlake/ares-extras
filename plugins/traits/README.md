@@ -58,7 +58,7 @@ If you are using _just_ traits (without any other skills system), you probably w
     ---
     custom:
       shortcuts:
-          sheet: traits
+          sheet: trait
 
 ## Uninstalling
 
