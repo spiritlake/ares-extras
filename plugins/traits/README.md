@@ -6,7 +6,7 @@
 
 Designed for AresMUSH 1.0
 
-> Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
+> Note: This code has been run through its paces on a test server, but hasn't been playtested much on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
 ## Overview
 
@@ -51,9 +51,11 @@ New:
 
 ## Configuration
 
-This plugin has no config options.
+Configuration options can be found in game/config/traits.yml.
 
-If you are using _just_ traits (without any other skills system), you probably want to alias the 'sheet' command to 'traits'.   Players usually expect 'sheet' to show them something useful.  You can do this by editing the shortcuts config in the `custom.yml` config file.
+`traits_blurb` - The instructions that appear above the traits web chargen controls.
+
+Note: If you are using _just_ traits (without any other skills system), you probably want to alias the 'sheet' command to 'traits'.  You can do this by editing the shortcuts config in the `traits.yml` config file.
 
     ---
     custom:

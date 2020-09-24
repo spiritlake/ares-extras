@@ -1,4 +1,4 @@
- <p class="cg-tip">Enter your character's traits.</p>
+ <p class="cg-tip"><AnsiFormat @text={{model.cgInfo.traits_blurb}} /></p>
 
      {{#each model.char.traits as |trait|}}
      <b>{{input type="text" value=trait.name size=25}}</b> 
