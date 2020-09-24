@@ -4,7 +4,7 @@ Watchable scenes are scenes which anyone can view on the portal (ie, watch), but
 
 Because it interacts heavily with the scene system, Watchable doesn't work well as a plug-in. You'll have to do some custom code in order to enable it. You can make the changes listed below in order to create Watchable scenes on your game.
 
-> **Note from Faraday**: Because so many custom code changes are required, be aware that you are exposing yourself to significant potential for merge conflicts (collisions between your changes and future code changes) when you upgrade.  Also, the files and functions mentioned here were correct at the time of writing, but may change at any time.  Consider this more of a guide than a guaranteed set of instructions.
+> **Note from Faraday**: Watchable scenes were added awhile ago.  Now Ares allows you to set a "Limited Scene Participation" notice (in the scene editor or via `scene/limit`) to alert people that they can join the scene to watch but not participate.  If you still decide to implement watchable scenes, be aware that it requires many custom code changes and you are exposing yourself to significant potential for future merge conflicts when you upgrade (collisions between your changes and core code changes).  Also, the files and functions mentioned here were correct at the time of writing, but may change at any time.  Consider this more of a guide than a guaranteed set of instructions.
 
 ## On game
 

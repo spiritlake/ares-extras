@@ -60,7 +60,7 @@ Note: If you are using _just_ traits (without any other skills system), you prob
     ---
     custom:
       shortcuts:
-          sheet: traits
+          sheet: trait
 
 ## Uninstalling
 
