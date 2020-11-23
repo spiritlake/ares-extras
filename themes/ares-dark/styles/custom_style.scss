@@ -95,3 +95,8 @@ textarea, input {
 blockquote {
   background-color: $dark-background;
 }
+
+pre code {
+color: $text-color;
+width: 70%;
+}

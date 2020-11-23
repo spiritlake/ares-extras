@@ -6,11 +6,11 @@ The README file in each folder contains details about each item.
 
 ## Contribution Guidlines
 
-See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/extra-contribs/) if you want to contribute your own plugins or extras.
+See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/extra-contribs.html) if you want to contribute your own plugins or extras.
 
 ## Plugins
 
-Within the [plugins](https://github.com/AresMUSH/ares-extras/tree/master/plugins) folder are additional plugins that you can add to your game.  They can be installed easily using the add-plugin script, as described in [Ares Extras](https://aresmush.com/tutorials/code/extras/).  
+Within the [plugins](https://github.com/AresMUSH/ares-extras/tree/master/plugins) folder are additional plugins that you can add to your game.  They can be installed easily using the add-plugin script, as described in [Ares Extras](https://aresmush.com/tutorials/code/extras.html).  
 
 You can install plugins directly from the game using `plugin/install <name>`.
   
@@ -26,8 +26,8 @@ You can install a theme from the game using `theme/install <name>`.
 
 ## Snippets
 
-The [snippets](https://github.com/AresMUSH/ares-extras/tree/master/snippets) folder contains code snippets that are not full plugins.
+The [snippets](https://github.com/AresMUSH/ares-extras/tree/master/snippets) folder contains code, style or configuration tidbits.
 
-## Archived Items
+## License
 
-Archived items are **not supported**, and may even be based off of an old version of AresMUSH.  They will require some code effort to get working, or you can just use them for ideas.
+See [License](https://github.com/AresMUSH/ares-extras/blob/master/LICENSE.md)

@@ -6,12 +6,6 @@
 
 Designed for AresMUSH 1.0
 
-## Installation
-
-In the game, run `plugin/install cookies`.
-
-See additional setup instructions below.
-
 ## Overview
 
 The cookies system allows you to give virtual cookies to players as a 'thank you' for RPing with them.  Cookies have no intrinsic value.  They have no coded purpose.  They don't do anything for you.  They're just a fun thing to collect and get achievements for.
@@ -19,6 +13,17 @@ The cookies system allows you to give virtual cookies to players as a 'thank you
     %% You give Susie a cookie.
     
     %% You have received 92 cookies.
+    
+
+## Web Portal
+
+The plugin includes a new scene menu item to give cookies to everyone in a scene.
+
+## Installation
+
+In the game, run `plugin/install cookies`.
+
+Additional configuration options are described below.
 
 ## Configuration
 
@@ -32,23 +37,6 @@ The game will periodically tally and award cookies.  There is a cron job to cont
 
 The system will post the top cookie earners to the forum.  You can configure which forum category this posts to.  Making it a forum that doesn't exist will effectively disable the cookie post.
 
-## Web Portal
+## Uninstalling
 
-This plugin has no web portal code.  If you want to add cookies to your scene menu, you can add a menu item such as this one to the template `app/templates/components/live_scene_control.hbs` (for active scenes) and `app/templates/scene.hbs` (for shared scenes).
-
-      <li><a href="#" {{action 'cookies'}}>Give Cookies</a></li>
-
-Then add a handler to the "actions" section of the controller `app/components/live_scene_control.js` (for live scenes) and `app/controllers/scene.js` (for shared scenes). 
-
-In the `scene.js` file you'll want it to be `this.get('model.id')` instead of `this.get('scene.id')`.
-
-      cookies(sceneId) {
-          let api = this.get('gameApi');
-          api.requestOne('sceneCookies', { id: this.get('scene.id') }, null)
-          .then( (response) => {
-              if (response.error) {
-                  return;
-              }
-              this.get('flashMessages').success('You give cookies to the scene participants.');
-          });
-      },
+Removing the plugin requires some code fiddling.  See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).

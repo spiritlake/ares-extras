@@ -8,25 +8,6 @@ Designed for AresMUSH 1.0.
 
 > Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
-## Installation
-
-1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
-2. In the game, run `plugin/install fate`.
-3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
-
-Old:
-
-    abilities:
-      help: skills
-
-New:
-
-    fate:
-      help: fate
-    abilities:
-      help: abilities
-
-See additional setup instructions below.
 
 ## Overview
 
@@ -54,22 +35,9 @@ This plugin is a simplified implementation of the Fate RPG system.
 
     %% Opposed Roll: Faraday/Will - Superb (5) vs Kitty/Good - Good (3).  Faraday wins.
 
-## Setting Up App Review
+## Web Portal
 
-You have to make a change to the Chargen plugin to make it display the Fate ability status in the `app` command.
-
-In `aresmush/plugins/chargen/templates/app.erb`, add:
-
-    <%= section_title(t('chargen.abilities_review_title')) %>
-    <%= fate_abilities %> 
-
-In `aresmush/plugins/chargen/templates/app_template.rb`, add:
-
-      def fate_abilities
-        Fate.app_review(@char)
-      end
-
-Type `load chargen` in-game when finished.
+Only a simple sheet display on profiles, no chargen or scene roll.
 
 ## Refresh
 
@@ -82,6 +50,26 @@ Admins can trigger a manual refresh at any time using the `fate/refresh` command
 ### Automated Refresh
 
 An automated refresh is disabled by default.  You can enable it by setting the `refresh_cron` configuration option to perform the refresh at a set interval (e.g. weekly or monthly).  See the [Cron Configuration Tutorial](https://www.aresmush.com/tutorials/code/cron/) for more information on possible settings.
+
+## Installation
+
+1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+2. In the game, run `plugin/install fate`.
+3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
+
+Old:
+
+    abilities:
+      help: skills
+
+New:
+
+    fate:
+      help: fate
+    abilities:
+      help: abilities
+
+Additional configuration options are described below.
 
 ## Configuration
 
@@ -132,6 +120,6 @@ You can configure a list of sample stunts for people to choose from, but players
             name: Sprinter
             description: "Double free movement."
 
-## Web Portal
+## Uninstalling
 
-This plugin has no web portal component.
+Removing the plugin requires some code fiddling.  See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).

@@ -10,3 +10,10 @@ cookies:
   cookie_category: Cookie Awards
   shortcuts:
     cookies: cookie
+  achievements:
+    cookie_given:
+      type: 'community'
+      message: "Gave a cookie."
+    cookie_received:
+      type: 'community'
+      message: "Received %{count} cookies."

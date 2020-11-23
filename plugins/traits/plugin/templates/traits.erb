@@ -1,0 +1,9 @@
+%lh
+<%= t('traits.traits_title', :name => @char.name) %>
+
+<% @traits.sort.each do |name, desc| %>
+%ld
+%xh<%= name %>%xn
+<%= desc %>
+<% end %>
+%lf

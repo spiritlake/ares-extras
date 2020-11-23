@@ -6,26 +6,6 @@
 
 Designed for AresMUSH 1.0.
 
-## Installation
-
-1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
-2. In the game, run `plugin/install ffg`.
-3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
-
-Old:
-
-    abilities:
-      help: skills
-
-New:
-
-    ffg:
-      help: ffg
-    abilities:
-      help: abilities
-
-See additional setup instructions below.
-
 ## Overview
 
 This plugin is a simplified implementation of the [Fantasy Flight Games RPG](https://www.fantasyflightgames.com/en/index/).  It is primarily based on their generic Genesys system, but it does incorporate a few things from the various Star Wars RPGs (Edge of Empire, Age of Rebellion and Force and Destiny).  
@@ -57,6 +37,29 @@ This plugin is a simplified implementation of the [Fantasy Flight Games RPG](htt
     
     %% Faraday rolls Melee+3S and fails. (- A F F S T) 
 
+## Web Portal
+
+This plugin has no web portal component.  Nor is it ever likely to, given its complexity.
+
+## Installation
+
+1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+2. In the game, run `plugin/install ffg`.
+3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
+
+Old:
+
+    abilities:
+      help: skills
+
+New:
+
+    ffg:
+      help: ffg
+    abilities:
+      help: abilities
+
+See additional setup instructions below.
 
 ## Implementation Notes
 
@@ -87,7 +90,6 @@ To make Bob's talent tree balanced, he would need to have an additional talent a
      Tier 2: - - -
      Tier 1: - - - -
 
-
 ### General Notes
 
 A few other miscellaneous notes:
@@ -95,23 +97,6 @@ A few other miscellaneous notes:
 * Talents have no coded effects.  You'll have to make adjustments manually.
 * Instead of giving people "4 free career skills", this plugin gives them 20 extra XP to buy them, and makes sure they've bought at least 4 career skills during app review.  If you're using specializations, you can make this 30 to include their 2 free specialization skills.
 * You can also give people extra XP on top of that to let them start out more advanced.  There are no restrictions on how this XP can be spent.
-
-## Setting Up App Review
-
-You have to make a change to the Chargen plugin to make it display the FFG ability status in the `app` command.
-
-In `aresmush/plugins/chargen/templates/app.erb`, add:
-
-    <%= section_title(t('chargen.abilities_review_title')) %>
-    <%= ffg_abilities %> 
-
-In `aresmush/plugins/chargen/templates/app_template.rb`, add:
-
-      def ffg_abilities
-        Ffg.app_review(@char)
-      end
-
-Type `load chargen` in-game when finished.
 
 ## Configuration
 
@@ -275,6 +260,6 @@ Talent configuration includes:
                 specializations:
                     - Sharpshooter
 
-## Web Portal
+## Uninstalling
 
-This plugin has no web portal component.
+Removing the plugin requires some code fiddling.  See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).

@@ -8,27 +8,9 @@ Designed for AresMUSH 1.0.
 
 > Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
-## Installation
-
-1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
-2. In the game, run `plugin/install cortex`.
-3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
-
-Old:
-
-    abilities:
-      help: skills
-
-New:
-
-    cortex:
-      help: cortex
-    abilities:
-      help: abilities
-
 ## Overview
 
-This game uses a simplified implementation of the [Cortex System](http://www.drivethrurpg.com/product/58488/Cortex-Classic-System-Role-Playing-Game) used in the Firefly and Leverage RPGs.
+This game uses a simplified implementation of the [Cortex System](https://boardgamegeek.com/rpgsystem/2044/cortex-classic) used in the Firefly and Leverage RPGs.
 
     +==~~~~~====~~~~====~~~~====~~~~=====~~~~=====~~~~====~~~~====~~~~====~~~~~==+
     Character Sheet for Carter
@@ -60,22 +42,29 @@ This game uses a simplified implementation of the [Cortex System](http://www.dri
 
 The design of this plugin is described in detail in the [Create Plugin Tutorial](https://aresmush.com/tutorials/code/create-plugin/).
 
-## Setting Up App Review
+## Web Portal
 
-You have to make a change to the Chargen plugin to make it display the cortex ability status in the `app` command.
+This plugin has no web portal component.
 
-In `aresmush/plugins/chargen/templates/app.erb`, add:
+## Installation
 
-    <%= section_title(t('chargen.abilities_review_title')) %>
-    <%= cortex_abilities %> 
+1. Disable the FS3 plugins, as explained in [Enabling and Disabling Plugins](https://aresmush.com/tutorials/config/plugins/).
+2. In the game, run `plugin/install cortex`.
+3. Go to Admin->Setup and change your [chargen stages](https://aresmush.com/tutorials/config/chargen.html).  Replace the FS3 stage with stages for FFG:
 
-In `aresmush/plugins/chargen/templates/app_template.rb`, add:
+Old:
 
-      def cortex_abilities
-        Cortex.app_review(@char)
-      end
+    abilities:
+      help: skills
 
-Type `load chargen` in-game when finished.
+New:
+
+    cortex:
+      help: cortex
+    abilities:
+      help: abilities
+
+Additional configuration options are described below.
 
 ## Configuration
 
@@ -125,6 +114,6 @@ A couple notes:
 * Skill specialties are a free-form text string, not a fixed list.
 * Assets and complications may specify the list of available steps.  Otherwise all steps are permitted.
 
-## Web Portal
+## Uninstalling
 
-This plugin has no web portal component.
+Removing the plugin requires some code fiddling.  See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).

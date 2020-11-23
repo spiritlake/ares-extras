@@ -23,7 +23,7 @@ module AresMUSH
         roll1 = Fate.roll_skill(enactor, self.roll_str1)
         
         char = Character.find_one_by_name(self.target)
-        roll2 = Fate.roll_skill(enactor, self.roll_str2)
+        roll2 = Fate.roll_skill(char, self.roll_str2)
         
         result1 = Fate.rating_name(roll1)
         result2 = Fate.rating_name(roll2)

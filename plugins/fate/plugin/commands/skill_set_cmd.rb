@@ -8,10 +8,9 @@ module AresMUSH
       def parse_args
         # Admin version
         if (cmd.args =~ /\//)
-          args = cmd.parse_args(ArgParser.arg1_equals_arg2_slash_arg3)
-          self.target_name = titlecase_arg(args.arg1)
-          self.skill_name = titlecase_arg(args.arg2)
-          self.rating = downcase_arg(args.arg3)
+          self.target_name = titlecase_arg(cmd.args.before("/"))
+          self.skill_name = titlecase_arg(cmd.args.after("/").before("="))
+          self.rating = downcase_arg(cmd.args.after("/").after("="))
         else
           args = cmd.parse_args(ArgParser.arg1_equals_arg2)
           self.target_name = enactor_name
@@ -32,7 +31,7 @@ module AresMUSH
       end
       
       def check_valid_ability
-        return t('cortex.invalid_skill_name') if !Fate.is_valid_skill_name?(self.skill_name)
+        return t('fate.invalid_skill_name') if !Fate.is_valid_skill_name?(self.skill_name)
         return nil
       end
       

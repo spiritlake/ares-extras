@@ -1,4 +1,5 @@
 traits:
+    traits_blurb: "Enter your character traits."
     shortcuts:
         "trait/add": "trait/set"
         "trait/update": "trait/set"
