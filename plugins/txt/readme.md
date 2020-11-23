@@ -1,10 +1,18 @@
-#TXT
+# Text System
 
-##Credit
-This plugin was originally coded by skew @ Ares Central, with a few updates and packaging by Tat @ Ares Central.
+## Credit
+This plugin has been updated and is now maintained by Tat @ Ares Central. Original credit for the code goes to skew @ Ares Central.
+
+## Overview
+
+A command designed to mimic real world texting. It sends texts or other private messages from one person to multiple people.
+
+It can send as a simple person-to-person emit (like pages), as a scene emit, or as a person-to-person emit that also logs to a scene.
+
+Allows users to choose their text color, reply to their previous text, and start new scenes with a text.
 
 ## Installation
-In the game, run plugin/install txt.
+In the game, run `plugin/install <github url>`.
 
 ### Page Command
 
@@ -12,34 +20,33 @@ This plugin references the default AresMUSH page command. If that is not install
 
 See additional setup instructions below.
 
-##Overview
-A command designed to mimic real world texting. It sends texts from one person to multiple people.
-
-It can send as a simple person-to-person emit (like pages), as a scene emit, or as a person-to-person emit that also logs to a scene.
-
-Allows users to choose their text color, reply to their previous text, start new scenes with a text.
-
 ## Configuring
 
 ### Message format
 
-The message format is contained in `/aresmush/plugins/txt/locales/local_en.yml`. There are two lines, in case you want to make sender and receiver see different things. By default, they are both set to: `%xh%xg<TXT>%xn (From %{sender}) -> %{recipients}%{message}`
+The text preface, start, and end markers are configurable in txt.yml. By default, texts display as:
 
-This outputs as: `<TXT> From Skew -> (to Pikachu) Hello there!`
+`(TXT to Tat) Skew : Hello there!`
 
-##Web Portal
-In addition to the included web portal files, you'll want to add a line of code to `/app/templates/components/live-scene-control.hbs` if you want to enable texting from portal scenes.
+You can further adjust the text format if you like. The message format is contained in `/aresmush/plugins/txt/locales/local_en.yml`.
 
-Insert the following with the other pose buttons:
+###Nicknames
 
-`{{live-scene-txt scenePose=scenePose scene=scene}}`
+If you'd like nicknames to appear in the sender and recipient fields, you can toggle `use_nick` or `use_only_nick` true. Only mark ONE of these options as true.
 
-For example:
+Note that texts must still be SENT using the character's name and not their nickname.
 
-`{{#if (not scene.completed)}}
-    {{live-scene-txt scenePose=scenePose scene=scene}}
-    <button {{action 'addPose' 'setpose'}} class="btn btn-default">Add Scene Set</button>
-    <button {{action 'addPose' 'gm'}} class="btn btn-default">Add GM Pose</button>
-    <button {{action 'addPose' 'ooc'}} class="btn btn-default">Add OOC Comment</button>
-    <button {{action 'addPose' 'pose'}} class="btn btn-primary">Add Pose</button>
-{{/if}}`
+`use_nick` - Changes the sender and recipient display to your nickname display as set up in `nickname_format` in demographics.yml.
+`use_only_nick` - Changes the sender and recipient display to your nickname. Displays the sender's character name after the text, with the scene number.
+
+###Location and Scene Type
+Sets the defaults for `txt/newscene` to autofill the location and scene type of text scenes. Be sure that scene type matches one of your scene_types as set in scenes.yml.
+
+## Uninstalling
+
+Removing the plugin requires some code fiddling.  See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).
+
+
+## License
+
+Same as [AresMUSH](https://aresmush.com/license).
