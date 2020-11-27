@@ -14,7 +14,7 @@ Contributed by (your handle/name/whatever)
 
 ## Installation
 
-In the game, run `plugin/install (your plugin name)`.
+In the game, run `plugin/install <github url>`.
 
 (describe any additional installation steps)
 
@@ -25,3 +25,7 @@ In the game, run `plugin/install (your plugin name)`.
 ## Uninstalling
 
 Removing the plugin requires some code fiddling.  See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).
+
+## License
+
+Same as [AresMUSH](https://aresmush.com/license).
