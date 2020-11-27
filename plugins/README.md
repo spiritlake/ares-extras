@@ -23,6 +23,7 @@ You can install plugins directly from the game using `plugin/install <github url
 * [LuckGive](https://github.com/spiritlake/ares-luckgive-plugin) - Give your luck points to other characters.
 * [Openweather](https://github.com/Mudpuppy12/ares-openweather-plugin) - Weather system that uses real weather data from https://openweathermap.org/
 * [Prefs](https://github.com/AresMUSH/ares-prefs-plugin) - RP preference registry.
+* [Rpg](https://github.com/AresMUSH/ares-rpg-plugin) - Generic RPG plugin.
 * [Traits](https://github.com/AresMUSH/ares-traits-plugin) - Simple system for tracking character traits.
 * [Txt](https://github.com/spiritlake/ares-txt-plugin) - Simulate text message conversations in scenes.
 
